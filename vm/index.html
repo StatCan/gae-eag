@@ -183,7 +183,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        About GEO
+        About DAaaS GEO
       </a>
     </li>
   
@@ -246,8 +246,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-vm" class="md-nav__link">
-    Creating a VM
+  <a href="#creating-a-vm-no-need" class="md-nav__link">
+    Creating a VM? No Need!
   </a>
   
 </li>
@@ -774,8 +774,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-vm" class="md-nav__link">
-    Creating a VM
+  <a href="#creating-a-vm-no-need" class="md-nav__link">
+    Creating a VM? No Need!
   </a>
   
 </li>
@@ -838,12 +838,30 @@
 
 <h1 id="using-your-cloud-vm">Using your Cloud VM</h1>
 <hr />
-<h2 id="creating-a-vm">Creating a VM</h2>
-<p>A GEO Virtual Machine will be created for you and you will not have permission to create a GEO-VM. </p>
-<p>See the <a href="../faq/">FAQ</a> if you need to make changes to your virtual machine.</p>
+<h2 id="creating-a-vm-no-need">Creating a VM? No Need!</h2>
+<p><strong>A GEO Virtual Machine will be created for you</strong> </p>
+<p>See the <a href="../faq/">FAQ</a> section if you need to make changes to your virtual machine.</p>
+<hr />
+<p>The standard GEO VMs include the following:</p>
+<p>Hardware:</p>
+<ul>
+<li>4vcpus, 14GiB Memory</li>
+<li>AMD Radeon Instinct MI25 GPU</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/nvv4-series">learn more- Microsoft</a></li>
+</ul>
+<p>Software:</p>
+<ul>
+<li>ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup></li>
+<li>QGIS</li>
+<li>Anaconda</li>
+<li>LibreOffice</li>
+</ul>
+<p>Plus any additional resources that were identified as part of the DAaaS Project Onboarding.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Depending on your project, you <em>may</em> have the ability to create a <em>standard</em> virtual machine via the CAE <strong>[link needed]</strong>, or create a workspace in the AAW<strong>[link needed]</strong>.</p>
+<p>Depending on your project, you <em>may</em> have the ability to create a standard virtual machine via the CAE, or create a workspace in the AAW<em>.  These self-serve VMs are </em><em>NOT</em>* optimized for geospatial rendering.</p>
+<p><a href="https://statcan.github.io/cae-eac/en/VirtualMachines/">Learn more about CAE VMs</a></p>
+<p><a href="https://statcan.github.io/daaas/en/#experiments">Learn more about AAW Workspaces</a></p>
 </div>
 <hr />
 <h2 id="finding-a-vm">Finding a VM</h2>
@@ -856,7 +874,7 @@
 <p><img alt="VM Start Button" src="../images/VMStartButton.png" />  </p>
 </li>
 <li>
-<p>It takes a few minutes for your VM to start up. Monitor its startup progress by selecting the Notifications icon at the top right of the window.   </p>
+<p>It takes a few minutes for your VM to start up. Monitor its start-up progress by selecting the Notifications icon at the top right of the window.   </p>
 <p><img alt="Start Notification" src="../images/VMRestartNotification.png" />  </p>
 </li>
 </ol>
@@ -907,7 +925,7 @@
 <tr>
 <td><img alt="error3" src="../images/error_bastion.png" /></td>
 <td></td>
-<td>You are experiancing some nextwork latency; this usually resolves itself. If not, try restarting your VM</td>
+<td>You are experiencing some network latency; this usually resolves itself. If not, try restarting your VM</td>
 </tr>
 <tr>
 <td>place</td>
@@ -917,9 +935,10 @@
 </tbody>
 </table>
 <h2 id="tips">Tips</h2>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. <em>ctrl + z</em> will close your main broswer window, not the VM browser window)</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm est. (this can be adjusted upon request)</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. <em>ctrl + z</em> will close your main browser window, not the VM browser window)</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm est. (this can be adjusted upon request: <a href="../faq/">FAQ</a>)</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Moving the taskbar</a> to the top or side of the VM will help differentiate between your OZ-PC and VM workspace.</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> You can not alter the VMs display settings, however there is a way to <em>almost</em> use multiple monitors. Use the <em>Restore Down</em> button in your browser window and then drag to resize the window across multiple displays to get a multi-screen effect.  You may need to adjust some configurations in your OZ-Laptop display settings.</p>
 
               
             </article>
@@ -970,7 +989,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 ECulkin 
+      Copyright &copy; 2020
     </div>
   
   
