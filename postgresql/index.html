@@ -228,7 +228,7 @@
   
     <li class="md-nav__item">
       <a href="../vm/" class="md-nav__link">
-        Virtual Machine Basics
+        Virtual Machine
       </a>
     </li>
   
@@ -354,15 +354,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#azure-data-studio" class="md-nav__link">
-    Azure Data Studio
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-data-factory" class="md-nav__link">
-    Azure Data Factory
+  <a href="#cae-azure-cloud-services" class="md-nav__link">
+    CAE- Azure Cloud Services
   </a>
   
 </li>
@@ -771,15 +764,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#azure-data-studio" class="md-nav__link">
-    Azure Data Studio
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#azure-data-factory" class="md-nav__link">
-    Azure Data Factory
+  <a href="#cae-azure-cloud-services" class="md-nav__link">
+    CAE- Azure Cloud Services
   </a>
   
 </li>
@@ -804,45 +790,51 @@
 
 
 <h1 id="postgresql-postgis"><img alt="postgis logo" src="../images/post.png" /> PostgreSQL + PostGIS</h1>
-<hr>
-
 <h4 id="prerequisites">Prerequisites</h4>
 <ol>
+<li>An onboarded project with a requested database   </li>
 <li>A <strong>virtual machine</strong> in the DAaaS Environment. See the <a href="../vm/">VM page</a> for more information.</li>
-<li><strong>pgAdmin</strong> or <strong>Azure Data Studio</strong> and <strong>Visual Studio Code</strong> or <strong>ArcGIS Pro</strong> or<strong>QGIS</strong>. </li>
+<li>with <strong>pgAdmin</strong> and/or <strong>ArcGIS Pro</strong> and/or <strong>QGIS</strong> and/or <strong>CAE Azure Services</strong>. </li>
 </ol>
-<p>Your preferred software will be pre-installed on the <strong>Windows GEO Virtual Machine</strong> based on your onbaording requirments.<br />
-<br></p>
+<p><br></p>
+<hr />
 <h2 id="accessing-via">Accessing via:</h2>
 <h3 id="pgadmin">pgAdmin</h3>
 <p>This is one of the more common tool for PostgreSQL database administration. PG-Admin has been installed on your VM.</p>
 <ol>
-<li>Connect to your cloud VM and launch <strong>pgAdmin</strong>.</li>
-</ol>
-<p><img alt="LaunchPgAdmin" src="../images/PgSql_01.png" /></p>
-<ol>
-<li>Add the server you need to connect to by right clicking on Servers in the top left corner</li>
-</ol>
-<p><img alt="CreateServer" src="../images/PgSql_02.png" /></p>
-<ol>
-<li>In the General tab, enter a name for your server. You can write the real name of the server
+<li>
+<p>Connect to your cloud VM and launch <strong>pgAdmin</strong>.
+    <img alt="LaunchPgAdmin" src="../images/PgSql_01.png" /></p>
+</li>
+<li>
+<p>Add the server you need to connect to by right clicking on Servers in the top left corner
+    <img alt="CreateServer" src="../images/PgSql_02.png" /></p>
+</li>
+<li>
+<p>In the General tab, enter a name for your server. You can write the real name of the server
    In the Connection tab, enter the full Server name and add your Cloud Account  as Username followed by the server name
-   or the active directory group you belong to followed by the server name if access to the server was granted to that active directory group.</li>
-</ol>
-<p><img alt="pgAdminParameters" src="../images/PgSql_03.png" /></p>
-<ol>
-<li>You can now see in the list of server the newly added server. 
-   Click on it to connect and you will be asked to enter a password</li>
-</ol>
-<p><img alt="EnterPassword" src="../images/PgSql_04.png" /></p>
-<ol>
-<li>The password you need to enter is a Azure AD access Token that will be generated for an authenticated Azure AD user. 
-   From PowerShell, you can generate this access token by entering the following command</li>
+   or the active directory group you belong to followed by the server name if access to the server was granted to that active directory group.
+    <img alt="pgAdminParameters" src="../images/PgSql_03.png" /></p>
+</li>
+<li>
+<p>You can now see in the list of server the newly added server. 
+   Click on it to connect and you will be asked to enter a password
+    <img alt="EnterPassword" src="../images/PgSql_04.png" /></p>
+</li>
+<li>
+<p>The password you need to enter is a Azure AD access Token that will be generated for an authenticated Azure AD user. 
+   From PowerShell, you can generate this access token by entering the following command</p>
+</li>
 </ol>
 <p><em>az account get-access-token --resource https://ossrdbms-aad.database.windows.net</em></p>
-<p>The output is as follow, where you will need to copy the value for accessToken and use it as Password in  pgAdmin</p>
-<p><img alt="AccessToken" src="../images/PgSql_05.png" /></p>
+<p>The output is as follow, where you will need to copy the value for accessToken and use it as Password in  pgAdmin
+    <img alt="AccessToken" src="../images/PgSql_05.png" /></p>
+<p>Learn More: <a href="https://www.pgadmin.org/docs/pgadmin4/latest/getting_started.html">pgAdmin docs</a></p>
 <h3 id="arcpro">ArcPro</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This section is incomplete </p>
+</div>
 <ol>
 <li>
 <p>Right-click Databases in the Catalog pane and click New Database Connection.</p>
@@ -859,21 +851,81 @@
 <hr />
 <h3 id="qgis">QGIS</h3>
 <ol>
-<li></li>
-<li></li>
-<li></li>
+<li>
+<p>Under the browser tab, Right-click PostgreSQL, and select <em>New Connection</em></p>
+<p><img alt="post_gis1" src="../images/post_qgis1.PNG" /></p>
+</li>
+<li>
+<p>A new window will open:</p>
+<p><img alt="post_gis2" src="../images/post_gis2.PNG" /></p>
+</li>
+<li>
+<p>Enter the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th></th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td></td>
+<td>Your chosen name(alias) for the database</td>
+</tr>
+<tr>
+<td>Host</td>
+<td></td>
+<td>Database Instance <em>see onboarding info</em></td>
+</tr>
+<tr>
+<td>Port</td>
+<td></td>
+<td>5432</td>
+</tr>
+<tr>
+<td>Database</td>
+<td></td>
+<td>The true name of the database <em>see onboarding info</em></td>
+</tr>
+<tr>
+<td>SSL mode</td>
+<td></td>
+<td>allow</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td></td>
+<td>*Press the green + button, then enter your cloud info</td>
+</tr>
+<tr>
+<td>Also list tables with no geometry</td>
+<td></td>
+<td>YES</td>
+</tr>
+<tr>
+<td>All other fields can be left blank</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Select <em>Test Connection</em></p>
+</li>
+<li>
+<p>The database will now appear under the <em>PostgreSQL</em> heaiding in the QGIS Browser</p>
+</li>
 </ol>
-<p>Learn More: <a href="https://docs.qgis.org/3.22/en/docs/user_manual/managing_data_source/opening_data.html#the-db-manager">QGIS Documentation</a></p>
+<p>Learn More: <a href="https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/opening_data.html#creating-a-stored-connection">QGIS Documentation</a></p>
 <p>Learn More: <a href="https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/qgis-azure-database-for-postgresql-postgis/ba-p/1152249">QGIS + Azure Documentation</a></p>
 <hr />
-<h3 id="azure-data-studio">Azure Data Studio</h3>
-<h3 id="azure-data-factory">Azure Data Factory</h3>
-<p>A linked service can be setup inside Azure Data Factory.
-Username is <strong>Cloud account username</strong> or AD group name if access was granted to a AD group, followed by the server name.
-Password is an Azure AD access Token as described below in step 6 of pgAdmin section</p>
-<p><img alt="ConnectDataFactorySynapse1" src="../images/PgSql_08.png" />
-or
-<img alt="ConnectDataFactorySynapse2" src="../images/PgSql_09.png" /></p>
+<h3 id="cae-azure-cloud-services">CAE- Azure Cloud Services</h3>
+<p><strong>Azure Data Factory, Azure Data Bricks, Azure Synapse</strong></p>
+<p><a href="https://statcan.github.io/cae-eac/en/PostgreSQL/">Learn how to use CAE services</a></p>
 <p>Please contact the support team through the https://cae-eac.slack.com channel if you need assistance.</p>
 <hr />
 
