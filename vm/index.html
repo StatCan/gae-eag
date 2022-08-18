@@ -197,7 +197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick.md" class="md-nav__link">
+      <a href="../quick/" class="md-nav__link">
         Quick Start
       </a>
     </li>
@@ -449,20 +449,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../insights/" class="md-nav__link">
-        ArcGIS Insights
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -501,74 +487,12 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Metadata
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Metadata" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Metadata
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hnap/" class="md-nav__link">
-        Standards
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../geonetwork/" class="md-nav__link">
-        GeoNetwork
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9">
           Cross-Platform (AAW/CAE)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cross-Platform (AAW/CAE)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Cross-Platform (AAW/CAE)
         </label>
@@ -601,55 +525,6 @@
   
 
             
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bp/" class="md-nav__link">
-        Best Practices
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_11">
-          Knowledge Centre
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Knowledge Centre" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
-          <span class="md-nav__icon md-icon"></span>
-          Knowledge Centre
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -822,9 +697,9 @@
 </tbody>
 </table>
 <p><strong>How do I request changes to my virtual machine?</strong></p>
-<p>If your VM does not meet your requirements, please contact the support team through the <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">Jira GEO Support Board</a>(NET B).</p>
+<p>If your VM does not meet your requirements, please contact the support team through the <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">Jira GEO Support Board</a> (NET B).</p>
 <details>
-<summary>Common Requests:</summary>
+<summary>Common Change Requests:</summary>
 
 - I need more capacity <br>
 - I need additional software/packages <br>
@@ -836,11 +711,14 @@
 <hr />
 <h2 id="finding-a-vm">Finding a VM</h2>
 <ol>
-<li>From the <strong><a href="https://portal.azure.com/">Geospatial Platform Azure Dashboard</a></strong>  locate the VM panel</li>
+<li>From the <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">Geospatial Platform Azure Dashboard</a></strong>  locate the Virtual Machine Tile</li>
 <li>Scroll down until you see your VM. </li>
-<li>Click on your VM Name to access its <strong>Overview</strong> page.
-<img alt="image" src="../images/img.png" />  </li>
+<li>Click on your VM Name to access its <strong>Overview</strong> page.</li>
 </ol>
+<div class="admonition temporary_image--your__view_may_look_different">
+<p class="admonition-title">Temporary_image--your__view_may_look_different</p>
+<p><img alt="dashboard_vm" src="../images/dashboard_vm.png" />  </p>
+</div>
 <hr />
 <h2 id="start-your-virtual-machine">Start Your Virtual Machine</h2>
 <ol>
@@ -857,21 +735,32 @@
 <h2 id="connect-to-your-virtual-machine">Connect To Your Virtual Machine</h2>
 <ol>
 <li>
-<p>From the <strong>Overview</strong> page for your VM, click on the <strong>Browser connect</strong> button (if you do not see a <strong>Browser connect</strong> button you might have to click on the <strong>Connect</strong> button and then choose <strong>Bastion</strong> from the dropdown menu).</p>
-<p><img alt="Browser Connect Button" src="../images/VMBrowserConnect.png" />    </p>
+<p>Start your VM, and wait for the notification (this can take a few minutes)</p>
 </li>
 <li>
-<p>Ensure the <em>Open in new window</em> checkbox is selected, enter the Username and Password that you used when you created your VM, and click on the <strong>Connect</strong> button. Your VM should open in a new browser tab.</p>
+<ul>
+<li>
+<p>From the <strong>Overview</strong> page for your VM, click on the <strong>Browser connect</strong> button 
+       <img alt="Browser Connect Button" src="../images/VMBrowserConnect.png" /></p>
+</li>
+<li>
+<p>If you do not see a <strong>Browser connect</strong> button, click on the <strong>Connect</strong> button and then choose <strong>Bastion</strong> from the dropdown menu.</p>
+<p><img alt="Bastion Connect" src="../images/bastion.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ensure the <em>Open in new window</em> checkbox is selected, enter the Username and Password that were provided to you, and click on the <strong>Connect</strong> button. Your VM should open in a new browser tab.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>After attempting to login for the first time, an error may appear that a popup blocker is preventing a new window to open. To disable it, an icon will pop up on the browser's search bar, select the button and click <strong>always allow</strong>. </p>
 <p><img alt="Allow PopUps" src="../images/VMPopUp.png" /></p>
 </div>
 <hr />
 <h2 id="stop-your-virtual-machine">Stop Your Virtual Machine</h2>
-<p>Virtual machines only incur costs while they are running. <strong>You should shut down your virtual machine when not in use to prevent unneccessary charges.</strong> Your VM has an automatic shut-down time of 7pm PST.</p>
+<p>Virtual machines only incur costs while they are running. <strong>You should shut down your virtual machine when not in use to prevent unnecessary charges.</strong> Your VM has an automatic shut-down time of 7pm PST.</p>
 <ol>
 <li>
 <p>From the <strong>Overview</strong> page for your VM, click on the <strong>Stop</strong> button.  </p>
@@ -909,8 +798,8 @@
 <hr />
 <h2 id="tips">Tips</h2>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. <em>ctrl + z</em> will close your main browser window, not the VM browser window)</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm est. (this can be adjusted upon request: <a href="../faq/">FAQ</a>)</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Moving the taskbar</a> to the top or side of the VM will help differentiate between your OZ-PC and VM workspace.</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm cst. (this can be adjusted upon request: <a href="../faq/">FAQ</a>)</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Moving the taskbar</a> to the top or side of the VM might help differentiate between your OZ-PC and VM workspace.</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> You can not alter the VMs display settings, however there is a way to <em>almost</em> use multiple monitors. Use the <em>Restore Down</em> button in your browser window and then drag to resize the window across multiple displays to get a multi-screen effect.  You may need to adjust some configurations in your OZ-Laptop display settings.</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> By default, the <strong>Ubuntu</strong> virtual machine opens in Terminal mode. You can access the GUI of your Ubuntu machine from a Windows machine using <a href="https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#x2go">X2Go</a>.</p>
 <hr />
