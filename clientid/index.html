@@ -13,7 +13,7 @@
     
     
       
-        <title>GeoServer - GeoSpatial Platform - Development Draft</title>
+        <title>Clientid - GeoSpatial Platform - Development Draft</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#geoserver" class="md-skip">
+        <a href="#obtaining-a-client-id" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GeoServer
+              Clientid
             
           </span>
         </div>
@@ -497,8 +497,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -507,83 +505,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
+  <a href="#obtaining-a-client-id" class="md-nav__link">
+    Obtaining a client id
   </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#log-insign-on" class="md-nav__link">
-    Log in/Sign on
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orginization-of-data" class="md-nav__link">
-    Orginization of Data
-  </a>
-  
-    <nav class="md-nav" aria-label="Orginization of Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#workspaces" class="md-nav__link">
-    Workspaces
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stores" class="md-nav__link">
-    Stores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layers" class="md-nav__link">
-    Layers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-group" class="md-nav__link">
-    Layer Group
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#symbolizing-your-data" class="md-nav__link">
-    Symbolizing your Data
-  </a>
-  
-    <nav class="md-nav" aria-label="Symbolizing your Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-style-sld-in-qgis" class="md-nav__link">
-    Creating a Style SLD in QGIS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -601,92 +525,31 @@
                 
 
 
-<h1 id="geoserver">GeoServer</h1>
-<p>GeoServer takes GIS inputs (geoTiff, Shapefiles, Geopackages, Rasters, Mosaics, PostGIS) and processes them into outputs, or services, that are more easily consumed over the web. </p>
-<p>There are three <em>four</em> types of services (outputs) in GeoServer.</p>
+  <h1>Clientid</h1>
+
+<h3 id="obtaining-a-client-id">Obtaining a client id</h3>
+<p>The steps below show how a client id can be obtained by registering a new application with your GIS. Only one client id is required, so if your GIS has one already, you may use it instead of creating a new application.</p>
+<ol>
+<li>
+<p>Log into your web GIS (ArcGIS Online organization or ArcGIS Enterprise)</p>
+</li>
+<li>
+<p>Go to Content tab</p>
+</li>
+<li>
+<p>Click '+ Add Item &gt; An Application' menu</p>
+</li>
+<li>
+<p>Add an application:</p>
 <ul>
-<li>
-<p><strong>Web Mapping Services (WMS)</strong> provide the map as an image; WMS can be used for both vector and raster data</p>
-</li>
-<li>
-<p><strong>Web Feature Services (WFS)</strong> provide features with their geometry and attributes. GeoJSON is the most common format of a WFS. However, it can support formats such as shapefiles and CSVs. WFS only support vector data</p>
-</li>
-<li>
-<p><strong>Web Coverage Services (WCS)</strong> are similar to WFS but serve raster data. WCS provide tile services that take large raster data and divide them into tiles that only load in the geographic area in view. Tile services allow the data to be consumed more efficiently online.</p>
-</li>
-<li>
-<p><em>Web Processing Services (WPS)</em><em> provide geoprocessing such as calculations and algorithms. They are essentially geoprocessing tools available online that can write to data locally or on a database. Unfortunately, WPS are not supported out-of-the-box in GeoServer and must be added with an extension.</em></p>
-</li>
+<li>Type: Application </li>
+<li>Title: Python</li>
+<li>Tags: python</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only designated people have access to the internal workings of GeoServer.  If you think you require access, please contact your DAaaS <em>point person</em>.</p>
-</div>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="log-insign-on">Log in/Sign on</h3>
-<p><img alt="geoserver_login" src="/images/geoserver_login.png" width="50%" /></p>
-<p>Once you are logged in, you will see the GeoServer homepage. The left-hand column contains a list of tools you will use to manage the server. The tools are grouped into related categories, such as the About &amp; Status tool group that will give you information about the server. </p>
-<p><img alt="geoserver_tools" src="/images/geoserver_tools.PNG" width="50%" /></p>
-<h3 id="orginization-of-data">Orginization of Data</h3>
-<p>The first tool in the Data group is the Layer Preview. The tool is not part of the hierarchy, but it will give you a list of all the layers available on your GeoServer.</p>
-<h4 id="workspaces">Workspaces</h4>
-<p>Click the Workspaces tool from the Data group on the homepage. You will see the Workspaces dialogue. Click the green plus button at the top of the page to add a new Workspace. Give the Workspace a name. </p>
-<p><img alt="geoserver_workspace" src="/images/geoserver_workspace.PNG" width="50%" /></p>
-<div class="highlight"><pre><span></span><code>- The name should not contain blank spaces
-
-- The name can be anything unique
-
-- The name should clearly identify your Project
-
-- The Workspace will also require Namespace URI
-</code></pre></div>
-<h4 id="stores">Stores</h4>
-<p>Click Stores or you can first navigate back to the homepage by clicking the GeoServer icon in the top lefthand corner. Once you have navigated to the list of Stores, click the green plus button to add a new Store. Here you will see a list of all the different inputs that can be loaded on the server.</p>
-<p><img alt="geoserver_source" src="/images/geoserver_source.png" width="50%" /></p>
-<h4 id="layers">Layers</h4>
-<p>Next, you will add a Layer. Click Layers from the list of tools on the homepage. Click the green plus to add a new Layer. You will choose from which Store you want to add a Layer. Choose the PostGIS Store you just created. A list of Layers that are available in the Store will appear. Select publish next to the Layer. The Edit Layer dialog will appear. You can change the name if you want. You will need to ensure the Coordinate Reference System is correct. GeoServer will try and determine this automatically. You can double-check the coordinate system by loading the data into QGIS. Right-click the feature on the layers pane and navigate to Source. You will next compute the bounding boxes by clicking Compute from data and Compute from native bounds. Click Save. You will see your new feature in the Layers list.</p>
-<p>Back on the list of tools, choose the Layer Preview option. You should see the Layer you just created. Click the OpenLayers link in the Common Formats column. A new tab will appear with an OpenLayers map of your data. The data will be symbolized in the default symbology.</p>
-<h4 id="layer-group">Layer Group</h4>
-<p>Text</p>
-<h2 id="symbolizing-your-data">Symbolizing your Data</h2>
-<p>GeoServer stores symbology and labels in XML documents called <em>Styles</em>. </p>
-<p><strong>You can create your customized Style in QGIS</strong> by symbolizing and labeling your data and storing the symbology as a <strong>Style Layer Definition file (SDL)</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can apply the same Styles file to multiple Layers on the server.</p>
-</div>
-<h3 id="creating-a-style-sld-in-qgis">Creating a Style SLD in QGIS</h3>
-<p>To do this, load your data into QGIS:</p>
-<ol>
-<li>
-<p>Right-click the feature in the Layers pane and select Layer Properties. </p>
-<ol>
-<li>From the Symbology and Labels tabs, you can configure your symbology and labeling to your liking. </li>
-</ol>
 </li>
 <li>
-<p>Click the Style button in the left-hand bottom of the options.</p>
-<ol>
-<li>Select Save Style, and you will see the Save Layer Style dialog. </li>
-<li>Use the first dropdown to save the Style as an SDL file somewhere on your local machine.</li>
-</ol>
-</li>
-<li>
-<p>Go back to GeoServer and select the Styles tool from the Data tool group. </p>
-<ol>
-<li>Select the green plus to add a new Style. The New style dialog will appear. </li>
-<li>Give your Style a name and choose the Workspace where you want it to be stored. </li>
-<li>Click the Browse button and navigate to where you stored your SDL file on your local machine. Select the file and click Upload. The XML for your Style will be loaded into the window. </li>
-<li>Click Validate to ensure that there are no validation errors. Click Save.</li>
-</ol>
-</li>
-<li>
-<p>Go to your Layers tool. Select the Layer to which you want to apply the Style. </p>
-<ol>
-<li>Select the Publishing tab at the top of the page. </li>
-<li>Towards the bottom of the page, you will see the Layer Settings and Default Style. </li>
-<li>Select the Style you just created from the list and click Save.</li>
-</ol>
+<p>On the Item details page of this newly created application, navigate to Settings tab Click the Registered Info button. It's towards the bottom of the page.
+This will dispaly an App ID. This is your client id and needs to be passed in as the client_id parameter when construcing a GIS object. You need this in your Python code to log in. </p>
 </li>
 </ol>
 
