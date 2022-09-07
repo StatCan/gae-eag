@@ -13,7 +13,7 @@
     
     
       
-        <title>ArcGIS Portal - GeoSpatial Platform - Development Draft</title>
+        <title>ArcGIS Portal - Geospatial Environment - Development Draft</title>
       
     
     
@@ -77,7 +77,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="GeoSpatial Platform - Development Draft" class="md-header__button md-logo" aria-label="GeoSpatial Platform - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -90,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoSpatial Platform - Development Draft
+            Geospatial Environment - Development Draft
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -163,13 +163,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="GeoSpatial Platform - Development Draft" class="md-nav__button md-logo" aria-label="GeoSpatial Platform - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    GeoSpatial Platform - Development Draft
+    Geospatial Environment - Development Draft
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -183,7 +183,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        About DAaaS GEO
+        About DAaaS GAE
       </a>
     </li>
   
@@ -406,15 +406,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-maps" class="md-nav__link">
-    Creating Maps
+  <a href="#creating-web-maps" class="md-nav__link">
+    Creating Web Maps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-apps" class="md-nav__link">
-    Creating Apps
+  <a href="#creating-interactive-apps" class="md-nav__link">
+    Creating Interactive Apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-the-api" class="md-nav__link">
+    Leveraging the API
   </a>
   
 </li>
@@ -693,15 +700,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-maps" class="md-nav__link">
-    Creating Maps
+  <a href="#creating-web-maps" class="md-nav__link">
+    Creating Web Maps
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-apps" class="md-nav__link">
-    Creating Apps
+  <a href="#creating-interactive-apps" class="md-nav__link">
+    Creating Interactive Apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-the-api" class="md-nav__link">
+    Leveraging the API
   </a>
   
 </li>
@@ -746,7 +760,7 @@
 <h3 id="cloud-account">Cloud Account</h3>
 <ol>
 <li>
-<p>Visit <strong><a href="https:www.google.com">URL placeholder</a></strong> to sign on to the ArcGIS Enterprise Portal using your authorized StatCan Cloud account (first.lastname@cloud.statcan.ca). </p>
+<p>Visit <strong><a href="https://geoanalytics.statcan.cloud.ca/portal">DAaaS GAE Enterprise Portal</a></strong> to sign on to the ArcGIS Enterprise Portal</p>
 </li>
 <li>
 <p>Select the <em>StatCan Azure Login</em> button</p>
@@ -801,11 +815,26 @@ Click on the group name to see all the shared content. </p>
 <li>Items can also be directly imported into a Web Map (see Web Map section for more information) and published to the portal individually.<br />
 <img alt="publish content webmap" src="../images/add%20data%20webmap.png" /></li>
 </ol>
-<h2 id="creating-maps">Creating Maps</h2>
-<h2 id="creating-apps">Creating Apps</h2>
+<h2 id="creating-web-maps">Creating Web Maps</h2>
+<p>To create a Web Map, there are two options:</p>
+<ol>
+<li>Click the <em>Map</em> tab in the main ribbon, or</li>
+<li>Visit the Overview page on a specific Feature Layer and click <em>Open in Map Viewer</em></li>
+</ol>
+<p>Once the Web Map is open, you can being adding in layers to the Web Map by searching through <em>My Content</em>, <em>My Groups</em>, or <em>My Organization</em>. </p>
+<blockquote>
+<p><strong><em>Note:</em></strong> Performing analysis is only available in <em>Map Viewer Classic</em>. It is not available in <em>Map Viewer</em> but will be available in a future release. </p>
+</blockquote>
+<p><a href="https://enterprise.arcgis.com/en/portal/latest/use/get-started-with-mv.htm">Get started with Map Viewer—Portal for ArcGIS | Documentation for ArcGIS Enterprise</a></p>
+<h2 id="creating-interactive-apps">Creating Interactive Apps</h2>
+<p>To create an app, navigate to the <em>Content</em> tab in the main ribbon and click <em>My Content</em>. </br> There is a <em>Create app</em> button that will allow you to work with 7 different types of interactive apps. </p>
+<p><img alt="image" src="../images/img.png" /></p>
+<p><a href="https://enterprise.arcgis.com/en/portal/latest/use/get-started-with-apps.htm">Get started with apps—Portal for ArcGIS | Documentation for ArcGIS Enterprise</a></p>
+<h2 id="leveraging-the-api">Leveraging the API</h2>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="tags">Tags</h3>
 <ul>
+<li>Items should only be shared to your group. Do not share to the enterprise or public level.</li>
 <li>Use many appropriate tags - this is how most people will find your work. </li>
 <li>Use common tags for items that are related.</li>
 </ul>
@@ -859,7 +888,7 @@ Click on the group name to see all the shared content. </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      DAaaS GEO Early Adopter's Guide; Version 01-03
+      © 2022 Statistics Canada; DAaaS GEO Early Adopter's Guide; Version 01.04
     </div>
   
   
