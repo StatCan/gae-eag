@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#logging-into-the-daaas-geo-azure-portal" class="md-skip">
+        <a href="#logging-into-the-daaas-gea" class="md-skip">
           Skip to content
         </a>
       
@@ -261,15 +261,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-your-gae-resources" class="md-nav__link">
-    Accessing your GAE Resources
+  <a href="#accessing-your-gae-resources-in-the-cloud" class="md-nav__link">
+    Accessing your GAE Resources in the cloud
   </a>
   
 </li>
@@ -377,6 +370,20 @@
     <li class="md-nav__item">
       <a href="../pro/" class="md-nav__link">
         ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
       </a>
     </li>
   
@@ -515,7 +522,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Python Libraries; Anaconda
+        Anaconda & Python
       </a>
     </li>
   
@@ -583,15 +590,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-your-gae-resources" class="md-nav__link">
-    Accessing your GAE Resources
+  <a href="#accessing-your-gae-resources-in-the-cloud" class="md-nav__link">
+    Accessing your GAE Resources in the cloud
   </a>
   
 </li>
@@ -610,24 +610,18 @@
                 
 
 
-<h1 id="logging-into-the-daaas-geo-azure-portal">Logging into the DAaaS Geo Azure Portal</h1>
-<h2 id="prerequisites">Prerequisites</h2>
+<h1 id="logging-into-the-daaas-gea">Logging into the DAaaS GEA</h1>
+<details class="success">
+<summary>Prerequisites</summary>
 <ol>
 <li>An authorized StatCan Cloud account <em>(first.lastname@cloud.statcan.ca)</em></li>
 <li>A registered &amp; onboarded DAaaS project</li>
 </ol>
-<hr style="height:2px; background-color:black">
-
-<h2 id="accessing-your-gae-resources">Accessing your GAE Resources</h2>
+</details>
+<h2 id="accessing-your-gae-resources-in-the-cloud">Accessing your GAE Resources in the cloud</h2>
 <ol>
 <li>
-<p>Using Chromium or Edge, open:   </p>
-<ul>
-<li>The <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">Geospatial Analysis Environment Launch Dashboard</a></strong> <ul>
-<li>This is your landing page for DAaaS GAE, your resources will be listed there</li>
-</ul>
-</li>
-</ul>
+<p>Using Chromium or Edge, open the <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">Geospatial Analysis Environment Launch Dashboard</a></strong> </p>
 </li>
 <li>
 <p>You may then be prompted to either enter or pick an account:  </p>
@@ -646,21 +640,20 @@
 <li>
 <p>You will then be prompted to enter your cloud account password, as shown below. Once entered, click on <strong>Sign in</strong>.<br />
 <img alt="Enter password" src="../images/PowerBI/image009.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If this is your first time accessing the STC Cloud:</p>
+<details class="info">
+<summary>Is your first time accessing the STC Cloud?</summary>
 <ul>
 <li>
 <p>use the temporary password that was emailed to you by the cloud team</p>
 </li>
 <li>
-<p>you will then be asked to set-up <em>2MFA</em> and <em>Password Recovery</em> questions</p>
+<p>you will then be asked to set-up <em>2MFA</em> on your phone and 5 <em>Password Recovery</em> questions</p>
 </li>
 <li>
-<p>follow the prompts as directed</p>
+<p>follow the prompts as directed, it should take about 2-5 minutes</p>
 </li>
 </ul>
-</div>
+</details>
 </li>
 <li>
 <p>Lastly, you may be asked to confirm your account via your cellular device.<br />
@@ -670,11 +663,11 @@
 <p>You should now be presented with your Projects Launch Dashboard</p>
 </li>
 </ol>
-<div class="admonition temporary_image--your__view_may_look_different">
-<p class="admonition-title">Temporary_image--your__view_may_look_different</p>
+<div class="admonition note">
+<p class="admonition-title">Your project dashboard may look different</p>
 <p><img alt="dashboard_vm" src="../images/dashboard_vm.png" />  </p>
 </div>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <p>How to access to the CAE: <a href="https://statcan.github.io/cae-eac/en/Login/">Collaborative Analytics Environment Guidebook</a></p>
 <p>How to access to the AAW:  <a href="https://statcan.github.io/daaas/en/">Advanced Analytics Workspace Guidebook</a></p>
@@ -728,7 +721,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 01.05
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.06
     </div>
   
   

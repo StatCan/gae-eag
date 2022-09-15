@@ -335,6 +335,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -442,13 +456,6 @@
         <li class="md-nav__item">
   <a href="#connecting-to-arcgis-enterprise-portal-using-arcgis-api" class="md-nav__link">
     Connecting to ArcGIS Enterprise Portal using ArcGIS API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    Prerequisite
   </a>
   
 </li>
@@ -622,7 +629,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Python Libraries; Anaconda
+        Anaconda & Python
       </a>
     </li>
   
@@ -692,13 +699,6 @@
         <li class="md-nav__item">
   <a href="#connecting-to-arcgis-enterprise-portal-using-arcgis-api" class="md-nav__link">
     Connecting to ArcGIS Enterprise Portal using ArcGIS API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    Prerequisite
   </a>
   
 </li>
@@ -825,10 +825,10 @@
 <h1 id="what-is-cae">What is CAE</h1>
 <p>The <a href="https://statcan.github.io/cae-eac/en/">Collaborative analytics Environment</a> (CAE) provides cloud services for data ingestion, transformation and preparation, as well as data exploration and computation. It includes tools for collaborative analytics, machine learning environments, and data visualization capabilities. </p>
 <h2 id="connecting-to-arcgis-enterprise-portal-using-arcgis-api">Connecting to ArcGIS Enterprise Portal using ArcGIS API</h2>
-<h2 id="prerequisite">Prerequisite</h2>
-<ul>
-<li>Client Id from the DAaaS ArcGIS Enterprise Portal for OAuth2.0 authentication (if accessing a Enterprise Feature Service)</li>
-</ul>
+<details class="success">
+<summary>Prerequisite</summary>
+<p>Client Id from the DAaaS ArcGIS Enterprise Portal for OAuth2.0 authentication (if accessing a Enterprise Feature Service)</p>
+</details>
 <p>Your project group will be provided with a Client ID upon onboarding which will be used to connect to the ArcGIS Enterprise Portal. Paste the Client ID inbetween the quoatations <br/><code>client_id=' '</code>. 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
@@ -987,7 +987,7 @@ R Code:
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 01.05
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.06
     </div>
   
   

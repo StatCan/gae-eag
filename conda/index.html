@@ -13,7 +13,7 @@
     
     
       
-        <title>Python Libraries; Anaconda - Geospatial Environment - Development Draft</title>
+        <title>Anaconda & Python - Geospatial Environment - Development Draft</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Libraries; Anaconda
+              Anaconda & Python
             
           </span>
         </div>
@@ -335,6 +335,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -476,12 +490,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Python Libraries; Anaconda
+          Anaconda & Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Python Libraries; Anaconda
+        Anaconda & Python
       </a>
       
         
@@ -500,6 +514,13 @@
         <li class="md-nav__item">
   <a href="#anacoda" class="md-nav__link">
     Anacoda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda-cheat-sheet" class="md-nav__link">
+    Conda Cheat Sheet
   </a>
   
 </li>
@@ -578,6 +599,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conda-cheat-sheet" class="md-nav__link">
+    Conda Cheat Sheet
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -592,7 +620,7 @@
                 
 
 
-  <h1>Python Libraries; Anaconda</h1>
+  <h1>Anaconda & Python</h1>
 
 <h2 id="anacoda">Anacoda</h2>
 <div class="admonition warning">
@@ -609,22 +637,34 @@
 <p><img alt="Anaconda Start" src="../images/anaconda_env.png" /></p>
 <p><strong>To create a new Environment using CMD window or python </strong></p>
 <p>Create new environment <em>(replace &lt;__&gt;)</em>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;&lt;</span><span class="n">package_spec</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
 </code></pre></div></p>
 <p>Activate your environment <em>(replace &lt;__&gt;)</em>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span>
 </code></pre></div></p>
 <p>Installing package(s):
-DAaaS utalizes <em>Artifactory</em> for package and library management.  This provides a secure and safe way (STC security approved) to install and update python packages.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section is incomplete, more information coming soon!</p>
-</div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="p">[</span><span class="n">package_spec</span><span class="p">]</span>
-</code></pre></div>
-<a href="https://github.com/StatCan/cae-eac/blob/Artifactory-draft/docs/en/Artifactory.md">Learn more about about Artifactory</a></p>
+DAaaS utilizes <em>Artifactory</em> for package and library management:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
+</code></pre></div></p>
+<p>To use:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span>
+</code></pre></div></p>
+<p>For specific package version:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda create --name geo
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>conda activate geo
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ geopandas
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ matplotlib=3.5.2
+</code></pre></div></p>
+<h2 id="conda-cheat-sheet">Conda Cheat Sheet</h2>
+<p><img alt="conda cheat" src="https://ugoproto.github.io/ugo_py_doc/img/scipy_cs/conda-cheatsheeta.png" /></p>
+<p><strong>Link to full <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">Conda cheat sheet</a></strong></p>
+<hr style="height:1px; background-color:green">
+
+<p><a href="https://github.com/StatCan/cae-eac/blob/Artifactory-draft/docs/en/Artifactory.md">Learn more about about Artifactory</a></p>
 <p><a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Learn more about Conda</a></p>
-<p><a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">Conda cheat sheet</a></p>
 
               
             </article>
@@ -675,7 +715,7 @@ DAaaS utalizes <em>Artifactory</em> for package and library management.  This pr
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 01.05
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.06
     </div>
   
   

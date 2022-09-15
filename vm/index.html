@@ -276,8 +276,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-your-geo-vm" class="md-nav__link">
-    About your GEO VM
+  <a href="#about-your-gea-vm" class="md-nav__link">
+    About your GEA VM
   </a>
   
 </li>
@@ -418,6 +418,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -550,7 +564,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Python Libraries; Anaconda
+        Anaconda & Python
       </a>
     </li>
   
@@ -618,8 +632,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-your-geo-vm" class="md-nav__link">
-    About your GEO VM
+  <a href="#about-your-gea-vm" class="md-nav__link">
+    About your GEA VM
   </a>
   
 </li>
@@ -681,16 +695,9 @@
 
 
 <h1 id="using-your-cloud-vm">Using your Cloud VM</h1>
-<hr />
-<h2 id="about-your-geo-vm">About your GEO VM</h2>
-<p><strong>A GEO Virtual Machine will be created for you.</strong> </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Depending on your project, you <em>may</em> have the ability to create a standard virtual machine via the CAE, or create a workspace in the AAW.  These self-serve VMs are <strong>NOT</strong> optimized for geospatial rendering.</p>
-<p><a href="https://statcan.github.io/cae-eac/en/VirtualMachines/">Learn more about CAE VMs</a></p>
-<p><a href="https://statcan.github.io/daaas/en/#experiments">Learn more about AAW Workspaces</a></p>
-</div>
-<p>The standard GEO VMs include the following:</p>
+<h2 id="about-your-gea-vm">About your GEA VM</h2>
+<p><strong>A GEA Virtual Machine will be created for you.</strong> </p>
+<p>The standard GEA VMs include the following:</p>
 <table>
 <thead>
 <tr>
@@ -703,7 +710,7 @@
 <tr>
 <td>- 4vcpus, 14GiB Memory <br> - AMD Radeon Instinct MI25 GPU <br> - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/nvv4-series">learn more- Microsoft</a></td>
 <td></td>
-<td>- ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup><br> - QGIS <br> - Conda <br> - LibreOffice <br></td>
+<td>- ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup><br> - QGIS <br> - Anaconda <br></td>
 </tr>
 <tr>
 <td>+Plus resources identified during the Project Onboarding.</td>
@@ -713,17 +720,14 @@
 </tbody>
 </table>
 <p><strong>How do I request changes to my virtual machine?</strong></p>
-<p>If your VM does not meet your requirements, please contact the support team through the <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">Jira GEO Support Board</a> (NET B).</p>
-<p>Common Change Requests:</p>
-<ul>
-<li>I need more capacity</li>
-<li>I need additional software/packages</li>
-<li>I need to update software</li>
-<li>I need the auto-shut down adjusted</li>
-<li>I need an auto-start enabled</li>
-</ul>
-<p>See the <strong><a href="../faq/">FAQ</a></strong> section for more information regarding <em>Project Amendments</em>.</p>
-<hr style="height:2px; background-color:black">
+<p>If your VM does not meet your requirements, please contact the support team through the <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">Jira GEA Support Board</a> (NET B).</p>
+<p>See the <strong><a href="/faq">Contact</a></strong> section for more information regarding <em>Project Amendments</em>.</p>
+<details class="info">
+<summary>Virtual Machines on AAW and CAE</summary>
+<p>Depending on your project, you <em>may</em> have the ability to create a standard virtual machine via the CAE, or create a workspace in the AAW.<br />
+These self-serve VMs are <strong>NOT</strong> optimized for geospatial rendering.</p>
+</details>
+<hr style="height:1px; background-color:green">
 
 <h2 id="finding-a-vm">Finding a VM</h2>
 <ol>
@@ -731,11 +735,11 @@
 <li>Scroll down until you see your VM. </li>
 <li>Click on your VM Name to access its <strong>Overview</strong> page.</li>
 </ol>
-<div class="admonition temporary_image--your__view_may_look_different">
-<p class="admonition-title">Temporary_image--your__view_may_look_different</p>
+<div class="admonition note">
+<p class="admonition-title">Your dashboard may look different</p>
 <p><img alt="dashboard_vm" src="../images/dashboard_vm.png" />  </p>
 </div>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <h2 id="start-your-virtual-machine">Start Your Virtual Machine</h2>
 <ol>
@@ -748,7 +752,7 @@
 <p><img alt="Start Notification" src="../images/VMRestartNotification.png" />  </p>
 </li>
 </ol>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <h2 id="connect-to-your-virtual-machine">Connect To Your Virtual Machine</h2>
 <ol>
@@ -771,12 +775,12 @@
 <p>Ensure the <em>Open in new window</em> checkbox is selected, enter the Username and Password that were provided to you, and click on the <strong>Connect</strong> button. Your VM should open in a new browser tab.</p>
 </li>
 </ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<details class="tip">
+<summary>Disable pop-up blockers</summary>
 <p>After attempting to login for the first time, an error may appear that a popup blocker is preventing a new window to open. To disable it, an icon will pop up on the browser's search bar, select the button and click <strong>always allow</strong>. </p>
 <p><img alt="Allow PopUps" src="../images/VMPopUp.png" /></p>
-</div>
-<hr style="height:2px; background-color:black">
+</details>
+<hr style="height:1px; background-color:green">
 
 <h2 id="stop-your-virtual-machine">Stop Your Virtual Machine</h2>
 <p>Virtual machines only incur costs while they are running. <strong>You should shut down your virtual machine when not in use to prevent unnecessary charges.</strong> Your VM has an automatic shut-down time of 7pm PST.</p>
@@ -786,7 +790,7 @@
 <p><img alt="VM Stop Button" src="../images/VMStopButton.png" />  </p>
 </li>
 </ol>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <h2 id="common-errors-fixes">Common Errors &amp; Fixes</h2>
 <table>
@@ -815,15 +819,16 @@
 </tr>
 </tbody>
 </table>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <h2 id="tips">Tips</h2>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Visit the <a href="/conda">Knoiwledge Centre</a> for help on configuring Python libraries and packages</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. <em>ctrl + z</em> will close your main browser window, not the VM browser window)</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm cst. (this can be adjusted upon request: <a href="../faq/">FAQ</a>)</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Moving the taskbar</a> to the top or side of the VM might help differentiate between your OZ-PC and VM workspace.</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> You can not alter the VMs display settings, however there is a way to <em>almost</em> use multiple monitors. Use the <em>Restore Down</em> button in your browser window and then drag to resize the window across multiple displays to get a multi-screen effect.  You may need to adjust some configurations in your OZ-Laptop display settings.</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Multi-screens? You can not alter the VMs display settings, however there is a way to <em>almost</em> use multiple monitors. Use the <em>Restore Down</em> <img width=15px src="https://img.icons8.com/small/512/restore-down.png">  button in your browser window and then drag to resize the window across multiple displays to get a multi-screen effect.  You may need to adjust some configurations in your OZ-Laptop display settings.</p>
 <p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> By default, the <strong>Ubuntu</strong> virtual machine opens in Terminal mode. You can access the GUI of your Ubuntu machine from a Windows machine using <a href="https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#x2go">X2Go</a>.</p>
-<hr style="height:2px; background-color:black">
+<hr style="height:1px; background-color:green">
 
 <p><a href="https://statcan.github.io/cae-eac/en/VirtualMachines/">Learn more about CAE VMs</a> <br />
 <a href="https://statcan.github.io/daaas/en/#experiments">Learn more about AAW Workspaces</a></p>
@@ -877,7 +882,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 01.05
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.06
     </div>
   
   
