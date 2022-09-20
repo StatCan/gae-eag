@@ -1,0 +1,911 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+    
+    
+      
+        <title>Virtual Machine - Geospatial Environment - Development Draft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-your-cloud-vm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geospatial Environment - Development Draft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Virtual Machine
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Geospatial Environment - Development Draft
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About DAaaS GAE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Logging In
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Virtual Machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Virtual Machine
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-your-gea-vm" class="md-nav__link">
+    About your GEA VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-a-vm" class="md-nav__link">
+    Finding a VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-your-virtual-machine" class="md-nav__link">
+    Start Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-virtual-machine" class="md-nav__link">
+    Connect To Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-your-virtual-machine" class="md-nav__link">
+    Stop Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors-fixes" class="md-nav__link">
+    Common Errors &amp; Fixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Data Ingestion & Storage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          ArcGIS ecosystem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ArcGIS ecosystem" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS ecosystem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Cross-Platform (AAW/CAE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cross-Platform (AAW/CAE)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Cross-Platform (AAW/CAE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aaw/" class="md-nav__link">
+        AAW
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cae/" class="md-nav__link">
+        CAE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Knowledge Centre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge Centre" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge Centre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Simple GIS Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/" class="md-nav__link">
+        Anaconda & Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Training and Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-your-gea-vm" class="md-nav__link">
+    About your GEA VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-a-vm" class="md-nav__link">
+    Finding a VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-your-virtual-machine" class="md-nav__link">
+    Start Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-virtual-machine" class="md-nav__link">
+    Connect To Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-your-virtual-machine" class="md-nav__link">
+    Stop Your Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors-fixes" class="md-nav__link">
+    Common Errors &amp; Fixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="using-your-cloud-vm">Using your Cloud VM</h1>
+<h2 id="about-your-gea-vm">About your GEA VM</h2>
+<p><strong>A GEA Virtual Machine will be created for you.</strong> </p>
+<p>The standard GEA VMs include the following:</p>
+<table>
+<thead>
+<tr>
+<th>Hardware:</th>
+<th></th>
+<th>Software:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- 4vcpus, 14GiB Memory <br> - AMD Radeon Instinct MI25 GPU <br> - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/nvv4-series">learn more- Microsoft</a></td>
+<td></td>
+<td>- ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup><br> - QGIS <br> - Anaconda <br></td>
+</tr>
+<tr>
+<td>+Plus resources identified during the Project Onboarding.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>How do I request changes to my virtual machine?</strong></p>
+<p>If your VM does not meet your requirements, please contact the support team through the <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">Jira GEA Support Board</a> (NET B).</p>
+<p>See the <strong><a href="/faq">Contact</a></strong> section for more information regarding <em>Project Amendments</em>.</p>
+<details class="info">
+<summary>Virtual Machines on AAW and CAE</summary>
+<p>Depending on your project, you <em>may</em> have the ability to create a standard virtual machine via the CAE, or create a workspace in the AAW.<br />
+These self-serve VMs are <strong>NOT</strong> optimized for geospatial rendering.</p>
+</details>
+<hr style="height:1px; background-color:green">
+
+<h2 id="finding-a-vm">Finding a VM</h2>
+<ol>
+<li>From the <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">Geospatial Environment Central Dashboard</a></strong>  locate the Virtual Machine Tile</li>
+<li>Scroll down until you see your VM. </li>
+<li>Click on your VM Name to access its <strong>Overview</strong> page.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Your dashboard may look different</p>
+<p><img alt="dashboard_vm" src="../images/dashboard_vm.png" />  </p>
+</div>
+<hr style="height:1px; background-color:green">
+
+<h2 id="start-your-virtual-machine">Start Your Virtual Machine</h2>
+<ol>
+<li>
+<p>From the <strong>Overview</strong> page for your VM, click on the <strong>Start</strong> button.  </p>
+<p><img alt="VM Start Button" src="../images/VMStartButton.png" />  </p>
+</li>
+<li>
+<p>It takes a few minutes for your VM to start up. Monitor its start-up progress by selecting the Notifications icon at the top right of the window.   </p>
+<p><img alt="Start Notification" src="../images/VMRestartNotification.png" />  </p>
+</li>
+</ol>
+<hr style="height:1px; background-color:green">
+
+<h2 id="connect-to-your-virtual-machine">Connect To Your Virtual Machine</h2>
+<ol>
+<li>
+<p>Start your VM, and wait for the notification (this can take a few minutes)</p>
+</li>
+<li>
+<ul>
+<li>
+<p>From the <strong>Overview</strong> page for your VM, click on the <strong>Browser connect</strong> button 
+       <img alt="Browser Connect Button" src="../images/VMBrowserConnect.png" /></p>
+</li>
+<li>
+<p>If you do not see a <strong>Browser connect</strong> button, click on the <strong>Connect</strong> button and then choose <strong>Bastion</strong> from the dropdown menu.</p>
+<p><img alt="Bastion Connect" src="../images/bastion.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ensure the <em>Open in new window</em> checkbox is selected, enter the Username and Password that were provided to you, and click on the <strong>Connect</strong> button. Your VM should open in a new browser tab.</p>
+</li>
+</ol>
+<details class="tip">
+<summary>Disable pop-up blockers</summary>
+<p>After attempting to login for the first time, an error may appear that a popup blocker is preventing a new window to open. To disable it, an icon will pop up on the browser's search bar, select the button and click <strong>always allow</strong>. </p>
+<p><img alt="Allow PopUps" src="../images/VMPopUp.png" /></p>
+</details>
+<hr style="height:1px; background-color:green">
+
+<h2 id="stop-your-virtual-machine">Stop Your Virtual Machine</h2>
+<p>Virtual machines only incur costs while they are running. <strong>You should shut down your virtual machine when not in use to prevent unnecessary charges.</strong> Your VM has an automatic shut-down time of 7pm PST.</p>
+<ol>
+<li>
+<p>From the <strong>Overview</strong> page for your VM, click on the <strong>Stop</strong> button.  </p>
+<p><img alt="VM Stop Button" src="../images/VMStopButton.png" />  </p>
+</li>
+</ol>
+<hr style="height:1px; background-color:green">
+
+<h2 id="common-errors-fixes">Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th></th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="error1" src="../images/error_bastion_falseStart.png" /></td>
+<td></td>
+<td>Your VM is still starting; wait a minute and try again</td>
+</tr>
+<tr>
+<td><img alt="error2" src="../images/error_loginFailed.png" /></td>
+<td></td>
+<td>You likely entered the VM username or password incorrectly, try again.</td>
+</tr>
+<tr>
+<td><img alt="error3" src="../images/error_bastion.png" /></td>
+<td></td>
+<td>You are experiencing some network latency; this usually resolves itself. If not, try restarting your VM</td>
+</tr>
+</tbody>
+</table>
+<hr style="height:1px; background-color:green">
+
+<h2 id="tips">Tips</h2>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Visit the <a href="/conda">Knowledge Centre</a> for help on configuring Python libraries and packages</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. <em>ctrl + z</em> will close your main browser window, not the VM browser window)</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> VMs have an auto-shutdown time of 7pm cst. (this can be adjusted upon request: <a href="../faq/">FAQ</a>)</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Moving the taskbar</a> to the top or side of the VM might help differentiate between your OZ-PC and VM workspace.</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Multi-screens? You can not alter the VMs display settings, however there is a way to <em>almost</em> use multiple monitors. Use the <em>Restore Down</em> <img width=15px src="https://img.icons8.com/small/512/restore-down.png">  button in your browser window and then drag to resize the window across multiple displays to get a multi-screen effect.  You may need to adjust some configurations in your OZ-Laptop display settings.</p>
+<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> By default, the <strong>Ubuntu</strong> virtual machine opens in Terminal mode. You can access the GUI of your Ubuntu machine from a Windows machine using <a href="https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#x2go">X2Go</a>.</p>
+<hr style="height:1px; background-color:green">
+
+<p><a href="https://statcan.github.io/cae-eac/en/VirtualMachines/">Learn more about CAE VMs</a> <br />
+<a href="https://statcan.github.io/daaas/en/#experiments">Learn more about AAW Workspaces</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../login/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logging In" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Logging In
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../pipeline/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Ingestion &amp; Storage" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data Ingestion & Storage
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.08
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      
+    
+  </body>
+</html>
