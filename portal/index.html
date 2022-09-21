@@ -420,8 +420,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leveraging-the-api" class="md-nav__link">
-    Leveraging the API
+  <a href="#connecting-to-arcgis-enterprise-via-api" class="md-nav__link">
+    Connecting to ArcGIS Enterprise via API
   </a>
   
 </li>
@@ -756,8 +756,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leveraging-the-api" class="md-nav__link">
-    Leveraging the API
+  <a href="#connecting-to-arcgis-enterprise-via-api" class="md-nav__link">
+    Connecting to ArcGIS Enterprise via API
   </a>
   
 </li>
@@ -870,9 +870,15 @@ Click on the group name to see all the shared content. </p>
 <p><a href="https://enterprise.arcgis.com/en/portal/latest/use/get-started-with-mv.htm">Get started with Map Viewer—Portal for ArcGIS | Documentation for ArcGIS Enterprise</a></p>
 <h2 id="creating-interactive-apps">Creating Interactive Apps</h2>
 <p>To create an app, navigate to the <em>Content</em> tab in the main ribbon and click <em>My Content</em>. </br> There is a <em>Create app</em> button that will allow you to work with 7 different types of interactive apps. </p>
-<p><img alt="image" src="../images/img.png" /></p>
+<p><img alt="portal_apps" src="../images/portal_apps.PNG" /></p>
 <p><a href="https://enterprise.arcgis.com/en/portal/latest/use/get-started-with-apps.htm">Get started with apps—Portal for ArcGIS | Documentation for ArcGIS Enterprise</a></p>
-<h2 id="leveraging-the-api">Leveraging the API</h2>
+<h2 id="connecting-to-arcgis-enterprise-via-api">Connecting to ArcGIS Enterprise via API</h2>
+<p>Your project group will be provided with a Client ID upon onboarding which will be used to connect to the ArcGIS Enterprise Portal. Paste the Client ID in-between the quotations. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</code></pre></div>
+<p>The output will redirect you to a web page where you can login to the Portal using the StatCan Azure Login option. After successful login, you will recive a code to sign in using SAML. Paste this code into the output. </p>
+<p><img alt="OAuth2 Approval" src="../images/OAuth2Key.png" /></p>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="tags">Tags</h3>
 <ul>
@@ -930,7 +936,7 @@ Click on the group name to see all the shared content. </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 00.07
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.8
     </div>
   
   
