@@ -13,7 +13,7 @@
     
     
       
-        <title>Démarrage rapide - Geospatial Environment - Development Draft</title>
+        <title>Démarrage rapide - L’Environnement Géospatial - Development Draft</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#demarrage" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -72,7 +77,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -85,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Geospatial Environment - Development Draft
+            L’Environnement Géospatial - Development Draft
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -158,13 +163,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Geospatial Environment - Development Draft
+    L’Environnement Géospatial - Development Draft
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -212,6 +217,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -542,6 +549,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -555,17 +564,147 @@
                 
 
 
-  <h1>Démarrage rapide</h1>
-
-<div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
+<details class="warning">
+<summary>Cette section n’est pas encore complète.</summary>
+<p>De plus amples renseignements seront disponibles sous peu!</p>
+</details>
+<hr />
+<h1 id="demarrage">Démarrage</h1>
+<details class="abstract">
+<summary>Le tableau de bord de votre projet:</summary>
+<p>Le tableau de bord du projet contient tous les liens vers vos ressources de l’EAG-ADS. Nous vous recommandons d’ajouter l’URL à vos favoris.</p>
+<p><strong>Trouvez votre tableau de bord ici : <a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/8bae6a4f-25c1-4b68-b8ac-1bc3160e00ef">Tableau de bord central de l’EAG</a></strong></p>
+<p><a href="https://statcan.github.io/cae-eac/en/Dashboards/">En savoir davantage sur les tableaux de bord</a></p>
+</details>
+<details class="tip">
+<summary>Comment lancer votre machine virtuelle (MV):</summary>
+<p><strong>Aide complète:
+<a href="/vmFR/#start-your-virtual-machine">Lien vers la page d’aide relative aux MV</a></strong></p>
+<p><strong>Aide rapide:</strong></p>
+<ol>
+<li>Dans le tableau de bord de votre projet, cliquez sur le nom de vos MV pour ouvrir la page Vue d’ensemble.</li>
+<li>À partir de la page Vue d’ensemble de la MV, cliquez sur <strong>Démarrer</strong> et attendez que la MV soit en cours d’exécution.</li>
+<li>Sélectionnez <strong>Connexion par navigateur</strong> ou Connecter &gt; Bastion.</li>
+<li>Saisissez le nom d’utilisateur et le mot de passe de votre MV.</li>
+</ol>
+</details>
+<details class="info">
+<summary>Portail ArcGIS Enterprise – EAG-ADS:</summary>
+<p><strong>Aide complète:
+<a href="/portalFR/">Lien vers la page d’aide du portail ArcGIS Enterprise</a></strong></p>
+<p><strong>Aide rapide:</strong></p>
+<ol>
+<li>Accès avec cette URL: <a href="https://geoanalytics.cloud.statcan.ca/portal/">Portail d’entreprise EAG-ADS</a></li>
+<li>Cliquez sur <strong>StatCan Azure Cloud Login</strong> (connexion au nuage Azure de StatCan).</li>
+<li>Si c’est la première fois que vous y accédez, vous devrez effectuer quelques étapes d’enregistrement, pour ensuite communiquer avec l’équipe de l’EAG-ADS pour que votre compte soit configuré.</li>
+</ol>
+</details>
+<details class="example">
+<summary>Comment accéder à votre base de données:</summary>
+<p><strong>Aide complète :
+<a href="/postgresqlFR/">Lien vers la page d’aide de PostgreSQL+PostGIS</a></strong></p>
+<div class="admonition bug">
+<p class="admonition-title">Cette section n’est pas encore complète</p>
 <p>De plus amples renseignements seront disponibles sous peu!</p>
 </div>
+</details>
+<details class="question">
+<summary>Comment communiquer avec l’équipe de l’EAG-ADS:</summary>
+<p><strong>Aide complète :
+<a href="/faqFR/">Lien vers la page d’aide Contact</a></strong></p>
+<p><strong>Aide rapide:</strong></p>
+<p>Pour obtenir du soutien ou présenter des demandes, veuillez soumettre un billet JIRA :</p>
+<ol>
+<li>Ouvrez le logiciel JIRA de Statistique Canada : <a href="https://jirab.statcan.ca/projects/DASGEO/summary">Plateforme géospatiale ADS (DASGEO)</a></li>
+<li>Dans la barre de menu, cliquez sur le bouton <strong>Créer</strong> :</li>
+<li>Dans la fenêtre Créer un ticket JIRA, sélectionnez le type de demande <strong>Client Support</strong>:</li>
+<li>Dans la fenêtre Créer un ticket JIRA, saisissez les renseignements relatifs à votre demande</li>
+</ol>
+</details>
+<details class="success">
+<summary>Liens ADS utiles</summary>
+<p><a href="https://geoanalytics.cloud.statcan.ca">Portail ArcGIS de l’EAG-ADS</a></p>
+<p><a href="https://statcan.github.io/daaas-dads-geo/french/index.html">Guide d’auto-assistance de l’EAG-ADS</a></p>
+<hr style="height:0.5px">
+<p><a href="">Environnement d’analyse collaborative</a></p>
+<p><a href="https://statcan.github.io/cae-eac/fr/">Guide d’auto-assistance de l’EAC</a></p>
+<hr style="height:0.5px">
+<p><a href="https://analytics-platform.statcan.gc.ca/covid19">Espace de travail d’analyse avancée</a></p>
+<p><a href="https://statcan.github.io/daaas/fr/">Guide d’auto-assistance de l’ETAA</a></p>
+<hr style="height:0.5px">
+<p><a href="https://enterprise.arcgis.com/en/portal/latest/use/what-is-portal-for-arcgis-.htm">Aide sur le portail ESRI ArcGIS Enterprise</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/?product=popular">Documents d’aide Azure</a></p>
+<p><a href="https://docs.qgis.org/3.22/en/docs/user_manual/index.html">Documents d’aide de QGIS</a></p>
+<p><a href="https://gcgeo.gc.ca/">Plateforme géospatiale fédérale</a></p>
+<hr style="height:1px; background-color:green">
+<p><strong>Acronymes et termes de la plateforme d’ADS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Terme</th>
+<th></th>
+<th>Description/Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADS</td>
+<td></td>
+<td>Analyse des données en tant que service</td>
+</tr>
+<tr>
+<td>EAG</td>
+<td></td>
+<td>Environnement d’analyse géospatiale</td>
+</tr>
+<tr>
+<td>ETAA</td>
+<td></td>
+<td>Espace de travail d’analyse avancée</td>
+</tr>
+<tr>
+<td>EAC</td>
+<td></td>
+<td>Environnement d’analyse collaborative</td>
+</tr>
+<tr>
+<td>FAIR(IDF)</td>
+<td></td>
+<td>Facile à trouver, accessible, interopérable, réutilisable; infrastructure de données FAIR/pipelines</td>
+</tr>
+<tr>
+<td>JIRA</td>
+<td></td>
+<td>Logiciel de billets et de suivi de soutien de Statistique Canada</td>
+</tr>
+<tr>
+<td>MV</td>
+<td></td>
+<td>Machine(s) virtuelle(s)</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td></td>
+<td>Unité de traitement graphique; MV EAG</td>
+</tr>
+<tr>
+<td>AVD</td>
+<td></td>
+<td>Bureau virtuel Azure</td>
+</tr>
+<tr>
+<td>2(M)FA</td>
+<td></td>
+<td>Authentification à deux facteurs</td>
+</tr>
+<tr>
+<td>ID Azure</td>
+<td></td>
+<td>Connexion au nuage de StatCan; prénom.nom@cloud.statcan.ca</td>
+</tr>
+</tbody>
+</table>
+</details>
 
               
             </article>
@@ -616,7 +755,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.9
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
     </div>
   
   

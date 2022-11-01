@@ -13,7 +13,7 @@
     
     
       
-        <title>Connexion - Geospatial Environment - Development Draft</title>
+        <title>Connexion - L’Environnement Géospatial - Development Draft</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#se-connecter-a-leag-de-lads" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -72,7 +77,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -85,7 +90,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Geospatial Environment - Development Draft
+            L’Environnement Géospatial - Development Draft
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -158,13 +163,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Geospatial Environment - Development Draft
+    L’Environnement Géospatial - Development Draft
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -228,10 +233,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Connexion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Connexion
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-vos-ressources-de-leag-dans-le-nuage" class="md-nav__link">
+    Accès à vos ressources de l’EAG dans le nuage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -542,6 +580,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-vos-ressources-de-leag-dans-le-nuage" class="md-nav__link">
+    Accès à vos ressources de l’EAG dans le nuage
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,17 +610,69 @@
                 
 
 
-  <h1>Connexion</h1>
+<h1 id="se-connecter-a-leag-de-lads">Se connecter à l’EAG de l’ADS</h1>
+<details class="success">
+<summary>Exigences préalables</summary>
+<ol>
+<li>Un compte de nuage de StatCan autorisé (prénom.nom@cloud.statcan.ca)</li>
+<li>Un projet ADS enregistré et intégré</li>
+</ol>
+</details>
+<h2 id="acces-a-vos-ressources-de-leag-dans-le-nuage">Accès à vos ressources de l’EAG dans le nuage</h2>
+<ol>
+<li>
+<p>À l’aide de Chrome ou Edge, ouvrez le <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">tableau de bord de lancement de l’environnement d’analyse géospatiale.</a></strong> </p>
+</li>
+<li>
+<p>Vous serez ensuite invité à ouvrir une session ou à choisir un compte:  </p>
+<ul>
+<li>Lors de votre première connexion, l’invite de connexion Microsoft s’ouvrira, comme il est indiqué ci-dessous.<br />
+<img alt="Microsoft Sign In Prompt" src="images/PowerBI/image007.png" />  </li>
+<li>
+<p>Entrez les identifiants de votre compte en <strong>nuage</strong> (prénom.nom@<strong>cloud.statcan.ca</strong>), puis cliquez sur <strong>Next(suivant)</strong>.</p>
+</li>
+<li>
+<p>Lors des connexions suivantes, vous recevrez l’invite Microsoft de choix de compte, comme il est indiqué ci-dessous. Cliquez sur votre compte <strong>cloud.statcan.ca.</strong>
+<img alt="Microsoft pick an account prompt" src="images/PowerBI/image008.png" />  </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Vous serez ensuite invité à entrer le mot de passe de votre compte en nuage, comme il est indiqué ci-dessous. Une fois entré, cliquez sur <strong>Connexion</strong>.<br />
+<img alt="Enter password" src="images/PowerBI/image009.png" /></p>
+<details class="info">
+<summary>Est-ce la première fois que vous accédez au nuage de StatCan?</summary>
+<ul>
+<li>
+<p>Utilisez le mot de passe temporaire qui vous a été envoyé par courriel par l’équipe infonuagique.</p>
+</li>
+<li>
+<p>Vous serez ensuite invité à configurer 2MFA sur votre téléphone et à répondre à cinq questions de <em>récupération du mot de passe</em>.</p>
+</li>
+<li>
+<p>Suivez les directives; cela devrait vous prendre de deux à cinq minutes.</p>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>Enfin, on peut vous demander de confirmer votre compte au moyen de votre téléphone cellulaire.<br />
+<img alt="2mfa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB44_hNmija81XfZPn6VOScP4k-h90TmSLCg&amp;usqp=CAU" /></p>
+</li>
+<li>
+<ol>
+<li>Le tableau de bord de lancement de projets devrait maintenant s’afficher.</li>
+</ol>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Your project dashboard may look different</p>
+<p><img alt="dashboard_vm" src="images/dashboard_vm.png" />  </p>
+</div>
+<hr style="height:1px; background-color:green">
 
-<div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</div>
+<p>Comment accéder à l’EAC : <a href="https://statcan.github.io/cae-eac/en/Login/">Guide de l’environnement analytique collaboratif</a></p>
+<p>Comment accéder à l’ETAA :  <a href="https://statcan.github.io/daaas/en/">Guide de l’Espace de travail d’analyse avancée</a></p>
 
               
             </article>
@@ -616,7 +723,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.9
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
     </div>
   
   
