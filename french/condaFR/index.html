@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#anacoda" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -484,9 +489,45 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Anaconda & Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Anaconda & Python
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anacoda" class="md-nav__link">
+    Anacoda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda-ide-memoire" class="md-nav__link">
+    Conda ide-mémoire
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -545,6 +586,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anacoda" class="md-nav__link">
+    Anacoda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda-ide-memoire" class="md-nav__link">
+    Conda ide-mémoire
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -559,15 +622,49 @@
 
   <h1>Anaconda & Python</h1>
 
+<h2 id="anacoda">Anacoda</h2>
 <div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
+<p class="admonition-title">Warning</p>
+<p>Pour l’instant, Anaconda Navigator est uniquement disponible en anglais.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</div>
+<p>Anaconda est une distribution de source ouverte des langages Python et R qui simplifie la gestion et le déploiement de paquets.</p>
+<p>Anaconda exploite le système de gestion de paquets, conda, qui analyse l’environnement actuel avant l’exécution et l’installation pour éviter de perturber d’autres cadres et paquets.
+Anaconda Navigator permet aux utilisateurs de lancer des applications et de gérer les paquets, les environnements et les canaux Conda sans utiliser la ligne de commande.</p>
+<p><img alt="Anaconda Navigator" src="images/anacondaNavigator.png" /></p>
+<p><strong>Pour lancer Anaconda Navigator :</strong> </p>
+<p><img alt="Anaconda Start" src="images/anaconda_start.png" /></p>
+<p><strong>Pour créer un nouvel environnement à l’aide de l’interface utilisateur graphique: </strong></p>
+<p><img alt="Anaconda Start" src="images/anaconda_env.png" /></p>
+<p><strong>Pour créer un nouvel environnement en utilisant une fenêtre CMD ou Python :</strong></p>
+<p>Créer un nouvel environnement <em>(remplacer &lt;__&gt;)</em> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
+</code></pre></div></p>
+<p>Activer votre environnement <em>(remplacer &lt;__&gt;)</em>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span>
+</code></pre></div></p>
+<p>Installation des paquets:
+La plateforme d’ADS utilise <em>Artifactory</em> pour la gestion des paquets et des bibliothèques :```
+https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>À utiliser:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>```python
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ [package]
+</code></pre></div></p>
+<p>Pour une version de paquet particulière :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Exemple :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda create --name geo
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>conda activate geo
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ geopandas
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ matplotlib=3.5.2
+</code></pre></div></p>
+<h2 id="conda-ide-memoire">Conda ide-mémoire</h2>
+<p><img alt="conda cheat" src="images/conda-cheatsheeta.png" /></p>
+<p><strong><a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">Lien vers la version intégrale de l’aide-mémoire Conda</a></strong></p>
+<hr style="height:1px; background-color:green">
+
+<p><a href="https://github.com/StatCan/cae-eac/blob/Artifactory-draft/docs/en/Artifactory.md">En savoir davantage sur Artifactory</a></p>
+<p><a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">En savoir davantage sur Conda</a></p>
 
               
             </article>
@@ -618,7 +715,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03
     </div>
   
   

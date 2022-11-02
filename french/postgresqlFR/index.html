@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#postgresqlpostgis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -273,10 +278,50 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PostgreSQL + PostGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         PostgreSQL + PostGIS
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-votre-base-de-donnees" class="md-nav__link">
+    Accès à votre base de données:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-charger-des-donnees-dans-votre-base-de-donnees" class="md-nav__link">
+    Comment charger des données dans votre base de données
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -542,6 +587,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acces-a-votre-base-de-donnees" class="md-nav__link">
+    Accès à votre base de données:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-charger-des-donnees-dans-votre-base-de-donnees" class="md-nav__link">
+    Comment charger des données dans votre base de données
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,17 +624,266 @@
                 
 
 
-  <h1>PostgreSQL + PostGIS</h1>
-
-<div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Cette section n’est pas encore complète.</p>
 <p>De plus amples renseignements seront disponibles sous peu!</p>
 </div>
+<hr />
+<h1 id="postgresqlpostgis">PostgreSQL+PostGIS &nbsp;&nbsp;&nbsp;&nbsp; <img alt="postgis logo" src="images/post.png" /></h1>
+<details class="bug">
+<summary>Fonction en cours d’élaboration</summary>
+<p>Cette fonction et cette section sont en cours d’élaboration. De plus amples renseignements seront disponibles sous peu!</p>
+</details>
+<details class="success">
+<summary>Exigences préalables</summary>
+<ol>
+<li>Un projet intégré avec une base de données demandée  </li>
+<li>Une machine virtuelle dans l’environnement ADS avec pgAdmin, ArcGIS Pro, QGIS ou CAE Services Azure de l’EAC. See the <a href="../vmFR/">Voir la page MV pour en savoir davantage.</a></li>
+</ol>
+</details>
+<details class="tip">
+<summary>En savoir davantage PostgreSQL + PostGIS</summary>
+<p>En savoir davantage:  <a href="https://www.postgresql.org/">À propos de PostgreSQL (EN)</a></p>
+<p>En savoir davantage:  <a href="https://postgis.net/">À propos de PostGIS (EN)</a></p>
+</details>
+<h2 id="acces-a-votre-base-de-donnees">Accès à votre base de données:</h2>
+<details class="example">
+<summary>1. pgAdmin</summary>
+<p>This is one of the more common tool for PostgreSQL database administration. PG-Admin has been installed on your VM.</p>
+<ol>
+<li>
+<p>Connect to your cloud VM and launch <strong>pgAdmin</strong>.
+    <img alt="LaunchPgAdmin" src="images/PgSql_01.png" /></p>
+</li>
+<li>
+<p>Add the server you need to connect to by right clicking on Servers in the top left corner
+    <img alt="CreateServer" src="images/PgSql_02.png" /></p>
+</li>
+<li>
+<p>In the General tab, enter a name for your server. You can write the real name of the server
+   In the Connection tab, enter the full Server name and add your Cloud Account  as Username followed by the server name
+   or the active directory group you belong to followed by the server name if access to the server was granted to that active directory group.
+    <img alt="pgAdminParameters" src="images/PgSql_03.png" /></p>
+</li>
+<li>
+<p>You can now see in the list of server the newly added server. 
+   Click on it to connect and you will be asked to enter a password
+    <img alt="EnterPassword" src="images/PgSql_04.png" /></p>
+</li>
+<li>
+<p>The password you need to enter is a Azure AD access Token that will be generated for an authenticated Azure AD user. 
+   From PowerShell, you can generate this access token by entering the following command</p>
+</li>
+</ol>
+<p><em>az account get-access-token --resource https://ossrdbms-aad.database.windows.net</em></p>
+<p>The output is as follow, where you will need to copy the value for accessToken and use it as Password in  pgAdmin
+    <img alt="AccessToken" src="images/PgSql_05.png" /></p>
+<p>En savoir davantage: <a href="https://www.pgadmin.org/docs/pgadmin4/latest/getting_started.html">pgAdmin docs</a></p>
+</details>
+<details class="example">
+<summary>2. ArcPro</summary>
+<p>Here is one method to connected to your PostgreSQL+PostGIS database in ArcGIS Pro:</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Insert</strong> tab, select <strong>Connections</strong>, then select <strong>Database</strong> &gt; <strong>New Database Connection</strong>.</p>
+<p><img alt="pro_post2" src="images/pro_post1.PNG" /></p>
+</li>
+<li>
+<p>In the new window, Choose PostgreSQL from the Database Platform drop-down list. Enter the database information provided to you during onboarding (see email: <em>Welcome to DAaaS GEO</em>).</p>
+<p><img alt="pro_post2" src="images/pro_post2.PNG" /></p>
+</li>
+<li>
+<p>Open/Navigate to the <strong>Catalog</strong> pane, Expand <strong>Databases</strong> and the new connection will be listed there.</p>
+<p><img alt="pro_post3" src="images/pro_post3.PNG" /></p>
+</li>
+</ol>
+<p>En savoir davantage: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
+</details>
+<details class="example">
+<summary>3. QGIS</summary>
+<ol>
+<li>
+<p>Sous l’onglet du navigateur, cliquez avec le bouton droit de la souris sur PostgreSQL, puis sélectionnez New Connection (nouvelle connexion).</p>
+<p><img alt="post_gis1" src="images/post_qgis1.PNG" /></p>
+</li>
+<li>
+<p>Une nouvelle fenêtre s’ouvrira.</p>
+<p><img alt="post_gis2" src="images/post_gis2.PNG" /></p>
+</li>
+<li>
+<p>Remplissez les champs suivants:</p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th></th>
+<th>Entrée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name (nom)</td>
+<td></td>
+<td>Nom (alias) que vous avez choisi pour la base de données</td>
+</tr>
+<tr>
+<td>Name (nom)</td>
+<td></td>
+<td>Instance de base de données (voir les renseignements sur l’intégration)</td>
+</tr>
+<tr>
+<td>Port</td>
+<td></td>
+<td>5432</td>
+</tr>
+<tr>
+<td>Base de données</td>
+<td></td>
+<td>Vrai nom de la base de données (voir les renseignements sur l’intégration)</td>
+</tr>
+<tr>
+<td>SSL mode (mode SSL)</td>
+<td></td>
+<td>Permettre</td>
+</tr>
+<tr>
+<td>Authentification</td>
+<td></td>
+<td><em>Appuyez sur le bouton vert</em> , puis entrez vos renseignements sur le nuage</td>
+</tr>
+<tr>
+<td>Énumérer également les tables sans géométrie</td>
+<td></td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>**Tous les autres champs peuvent être laissés vides</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Sélectionnez Tester la connexion.</p>
+</li>
+<li>
+<p>La base de données s’affichera désormais sous l’intitulé <em>PostgreSQL</em> dans le navigateur QGIS.</p>
+</li>
+</ol>
+<p>En savoir davantage:</p>
+<ul>
+<li>
+<p><a href="https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/opening_data.html#creating-a-stored-connection">Documentation QGIS (EN)</a></p>
+</li>
+<li>
+<p><a href="https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/qgis-azure-database-for-postgresql-postgis/ba-p/1152249">Documentation QGIS + Azure (EN)</a></p>
+</li>
+<li>
+<p><a href="https://www.line-45.com/post/using-qgis-postgis-dynamic-duo">Line 45 – Using QGIS with PostGIS: A Dynamic Duo (livre blanc – anglais seulement)</a></p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>4. EAC – services infonuagiques Azure</summary>
+<p><strong>Azure Data Factory, Azure Databricks, Azure Synapse</strong></p>
+<p><a href="https://statcan.github.io/cae-eac/en/PostgreSQL/">Apprendre à utiliser les services de l’EAC</a></p>
+<p>Si vous avez besoin d’aide, veuillez communiquer avec l’équipe de soutien par le biais du canal https://cae-eac.slack.com.</p>
+</details>
+<hr style="height:1px; background-color:green">
+<h2 id="comment-charger-des-donnees-dans-votre-base-de-donnees">Comment charger des données dans votre base de données</h2>
+<details class="example">
+<summary>1. Python</summary>
+<p>Il existe de nombreux progiciels Python pour travailler avec PostgreSQL (SQLAlchemy, psycopg*, ogr2ogr, etc.). Cet exemple utilise sqlalchemy avec l’aide de geoPandas pour charger un fichier forme dans la base de données:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># create the sqlalchemy connection engine</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># replace the &lt; &gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#Example: &quot;postgresql://myUsername:myPassword@geopostgresqlflex.postgres.database.azure.com:5432/myDataBase&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">db_connection_url</span> <span class="o">=</span> <span class="s2">&quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;instance&gt;:&lt;port&gt;/&lt;database&gt;&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">link</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">db_connection_url</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># read in the data into a geo-dataframe</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Push the geo-dataframe to postgresql</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">gdf</span><span class="o">.</span><span class="n">to_postgis</span><span class="p">(</span><span class="s2">&quot;&lt;table_name&gt;&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span> 
+</code></pre></div>
+En savoir davantage:</p>
+<ul>
+<li>
+<p><a href="https://docs.sqlalchemy.org/en/14/">Documentation SQLAlchemy</a></p>
+</li>
+<li>
+<p><a href="https://www.pythonsheets.com/notes/python-sqlalchemy.html">PYSHEET – Aide-mémoire SQLAlchemy (non officiel)</a></p>
+</li>
+<li>
+<p><a href="https://geopandas.org/en/stable/">Documentation GeoPandas</a></p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>2. pgAdmim</summary>
+<p>Documents d’aide de pgAdmin : <a href="https://www.pgadmin.org/docs/pgadmin4/development/import_export_data.html">Importation/Exportation de données</a></p>
+<p><img alt="Import/Export_postgresql" src="images/PGimport_export_options.png" /></p>
+</details>
+<details class="example">
+<summary>3. QGIS</summary>
+<p>In current versions of QGIS you can export shape files to PostGIS using the build in DB Manager.  Somewhat counterintuitively, QGIS refers to this as 'importing to Postgis'. </p>
+<ol>
+<li>
+<p>Ouvrez le gestionnaire de base de données. 
+<img alt="open_DB" src="images/GZor3.jpg" /></p>
+</li>
+<li>
+<p>À partir de la liste des bases de données PostGIS, repérez la base de données vers laquelle vous voulez exporter, trouvez le schéma souhaité et cliquez sur le bouton d’importation (marqué par le contour rouge). 
+<img alt="layer_to_post" src="images/RAHSN.png" /></p>
+</li>
+<li>
+<ol>
+<li>Choisissez le fichier forme dans « input » (entrée) [au niveau de votre « Volet couches »], puis cliquez sur « ok ». 
+<img alt="shp_to_post" src="images/4UuEs.png" /></li>
+</ol>
+</li>
+</ol>
+<p>En savoir davantage: </p>
+<ul>
+<li>
+<p><a href="https://docs.qgis.org/3.22/en/docs/training_manual/spatial_databases/import_export.html#db-manager">Documentation QGIS – Lesson : Importer et Exporter (EN)</a></p>
+</li>
+<li>
+<p><a href="https://live.osgeo.org/en/quickstart/postgis_quickstart.html">Documentation OSGeo – Guide de démarrage rapide PostGIS</a></p>
+</li>
+<li>
+<p><a href="https://www.line-45.com/post/using-qgis-postgis-dynamic-duo">Line 45 – Using QGIS with PostGIS: A Dynamic Duo (livre blanc – anglais seulement)</a></p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>4. ArcPro</summary>
+<div class="admonition warning">
+<p class="admonition-title">Cette section n’est pas encore complète.</p>
+<p>De plus amples renseignements seront disponibles sous peu!</p>
+</div>
+<p>To simplify the process, GAE has crated a database connection file for your project; .sde file.  This can be located in your project's fileshare which is mounted as a drive to your VM.</p>
+<ol>
+<li>
+<p>When ready import your data into the PostgreSQL DB from arc pro, use the <em>Feature Class to Feature Class</em> tool.
+<img alt="pro to post" src="images/propost1.PNG" /></p>
+</li>
+<li>
+<p>For <em>Output Location</em> select the .sde file in your projects fileshare.
+<img alt="pro to post2" src="images/propost2.PNG" /></p>
+</li>
+<li>
+<p><em>Output Name</em> will be the table name in the database</p>
+</li>
+<li>
+<p>Select run</p>
+</li>
+</ol>
+</details>
 
               
             </article>
@@ -616,7 +934,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03
     </div>
   
   

@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#quest-ce-que-leac" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -421,10 +426,57 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          EAC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         EAC
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connexion-au-portail-arcgis-enterprise-a-laide-de-linterface-de-protocole-dapplication-arcgis" class="md-nav__link">
+    Connexion au portail ArcGIS Enterprise à l’aide de l’interface de protocole d’application ArcGIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more-caes-guidebook" class="md-nav__link">
+    Learn More; CAE's Guidebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-documentation" class="md-nav__link">
+    Microsoft Documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -544,6 +596,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connexion-au-portail-arcgis-enterprise-a-laide-de-linterface-de-protocole-dapplication-arcgis" class="md-nav__link">
+    Connexion au portail ArcGIS Enterprise à l’aide de l’interface de protocole d’application ArcGIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more-caes-guidebook" class="md-nav__link">
+    Learn More; CAE's Guidebook
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-documentation" class="md-nav__link">
+    Microsoft Documentation
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -557,17 +640,24 @@
                 
 
 
-  <h1>EAC</h1>
-
-<div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</div>
+<h1 id="quest-ce-que-leac">Qu’est-ce que l’EAC?</h1>
+<p><a href="https://statcan.github.io/cae-eac/en/">L’Environnement d’analyse collaborative (EAC) </a> (CAE) provides cloud services for data ingestion, transformation and preparation, as well as data exploration and computation. It includes tools for collaborative analytics, machine learning environments, and data visualization capabilities. </p>
+<h2 id="connexion-au-portail-arcgis-enterprise-a-laide-de-linterface-de-protocole-dapplication-arcgis">Connexion au portail ArcGIS Enterprise à l’aide de l’interface de protocole d’application ArcGIS</h2>
+<p>Lors de l’intégration, votre groupe de projet recevra un identificateur de client qui sera utilisé pour se connecter au portail ArcGIS Enterprise. Collez l’identificateur de client entre les guillemets <code>client_id=' '</code>. </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</code></pre></div>
+La sortie vous redirigera vers une page Web où vous pouvez vous connecter au portail en utilisant l’option de connexion StatCan Azure. Une fois que vous aurez réussi à ouvrir une session, vous recevrez un code pour vous connecter en utilisant le langage de balisage des déclarations de sécurité (SAML). Collez ce code dans la sortie.</p>
+<p><img alt="OAuth2 Approval" src="images/OAuth2Key.png" /></p>
+<h2 id="learn-more-caes-guidebook">Learn More; <a href="https://statcan.github.io/cae-eac/en/DataBricks/">CAE's Guidebook</a></h2>
+<h2 id="microsoft-documentation">Microsoft Documentation</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal#run-a-spark-sql-job">First Access to Databricks</a>  </li>
+<li><a href="https://azure.microsoft.com/en-us/resources/videos/connect-2017-introduction-to-azure-databricks">For more information on Databricks</a>  </li>
+<li><a href="https://docs.databricks.com/dev-tools/databricks-connect.html">Databricks Connect</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/databricks/notebooks/notebooks-python-libraries">Install Libraries in Current Notebook Session</a>  </li>
+<li><a href="https://docs.microsoft.com/en-us/azure/databricks/libraries#:~:text=Azure%20Databricks%20supports%20three%20library,its%20path%20in%20the%20workspace">Library Management for Admins</a>  </li>
+</ul>
 
               
             </article>
@@ -618,7 +708,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03
     </div>
   
   

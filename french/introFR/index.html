@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#une-introduction-sommaire-a-lanalyse-geospatiale" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -469,10 +474,50 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction simple au SIG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Introduction simple au SIG
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-propos-des-donnees-spatiales" class="md-nav__link">
+    À propos des données spatiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire-du-sig" class="md-nav__link">
+    Vocabulaire du SIG
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -544,6 +589,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-propos-des-donnees-spatiales" class="md-nav__link">
+    À propos des données spatiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire-du-sig" class="md-nav__link">
+    Vocabulaire du SIG
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -557,17 +626,115 @@
                 
 
 
-  <h1>Introduction simple au SIG</h1>
+<h1 id="une-introduction-sommaire-a-lanalyse-geospatiale">Une introduction sommaire à l’analyse géospatiale</h1>
+<p align='center'>
+<img src="https://i.ibb.co/TrGQv9f/intro.png" alt="html picture">
+</p>
+<p><strong>L’analyse géospatiale s’intéresse à la localisation quantitative de caractéristiques importantes, appelées phénomènes.</strong></p>
+<p>Les données géospatiales sont des données concernant des phénomènes qui ont un emplacement sur la surface de la terre. L’emplacement peut être statique (p. ex. emplacement d’une route, catastrophe, citoyens vivant dans la pauvreté) ou dynamique (p. ex. véhicule ou piéton en mouvement, propagation de la COVID-19).
+<br></p>
+<p>Un SIG (système d’information géospatiale) nous aide à analyser les relations et les profils spatiaux parmi ces phénomènes. Il est particulièrement utile pour la visualisation des données spatiales et la présentation des résultats d’analyse.</p>
+<p>Les SIG sont composés d’éléments matériels et logiciels. En raison d’importants volumes de données spatiales et de la nécessité d’afficher les valeurs à la volée, le matériel du SIG dispose souvent de grandes capacités de stockage, d’une vitesse de calcul rapide et d’une mémoire puissante.  <b>L’ADS a été conçue pour répondre aux besoins de ces utilisateurs.</b></p>
+<hr />
+<h3 id="a-propos-des-donnees-spatiales">À propos des données spatiales</h3>
+<p>Les données spatiales sont des types de données (fichiers, bases de données, services Web) qui codent l’information géographique destinée à être utilisée dans des applications fondées sur l’emplacement. Il en existe deux types :</p>
+<ol>
+    <li> <b>Données vectorielles</b>
+        <ul>
+        <li>points (coordonnées x, y, (z))
+        <li>lignes (routes, réseaux)) 
+        <li>polygones (zones).
+        </ul></li>
 
-<div class="admonition warning">
-<p class="admonition-title">Guide en cours d’élaboration :</p>
-<p>L’élaboration de ce guide est toujours en cours; certaines sections sont incomplètes et ne sont pas encore disponibles dans les deux langues officielles.
-Statistique Canada s’emploie à faire en sorte que tous les services de l’EAG soient représentés dans ce guide et qu’ils soient accessibles dans les deux langues officielles dans un proche avenir.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</div>
+    <li> <b>Données de trame</b>
+        <ul>
+        <li>Images ou grilles de valeurs numériques (p. ex. imagerie satellitaire).
+        </li></ul>
+</ol>
+
+<p>Une <strong>base de données spatiales</strong> – également appelée <em>base de données géospatiales</em>– est construite pour capturer et stocker les points, les lignes et les polygones.</p>
+<h3 id="vocabulaire-du-sig">Vocabulaire du SIG</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carte de base</td>
+<td></td>
+<td>Les données du SIG et/ou les images qui constituent le fond de la carte</td>
+</tr>
+<tr>
+<td>Coordonnées</td>
+<td></td>
+<td>Valeurs représentées par les lettres x, y, z [ou m (mesure)], qui définissent une position dans une référence spatiale.</td>
+</tr>
+<tr>
+<td>DCAT, GeoDCAT AP</td>
+<td></td>
+<td>Norme de métadonnées permettant de rechercher des ensembles de données spatiales, des séries d’ensembles de données et des services dans les catalogues généraux de données.</td>
+</tr>
+<tr>
+<td>OT, observation de la Terre</td>
+<td></td>
+<td>Information sur la planète Terre recueillie par des technologies de télédétection ainsi que par des techniques au sol (p. ex. imagerie par satellite ou par drone).</td>
+</tr>
+<tr>
+<td>ETL</td>
+<td></td>
+<td>Procédure consistant à copier des données de sources vers un système de destination qui représente les données différemment de la source ou dans un contexte différent de la source.</td>
+</tr>
+<tr>
+<td>Généralisation</td>
+<td></td>
+<td>Méthode utilisée dans le SIG pour réduire le détail des données (pour des raisons de confidentialité et/ou de visualisation).</td>
+</tr>
+<tr>
+<td>Géocoder</td>
+<td></td>
+<td>Le processus d’identification d’un emplacement par un ou plusieurs attributs d’une couche.</td>
+</tr>
+<tr>
+<td>HNAP</td>
+<td></td>
+<td>HNAP-Canada est un profil du profil nord-américain harmonisé qui est lui-même un profil de la norme ISO19139 (ISO 19115*).</td>
+</tr>
+<tr>
+<td>Couche</td>
+<td></td>
+<td>Données thématiques décrites et stockées dans une bibliothèque de cartes. Les couches font fonction de transparents qui peuvent être superposés pour la visualisation ou l’analyse spatiale.</td>
+</tr>
+<tr>
+<td>OGC</td>
+<td></td>
+<td>Open Geospatial Consortium – champion du code source ouvert; normes ouvertes.</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td></td>
+<td>Système de base de données relationnel-objet de source ouverte; géré par Azure.</td>
+</tr>
+<tr>
+<td>Fichier forme</td>
+<td></td>
+<td>Format de stockage de données vectorielles permettant de stocker l’emplacement, la forme et les attributs. Il est stocké dans un ensemble de quatre fichiers connexes et contient une classe de caractéristiques. <em>Il faut éviter les fichiers formes en production.</em></td>
+</tr>
+<tr>
+<td>WMS</td>
+<td></td>
+<td>Web Map Service; spécifications permettant aux clients Web d’accéder de façon uniforme aux cartes rendues par les serveurs cartographiques sur Internet.</td>
+</tr>
+<tr>
+<td>WFS</td>
+<td></td>
+<td>Web Feature Service; spécifications qui normalisent la manipulation des données et l’affichage des cartes sur Internet.</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -618,7 +785,7 @@ Statistique Canada s’emploie à faire en sorte que tous les services de l’EA
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.02
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03
     </div>
   
   
