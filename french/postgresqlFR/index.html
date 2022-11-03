@@ -629,7 +629,7 @@
 <p>De plus amples renseignements seront disponibles sous peu!</p>
 </div>
 <hr />
-<h1 id="postgresqlpostgis">PostgreSQL+PostGIS &nbsp;&nbsp;&nbsp;&nbsp; <img alt="postgis logo" src="images/post.png" /></h1>
+<h1 id="postgresqlpostgis">PostgreSQL+PostGIS &nbsp;&nbsp;&nbsp;&nbsp; <img alt="postgis logo" src="https://statcan.github.io/daaas-dads-geo/english/images/post.png" /></h1>
 <details class="bug">
 <summary>Fonction en cours d’élaboration</summary>
 <p>Cette fonction et cette section sont en cours d’élaboration. De plus amples renseignements seront disponibles sous peu!</p>
@@ -652,23 +652,22 @@
 <p>This is one of the more common tool for PostgreSQL database administration. PG-Admin has been installed on your VM.</p>
 <ol>
 <li>
-<p>Connect to your cloud VM and launch <strong>pgAdmin</strong>.
-    <img alt="LaunchPgAdmin" src="images/PgSql_01.png" /></p>
+<p>Connect to your cloud VM and launch <strong>pgAdmin</strong>.</p>
 </li>
 <li>
 <p>Add the server you need to connect to by right clicking on Servers in the top left corner
-    <img alt="CreateServer" src="images/PgSql_02.png" /></p>
+    <img alt="LaunchPgAdmin" src="../imagesFR/postgresql/pgadmin1.PNG" /></p>
 </li>
 <li>
 <p>In the General tab, enter a name for your server. You can write the real name of the server
    In the Connection tab, enter the full Server name and add your Cloud Account  as Username followed by the server name
    or the active directory group you belong to followed by the server name if access to the server was granted to that active directory group.
-    <img alt="pgAdminParameters" src="images/PgSql_03.png" /></p>
+    <img alt="pgAdminParameters" src="../imagesFR/postgresql/pgadmin2.PNG" /><img alt="pgAdminParameters" src="../imagesFR/postgresql/pgadmin3.PNG" /></p>
 </li>
 <li>
 <p>You can now see in the list of server the newly added server. 
    Click on it to connect and you will be asked to enter a password
-    <img alt="EnterPassword" src="images/PgSql_04.png" /></p>
+    <img alt="EnterPassword" src="../imagesFR/postgresql/pgadmin4.PNG" /></p>
 </li>
 <li>
 <p>The password you need to enter is a Azure AD access Token that will be generated for an authenticated Azure AD user. 
@@ -686,15 +685,15 @@
 <ol>
 <li>
 <p>Navigate to the <strong>Insert</strong> tab, select <strong>Connections</strong>, then select <strong>Database</strong> &gt; <strong>New Database Connection</strong>.</p>
-<p><img alt="pro_post2" src="images/pro_post1.PNG" /></p>
+<p><img alt="pro_post2" src="../imagesFR/postgresql/postpro1.PNG" /></p>
 </li>
 <li>
 <p>In the new window, Choose PostgreSQL from the Database Platform drop-down list. Enter the database information provided to you during onboarding (see email: <em>Welcome to DAaaS GEO</em>).</p>
-<p><img alt="pro_post2" src="images/pro_post2.PNG" /></p>
+<p><img alt="pro_post2" src="../imagesFR/postgresql/postpro2.PNG" /></p>
 </li>
 <li>
 <p>Open/Navigate to the <strong>Catalog</strong> pane, Expand <strong>Databases</strong> and the new connection will be listed there.</p>
-<p><img alt="pro_post3" src="images/pro_post3.PNG" /></p>
+<p><img alt="pro_post3" src="../imagesFR/postgresql/postpro3.PNG" /></p>
 </li>
 </ol>
 <p>En savoir davantage: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
@@ -704,11 +703,11 @@
 <ol>
 <li>
 <p>Sous l’onglet du navigateur, cliquez avec le bouton droit de la souris sur PostgreSQL, puis sélectionnez New Connection (nouvelle connexion).</p>
-<p><img alt="post_gis1" src="images/post_qgis1.PNG" /></p>
+<p><img alt="post_gis1" src="../imagesFR/postgresql/postq1.PNG" /></p>
 </li>
 <li>
 <p>Une nouvelle fenêtre s’ouvrira.</p>
-<p><img alt="post_gis2" src="images/post_gis2.PNG" /></p>
+<p><img alt="post_gis2" src="../imagesFR/postgresql/postq2.PNG" /></p>
 </li>
 <li>
 <p>Remplissez les champs suivants:</p>
@@ -834,16 +833,16 @@ En savoir davantage:</p>
 <ol>
 <li>
 <p>Ouvrez le gestionnaire de base de données. 
-<img alt="open_DB" src="images/GZor3.jpg" /></p>
+<img alt="open_DB" src="../imagesFR/postgresql/postq3.PNG" /></p>
 </li>
 <li>
 <p>À partir de la liste des bases de données PostGIS, repérez la base de données vers laquelle vous voulez exporter, trouvez le schéma souhaité et cliquez sur le bouton d’importation (marqué par le contour rouge). 
-<img alt="layer_to_post" src="images/RAHSN.png" /></p>
+<img alt="layer_to_post" src="../imagesFR/postgresql/postq4.PNG" /></p>
 </li>
 <li>
 <ol>
 <li>Choisissez le fichier forme dans « input » (entrée) [au niveau de votre « Volet couches »], puis cliquez sur « ok ». 
-<img alt="shp_to_post" src="images/4UuEs.png" /></li>
+<img alt="shp_to_post" src="../imagesFR/postgresql/postq5.PNG" /></li>
 </ol>
 </li>
 </ol>
@@ -870,11 +869,11 @@ En savoir davantage:</p>
 <ol>
 <li>
 <p>When ready import your data into the PostgreSQL DB from arc pro, use the <em>Feature Class to Feature Class</em> tool.
-<img alt="pro to post" src="images/propost1.PNG" /></p>
+<img alt="pro to post" src="imagesFR/postgresql/postproX.PNG" /></p>
 </li>
 <li>
 <p>For <em>Output Location</em> select the .sde file in your projects fileshare.
-<img alt="pro to post2" src="images/propost2.PNG" /></p>
+<img alt="pro to post2" src="imagesFR/postgresql/postproX.PNG" /></p>
 </li>
 <li>
 <p><em>Output Name</em> will be the table name in the database</p>
@@ -934,7 +933,7 @@ En savoir davantage:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03b
     </div>
   
   
