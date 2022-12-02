@@ -267,21 +267,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline/" class="md-nav__link">
-        Data Ingestion & Storage
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../postgresql/" class="md-nav__link">
         PostgreSQL + PostGIS
       </a>
@@ -300,18 +285,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_7">
           ArcGIS ecosystem
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ArcGIS ecosystem" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           ArcGIS ecosystem
         </label>
@@ -391,18 +376,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_9">
           Cross-Platform (AAW/CAE)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cross-Platform (AAW/CAE)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Cross-Platform (AAW/CAE)
         </label>
@@ -453,18 +438,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_10">
           Knowledge Centre
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Knowledge Centre" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Knowledge Centre
         </label>
@@ -565,22 +550,23 @@
 
 
 <h1 id="getting-started">Getting Started</h1>
-<details class="abstract">
-<summary>Your Project's Dashboard</summary>
-<p>The Project Dashboard contains all the links to your DAaaS GEA resources, we recommend bookmarking the URL.</p>
-<p><strong>Find your Dashboard here: <a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/8bae6a4f-25c1-4b68-b8ac-1bc3160e00ef">GAE Central Dashboard</a></strong></p>
-<p><a href="https://statcan.github.io/cae-eac/en/Dashboards/">Learn more about Dashboards</a></p>
-</details>
 <details class="tip">
 <summary>How to launch your VM</summary>
+<details class="success">
+<summary>Prerequisites</summary>
+<p>You have already claimed your VM </p>
+</details>
 <p><strong>Full Help:
 <a href="/vm/#start-your-virtual-machine">Link to VM Help Page</a></strong></p>
 <p><strong>Quick Help:</strong></p>
 <ol>
-<li>From your Project Dashboard, click on your VMs name to open the Overview page</li>
-<li>In the VM Overview page, select <strong>Start</strong> and wait until the VM is <em>running</em></li>
-<li>Select either <strong>Browser Connect</strong> or <strong>Connect &gt; Bastion</strong></li>
-<li>Enter your VM username and password</li>
+<li>Access the Azure Portal: <em>https://portal.azure.com/#home</em></li>
+<li>Select More Services and search for: DevTest Labs</li>
+<li>Ensure <em>Subscription Equals</em> is set to <em>ALL</em></li>
+<li>Select <em>geop-prod-intuser-dtl</em></li>
+<li>Locate and Select your VM</li>
+<li>Select <em>Start</em>, wait for confirmation, Select <em>Browser Connect</em></li>
+<li>Remember to <em>STOP</em> your VM when finished</li>
 </ol>
 </details>
 <details class="info">
@@ -589,7 +575,7 @@
 <a href="/portal/">Link to Help ArcGIS Enterprise Portal Page</a></strong></p>
 <p><strong>Quick Help:</strong></p>
 <ol>
-<li>Access via this URL: <a href="https://geoanalyticsdev.cloud.statcan.ca/portal/">DAaaS GEA Enterprise Portal</a></li>
+<li>Access via this URL: <a href="https://geoanalytics.cloud.statcan.ca/portal/">DAaaS GEA Enterprise Portal</a></li>
 <li>Click the <em>StatCan Azure Cloud Login</em></li>
 <li>If this is your first time accessing it, you will have to do some registration steps, then contact DAaaS GEA to have your account configured</li>
 </ol>
@@ -608,7 +594,8 @@
 <p><strong>Full Help:
 <a href="/faq/">Link to Contact Help Page</a></strong></p>
 <p><strong>Quick Help:</strong></p>
-<p>For  support, or  requests please submit a ticket via Jira:</p>
+<p>For business and onboarding inquiries: <em>statcan.daaasgae-dadseag.statcan@statcan.gc.ca</em></p>
+<p>For  technical support, or  requests please submit a ticket via Jira:</p>
 <ol>
 <li>Open Statistics Canada Jira software: <a href="https://jirab.statcan.ca/projects/DASGEO/summary">DAaaS Geospatial Platform (DASGEO)</a></li>
 <li>From the Menu Bar, select the button “Create”:</li>
@@ -750,7 +737,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.9
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.10
     </div>
   
   

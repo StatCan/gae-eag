@@ -257,21 +257,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipeline/" class="md-nav__link">
-        Data Ingestion & Storage
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../postgresql/" class="md-nav__link">
         PostgreSQL + PostGIS
       </a>
@@ -292,18 +277,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_7">
           ArcGIS ecosystem
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="ArcGIS ecosystem" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           ArcGIS ecosystem
         </label>
@@ -367,14 +352,7 @@
     Connect Pro to Enterprise Portal
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-pro-to-a-postgresql-postgis-database" class="md-nav__link">
-    Connect Pro to a PostgreSQL +PostGIS Database
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect Pro to a PostgreSQL +PostGIS Database">
+    <nav class="md-nav" aria-label="Connect Pro to Enterprise Portal">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -471,18 +449,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_9">
           Cross-Platform (AAW/CAE)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Cross-Platform (AAW/CAE)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Cross-Platform (AAW/CAE)
         </label>
@@ -533,18 +511,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_10">
           Knowledge Centre
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Knowledge Centre" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Knowledge Centre
         </label>
@@ -643,14 +621,7 @@
     Connect Pro to Enterprise Portal
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-pro-to-a-postgresql-postgis-database" class="md-nav__link">
-    Connect Pro to a PostgreSQL +PostGIS Database
-  </a>
-  
-    <nav class="md-nav" aria-label="Connect Pro to a PostgreSQL +PostGIS Database">
+    <nav class="md-nav" aria-label="Connect Pro to Enterprise Portal">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -746,26 +717,24 @@ DAaaS can not provide you with a license. </p>
 </ol>
 <hr style="height:1px; background-color:green">
 
-<h2 id="connect-pro-to-a-postgresql-postgis-database">Connect Pro to a PostgreSQL +PostGIS Database</h2>
-<details class="bug">
-<summary>This section is incomplete</summary>
-<p>More information coming soon!</p>
-</details>
-<hr style="height:1px; background-color:green">
-
 <h3 id="connect-to-a-postgresql-database">Connect to a PostgreSQL Database</h3>
+<p>GAE has streamlined the ArcGIS Pro-PostgreSQL connection process by utilizing a <em>.sde</em> file connection.</p>
 <ol>
-<li>Navigate to the <strong>Insert</strong> tab, select <strong>Connections</strong>, then select <strong>Database</strong> &gt; <strong>New Database Connection</strong>.</li>
+<li>
+<p>In the Catalog pane, right-click <em>Databases</em> and select <em>Add Database</em>
+<img alt="propost1" src="../images/propost1.PNG" /></p>
+</li>
+<li>
+<p>In the new window, expand <em>This PC</em> and located your project Fileshare (mounted as a drive)
+<img alt="propost2" src="../images/propost2.PNG" /></p>
+</li>
+<li>
+<p>Select the <em>.sde</em> file, and click <em>Ok</em></p>
+</li>
+<li>
+<p>The PostgreSQL database will not appear udner <em>Databases</em> in the <em>Catalog</em> pane.</p>
+</li>
 </ol>
-<p><img alt="pro_post2" src="../images/pro_post1.PNG" /></p>
-<ol>
-<li>In the new window, Choose PostgreSQL from the Database Platform drop-down list. Enter the database information provided to you during onboarding (see email: <em>Welcome to DAaaS GEO</em>).</li>
-</ol>
-<p><img alt="pro_post2" src="../images/pro_post2.PNG" /></p>
-<ol>
-<li>Open/Navigate to the <strong>Catalog</strong> pane, Expand <strong>Databases</strong> and the new connection will be listed there.</li>
-</ol>
-<p><img alt="pro_post3" src="../images/pro_post3.PNG" /></p>
 <p>Learn More: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
 <h2 id="publishing-to-enterprise-portal">Publishing to Enterprise Portal</h2>
 <details class="bug">
@@ -831,7 +800,7 @@ DAaaS can not provide you with a license. </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.9
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.10
     </div>
   
   
