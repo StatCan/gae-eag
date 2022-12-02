@@ -1,0 +1,900 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+    
+    
+      
+        <title>GeoSpatial Standards - ISO 19115*HNAP - Geospatial Environment - Development Draft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1c3799f8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#geospatial-standards-iso-19115hnap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geospatial Environment - Development Draft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GeoSpatial Standards - ISO 19115*HNAP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Geospatial Environment - Development Draft
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About DAaaS GAE
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../login/" class="md-nav__link">
+        Logging In
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vm/" class="md-nav__link">
+        Virtual Machine
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/" class="md-nav__link">
+        Data Ingestion & Storage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          ArcGIS ecosystem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ArcGIS ecosystem" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS ecosystem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Cross-Platform (AAW/CAE)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cross-Platform (AAW/CAE)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Cross-Platform (AAW/CAE)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aaw/" class="md-nav__link">
+        AAW
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cae/" class="md-nav__link">
+        CAE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Knowledge Centre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge Centre" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge Centre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        Simple GIS Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conda/" class="md-nav__link">
+        Anaconda & Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        Training and Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-standards" class="md-nav__link">
+    Metadata Standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19115-2003-hnap" class="md-nav__link">
+    19115-2003 HNAP
+  </a>
+  
+    <nav class="md-nav" aria-label="19115-2003 HNAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-elements" class="md-nav__link">
+    Mandatory Elements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geodcat-ap" class="md-nav__link">
+    GeoDCAT-ap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdmx" class="md-nav__link">
+    SDMX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    Learn More
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="geospatial-standards-iso-19115hnap">GeoSpatial Standards - ISO 19115*HNAP</h1>
+<h2 id="metadata-standards">Metadata Standards</h2>
+<p>Metadata supports users in locating and accessing their resources, and data consumers in locating and using geodata resources produced by others. </p>
+<p>Metadata includes information about the content, quality, condition, and other characteristics of geodata.  It is necessary to document the temporal and spatial context of your data.</p>
+<p><img alt="🌎" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f30e.png" title=":earth_americas:" /> <b> The DAaaS Geospatial Platform uses the following standards: <ins>ISO 19115-2003 HNAP </ins>, GeoDCAT-ap, SDMX. </b></p>
+<p>Standards facilitate the creation, sharing, and general use of geospatial data. Standards are necessary for interoperability between platforms, especially in the cloud environment.</p>
+<p>!!!</p>
+<hr />
+<h2 id="19115-2003-hnap">19115-2003 HNAP</h2>
+<p>The North American Profile of ISO 19115 - Geographic information - Metadata (HNAP - Metadata), published by the Canadian General Standards Board, identifies the geospatial metadata needed for North America to describe geospatial data, including dataset and dataset series, and related Web services. </p>
+<p>This metadata format is a Canadian variant of the North America Profile of ISO 19115 2003, which has a defined XML schema that supports federal government requirements. However, HNAP is not fully compatible with either the ISO or the NAP standards and thus requires unique processing which has been integrated in the DAaaS Platform.</p>
+<h4 id="mandatory-elements">Mandatory Elements</h4>
+<p>This section provides guidelines for populating the minimum mandatory metadata elements for Government of Canada geospatial datasets.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><b>Section 1: Metadata Information</b></td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" /> *File Identifier</td>
+<td>Each metadata record shall have a universal unique identifier (UUID)</td>
+</tr>
+<tr>
+<td>*Language</td>
+<td>Language code and country of the initial metadata language. eng; CAN or fra; CAN</td>
+</tr>
+<tr>
+<td>*Character Set</td>
+<td>Encoding of the metadata record.</td>
+</tr>
+<tr>
+<td>Hierarchy Level</td>
+<td>Level to which the metadata applies. Values typically are "dataset; jeuDonnées" or "series; série".</td>
+</tr>
+<tr>
+<td>Organization Name</td>
+<td>Organization responsible for the metadata.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Email of the organisation (general).</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Responsible part function</td>
+</tr>
+<tr>
+<td>*Date</td>
+<td>Date that the metadata was created or last modified  (date or dateTime type).</td>
+</tr>
+<tr>
+<td>*Metadata Standard Name</td>
+<td>Name of the metadata standard/profile used.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>EPSG code or SR-ORG code.</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Section 2: Identification Information</b></td>
+</tr>
+<tr>
+<td>Tite</td>
+<td>Title of the Data</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Date of creation for the data. Repeat for creation, publication and revision.</td>
+</tr>
+<tr>
+<td>Date Type</td>
+<td>Creation, Publication, or Revision</td>
+</tr>
+<tr>
+<td>Organization Name</td>
+<td>Organisation responsible for the data.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Email of the organisation.</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Reponsible party function. Suggestion: pointOfContact; contact</td>
+</tr>
+<tr>
+<td>Abstract</td>
+<td>Brief narrative summary of the dataset's contents</td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />Status</td>
+<td>Development phase of the dataset- see codelist !!DEAD LINK!!</td>
+</tr>
+<tr>
+<td>Update Frequency</td>
+<td>Revision cycle of the data.</td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />Keyword</td>
+<td>Codelist. <img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />-link-<img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" /></td>
+</tr>
+<tr>
+<td>*Title</td>
+<td>Thesaurus title</td>
+</tr>
+<tr>
+<td>*Date</td>
+<td>Thesaurus creation date</td>
+</tr>
+<tr>
+<td>*Date Type</td>
+<td>Date type</td>
+</tr>
+<tr>
+<td>*Date</td>
+<td>Thesaurus publication date</td>
+</tr>
+<tr>
+<td>*Date Type</td>
+<td>Date type</td>
+</tr>
+<tr>
+<td>*Organization Name</td>
+<td>Name of the organisation responsible for the thesaurus</td>
+</tr>
+<tr>
+<td>*Role</td>
+<td>Role of the organization responsible for the thesaurus.</td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />*Use Limitation</td>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" /></td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />*Access Constraints</td>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" /></td>
+</tr>
+<tr>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" />*User Constraints</td>
+<td><img alt="🚩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f6a9.png" title=":triangular_flag_on_post:" /></td>
+</tr>
+<tr>
+<td>Spatial Representation Type</td>
+<td>Spatial representation type of the data. (vector, grid, textTable, tin, stereoModel, video)</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Language of the data (usually eng; CAN or fra; CAN)</td>
+</tr>
+<tr>
+<td>Topic Category</td>
+<td>Main theme (English only) of the data. (farming, biota, boundaries, climatologyMeteorologyAtmosphere, economy, elevation, environment, geoscientificInformation, health, imageryBaseMapsEarthCover, intelligenceMilitary, inlandWaters, location, oceans, planningCadastre, society, structure, transportation, utilitiesCommunication)</td>
+</tr>
+<tr>
+<td>West Bound Longitude</td>
+<td>Geographic Bounding Box</td>
+</tr>
+<tr>
+<td>East Bound Longitude</td>
+<td>Geographic Bounding Box</td>
+</tr>
+<tr>
+<td>South Bound Latitude</td>
+<td>Geographic Bounding Box</td>
+</tr>
+<tr>
+<td>North Bound Latitude</td>
+<td>Geographic Bounding Box</td>
+</tr>
+<tr>
+<td>Begin Date</td>
+<td>Beginning or Start date of the time period that a particular dataset covers or describes</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Section 3: Distribution Information</b></td>
+</tr>
+<tr>
+<td>Name (file format)</td>
+<td>Format of the data distributed</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Version number or date of the format (or: unknown)</td>
+</tr>
+<tr>
+<td>Organization Name</td>
+<td>Organisation responsive for the distribution</td>
+</tr>
+<tr>
+<td>Email Address</td>
+<td>Email of the organisation responsivle for the distribution</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Responsible party function; Suggestion: distributor; distributeur</td>
+</tr>
+<tr>
+<td></td>
+<td><b>Section 4: Web Map Service</b> (if necessary)</td>
+</tr>
+<tr>
+<td>Linkage (Service URL)</td>
+<td>For a OGC:WMS service type, the format must conform to: "a GetCapabilities request with non-standard parameters (mandatory :  “LAYERS=<layername>”, optional : ""LEGEND_FORMAT=legend_format&gt;"" and ""FEATURE_INFO_TYPE=<featureInfoType>"") :"</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>The value must conform to : OGC:WMS or ESRI REST: Map Service</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>The name of the resource being described.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The format must conform to: ContentType;Format;Lang(,Lang,Lang) where: ContentType:  Web Service; Format :  WMS or ESRI REST; Lang : eng, fra, zxx (for no linguistic content e.g. imagery) or the appropriate code from ISO 639-2/T.; List the data language(s) , separated by comma if more than one.</td>
+</tr>
+</tbody>
+</table>
+<p><sup>    * Automatically generated by DAaaS Catalog </sup></p>
+<p><a href="http://nap.geogratis.gc.ca/metadata/register/codelists-eng.html#IC_109">North American Profile of ISO19115:2003 Register - Codelists</a></p>
+<p></p>
+<br></p>
+<hr />
+<h2 id="geodcat-ap">GeoDCAT-ap</h2>
+<p>GeoDCAT is a vocabulary designed to facilitate interoperability between catalogs.  It increases discoverability and will enable federalization of datasets.  GeoDCAT does not replace 19115; its purpose is to enhance it for catalogs.  </p>
+<p>GeoDCAT is for the exchange of descriptions of geospatial datasets, dataset series and services. It provides an RDF syntax binding for the union of all metadata elements defined in the core profile 19115.</p>
+<p>The DAaaS Platform automatically coverts your ISO 19115 metadata file into GeoDCAT.</p>
+<hr />
+<h2 id="sdmx">SDMX</h2>
+<p>SDMX 3.0 ...</p>
+<hr />
+<h2 id="learn-more">Learn More</h2>
+<p>List of resources to learn more</p>
+<p><a href="https://www.w3.org/TR/vocab-dcat/">DCAT Standard</a></p>
+<p><a href="http://www.gcpedia.gc.ca/wiki/Federal_Geospatial_Platform/Policies_and_Standards/Catalogue/Release/Appendix_B_Guidelines_and_Best_Practices/Guide_to_Harmonized_ISO_19115:2003_NAP">Government of Canada Geospatial Standards(Internal GC Only)</a></p>
+<p><a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=16553">TBS: Policies, directives, standards and guidelines</a></p>
+<p><a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/standards-policies/8912">Digital Geospatial Metadata (NRCAN)</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.9
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      
+    
+  </body>
+</html>
