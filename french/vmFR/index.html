@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,8 +8,14 @@
       
       
       
+      
+        <link rel="prev" href="../loginFR/">
+      
+      
+        <link rel="next" href="../postgresqlFR/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
     
     
       
@@ -17,16 +23,13 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4cae4f">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
@@ -39,10 +42,11 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -53,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
   
     
     
@@ -64,7 +68,7 @@
       
         
         <a href="#utilisation-de-votre-mv-en-nuage" class="md-skip">
-          Skip to content
+          Aller au contenu
         </a>
       
     </div>
@@ -76,7 +80,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
@@ -112,14 +116,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Recherche">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -129,9 +133,9 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Initialisation de la recherche
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -245,7 +249,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -262,7 +266,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
@@ -271,7 +275,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -283,30 +287,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trouver-une-mv" class="md-nav__link">
-    Trouver une MV
+  <a href="#premiere-utilisation" class="md-nav__link">
+    Première utilisation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#demarrez-votre-machine-virtuelle" class="md-nav__link">
-    Démarrez votre machine virtuelle
+  <a href="#utilisation-future" class="md-nav__link">
+    Utilisation future
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation future">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arreter-une-machine-virtuelle" class="md-nav__link">
+    Arrêter une Machine virtuelle
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connectez-vous-a-votre-machine-virtuelle" class="md-nav__link">
-    Connectez-vous à votre machine virtuelle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arreter-votre-machine-virtuelle" class="md-nav__link">
-    Arrêter votre machine virtuelle
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -340,21 +343,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipelineFR/" class="md-nav__link">
-        Ingestion et stockage des données
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../postgresqlFR/" class="md-nav__link">
         PostgreSQL + PostGIS
       </a>
@@ -373,18 +361,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Écosystème ArcGIS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Écosystème ArcGIS" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Écosystème ArcGIS
         </label>
@@ -464,18 +453,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Multi-plateforme (ETAA/EAC)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Multi-plateforme (ETAA/EAC)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Multi-plateforme (ETAA/EAC)
         </label>
@@ -526,18 +516,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           Centre de connaissances
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Centre de connaissances" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Centre de connaissances
         </label>
@@ -618,7 +609,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
@@ -627,7 +618,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -639,30 +630,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trouver-une-mv" class="md-nav__link">
-    Trouver une MV
+  <a href="#premiere-utilisation" class="md-nav__link">
+    Première utilisation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#demarrez-votre-machine-virtuelle" class="md-nav__link">
-    Démarrez votre machine virtuelle
+  <a href="#utilisation-future" class="md-nav__link">
+    Utilisation future
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation future">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arreter-une-machine-virtuelle" class="md-nav__link">
+    Arrêter une Machine virtuelle
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connectez-vous-a-votre-machine-virtuelle" class="md-nav__link">
-    Connectez-vous à votre machine virtuelle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arreter-votre-machine-virtuelle" class="md-nav__link">
-    Arrêter votre machine virtuelle
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -688,22 +678,20 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
-<details class="warning">
-<summary>Cette section n’est pas encore complète.</summary>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</details>
-<hr />
+
 <h1 id="utilisation-de-votre-mv-en-nuage">Utilisation de votre MV en nuage</h1>
 <h2 id="a-propos-de-votre-mv-eag">À propos de votre MV EAG</h2>
 <p><strong>Une machine virtuelle EAG sera créée pour vous.</strong> </p>
-<p>Les MV EAG ordinaires comprennent les éléments suivants:</p>
-<table>
+<p><strong>Comment puis-je demander des modifications à ma machine virtuelle?</strong></p>
+<p>Si votre MV ne satisfait pas à vos exigences, veuillez communiquer avec l’équipe de soutien par l’intermédiaire du tableau d’assistance de <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">l’EAG JIRA</a> (interne).</p>
+<details class="question"><summary>Les MV EAG ordinaires comprennent les éléments suivants:</summary><table>
 <thead>
 <tr>
 <th>Matériel :</th>
@@ -715,7 +703,7 @@
 <tr>
 <td>- Quatre unités centrales virtuelles, mémoire vive de 14 Go <br> - Carte graphique AMD Radeon Instinct MI25 <br> - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/nvv4-series">En savoir davantage – Microsoft</a></td>
 <td></td>
-<td>- ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup><br> - QGIS <br> - Anaconda <br></td>
+<td>- ArcGIS Pro <sup><sub><em>(BYO-license)</em></sub></sup><br> - QGIS <br> - Conda(miniforge)  <br></td>
 </tr>
 <tr>
 <td>+ressources désignées lors de l’intégration du projet.</td>
@@ -724,71 +712,97 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Comment puis-je demander des modifications à ma machine virtuelle?</strong></p>
-<p>Si votre MV ne satisfait pas à vos exigences, veuillez communiquer avec l’équipe de soutien par l’intermédiaire du tableau d’assistance de <a href="https://jirab.statcan.ca/secure/RapidBoard.jspa?rapidView=1452&amp;view=detail">l’EAG JIRA</a> (réseau B).</p>
-<p>Reportez-vous à la section <strong><a href="/faqFR">Point de contact</a></strong> pour en savoir davantage sur les modifications de projet.</p>
-<details class="info">
-<summary>Machines virtuelles sur l’ETAA et l’EAC</summary>
-<p>Selon votre projet, vous pouvez créer une machine virtuelle ordinaire dans l’EAC ou créer un espace de travail dans l’ETAA. <br>
+</details>
+<details class="note"><summary>Machines virtuelles sur l’ETAA et l’EAC</summary><p>Selon votre projet, vous pouvez créer une machine virtuelle ordinaire dans l’EAC ou créer un espace de travail dans l’ETAA. <br>
 Ces MV libre-service ne sont PAS optimisées pour le rendu géospatial.</p>
 </details>
-<hr style="height:1px; background-color:green">
-
-<h2 id="trouver-une-mv">Trouver une MV</h2>
-<ol>
-<li>From the <strong><a href="https://portal.azure.com/#@cloud.statcan.ca/dashboard/arm/subscriptions/d2d3c198-2275-4c7b-bd79-0fc949819c0e/resourcegroups/geop-dev/providers/microsoft.portal/dashboards/c0e80959-d3fd-4d73-b80b-9ffa11d8e28e">Geospatial Environment Central Dashboard</a></strong>  locate the Virtual Machine Tile</li>
-<li>Scroll down until you see your VM. </li>
-<li>Click on your VM Name to access its <strong>Overview</strong> page.</li>
+<hr />
+<h2 id="premiere-utilisation">Première utilisation</h2>
+<details class="example"><summary>Recherche et réclamation d’une Machine virtuelle</summary><ol>
+<li>
+<p>Accédez à l’URL du portail Azure à partir d’OZ:<br />
+<strong>https://portal.azure.com/#home.</strong></p>
+</li>
+<li>
+<p>Sélectionnez Autre services et filtrez/recherchez <strong>"DevTest Labs"</strong>.</p>
+<p><img alt="DTL Services Image_FR" src="../imagesFR/VM/dtl1.PNG" /></p>
+</li>
+<li>
+<p>Remplacez <em>le filtre Abonnements</em> par : <strong>TOUS</strong> ou <strong>Daaas</strong>.</p>
+<p>Sélectionnez <strong>geop-prod-intuser-dtl</strong>.</p>
+<p><img alt="geop-prod-intuser-dtl Image_FR" src="../imagesFR/VM/dtl2.PNG" /></p>
+</li>
+<li>
+<p>Dans le panneau de menu de gauche, sélectionnez : <strong>Machines virtuelles pouvant être revendiquées</strong>.</p>
+<p><img alt="claim VM Image_FR" src="../imagesFR/VM/dtl3.PNG" /></p>
+</li>
+<li>
+<p>Localisez et sélectionnez votre Machine virtuelle. Votre machine virtuelle sera nommée : <em>projectAccroymn-statcanID</em>.
+    <em>ex: Gae-Namenick</em></p>
+<p><img alt="claim VM Image2_FR" src="../imagesFR/VM/dtl4.PNG" /></p>
+</li>
+<li>
+<p>Dans la page vue d’ensemble de la Machine virtuelle, sélectionnez <strong>Revendiquer la machine</strong>.</p>
+<p><img alt="claim VM Image3_FR" src="../imagesFR/VM/dtl5.PNG" /></p>
+</li>
+<li>
+<p>Réclamer prendra quelques minutes. Attendez le message <em>Revendiqué avec succès</em> avant de continuer.</p>
+<p><img alt="claim VM success Image_FR" src="../imagesFR/VM/dtl6.PNG" /> </p>
+</li>
+<li>
+<p>Sélectionnez <strong>Connexion au navigateur</strong>. Un nouveau panneau s’ouvrira à droite.</p>
+<p>Entrez votre nom d’utilisateur : <strong>StatCanID (ex: namenick)</strong>.</p>
+<p>Entrez le mot de passe temporaire: <strong>(fourni via l’e-mail d’intégration)</strong>.</p>
+<p>Sélectionnez <strong>Connecter</strong>.</p>
+<p><img alt="Browser Connect Image_FR" src="../imagesFR/VM/dtl7.PNG" /></p>
+</li>
+<li>
+<p>Changez votre mot de passe pour quelque chose de mémorable. (Paramètres système &gt; Options de connexion &gt; Mot de passe )</p>
+</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Your dashboard may look different</p>
-<p><img alt="dashboard_vm" src="../imagesFR/login/dashboard.png" />  </p>
-</div>
-<hr style="height:1px; background-color:green">
-
-<h2 id="demarrez-votre-machine-virtuelle">Démarrez votre machine virtuelle</h2>
-<ol>
-<li>
-<p>À partir de la page Vue d’ensemble de votre MV, cliquez sur le bouton Démarrer.  </p>
-<p><img alt="VM Start Button" src="../imagesFR/VM/VMStartButton.png" />  </p>
-</li>
-<li>
-<p>Le démarrage de votre MV prendra quelques minutes. Surveillez l’avancement du démarrage en cliquant sur l’icône des notifications dans le coin supérieur droit de la fenêtre.   </p>
-<p><img alt="Start Notification" src="../imagesFR/VM/VMRestartNotification.png" />  </p>
-</li>
-</ol>
-<hr style="height:1px; background-color:green">
-
-<h2 id="connectez-vous-a-votre-machine-virtuelle">Connectez-vous à votre machine virtuelle</h2>
-<ol>
-<li>
-<p>Démarrez votre VM et attendez la notification (cela peut prendre quelques minutes).</p>
-</li>
-<li>
-<p>À partir de la page Vue d’ensemble de votre MV, cliquez sur Connexion par navigateur.<br />
-<img alt="Browser Connect Button" src="../imagesFR/VM/VMBrowserConnect.png" /></p>
-</li>
-<li>
-<p>Assurez-vous que la case Ouvrir dans une nouvelle fenêtre est cochée; entrez le nom d’utilisateur et le mot de passe qui vous ont été fournis, puis cliquez sur le bouton Connecter. Votre MV devrait s’ouvrir dans un nouvel onglet du navigateur.</p>
-</li>
-</ol>
-<details class="tip">
-<summary>Désactiver les bloqueurs de fenêtres contextuelles</summary>
-<p>Après avoir tenté de vous connecter pour la première fois, une erreur peut s’afficher, indiquant qu’un bloqueur de fenêtres contextuelles empêche l’ouverture d’une nouvelle fenêtre. Pour le désactiver, une icône s’affichera dans la barre de recherche du navigateur; cliquez sur le bouton, puis sur Toujours autoriser. </p>
-<p><img alt="Allow PopUps" src="../imagesFR/VM/VMPopUp.png" /></p>
 </details>
-<hr style="height:1px; background-color:green">
-
-<h2 id="arreter-votre-machine-virtuelle">Arrêter votre machine virtuelle</h2>
-<p>Les machines virtuelles entraînent des coûts uniquement lorsqu’elles sont en marche. <strong>Pour éviter les dépenses inutiles, vous devez arrêter votre machine virtuelle lorsque vous ne l’utilisez pas.</strong> L’heure d’arrêt automatique de votre MV est fixée à 19 h (HNP).</p>
-<ol>
+<h2 id="utilisation-future">Utilisation future</h2>
+<details class="example"><summary>Démarrage d’une Machine virtuelle</summary><ol>
 <li>
-<p>À partir de la page Vue d’ensemble de votre MV, cliquez sur le bouton Arrêter.  </p>
-<p><img alt="VM Stop Button" src="../imagesFR/VM/VMStopButton.png" />  </p>
+<p>Accédez à l’URL du portail Azure à partir d’OZ:</p>
+<p><strong>https://portal.azure.com/#home</strong></p>
+</li>
+<li>
+<p>Sélectionnez <strong>DevTest Labs</strong> dans <em>Ressources - récentes</em>.</p>
+</li>
+<li>
+<p>Sélectionnez votre machine virtuelle.</p>
+</li>
+<li>
+<p>À partir de la page Vue d’ensemble de la Machine virtuelle, cliquez sur le bouton <strong>Démarrer</strong>.</p>
+<p><img alt="Start VM Image_FR" src="../imagesFR/VM/dtlstart.PNG" /></p>
+</li>
+<li>
+<p>Il faut quelques minutes pour que votre Machine virtuelle démarre. Surveillez sa progression de démarrage en sélectionnant l’icône Notifications en haut à droite de la fenêtre.</p>
 </li>
 </ol>
-<hr style="height:1px; background-color:green">
-
+</details>
+<details class="example"><summary>Se connecter à une Machine virtuelle</summary><ol>
+<li>
+<p>Démarrez votre Machine virtuelle et attendez la notification (cela peut prendre quelques minutes).</p>
+</li>
+<li>
+<p>À partir de la <em>page Vue d’ensemble</em> de votre Machine virtuelle, cliquez sur le bouton de <strong>connexion du navigateur</strong>.
+    <img alt="Browser Connect image_FR" src="../imagesFR/VM/dtlconnect.PNG" /></p>
+</li>
+<li>
+<p>Assurez-vous que la case à cocher Ouvrir dans <em>une nouvelle fenêtre</em> est sélectionné, entrez le nom d’utilisateur et mot de passe, et cliquez sur le bouton <strong>Connecter</strong>. Votre Machine virtuelle doit s’ouvrir dans un nouvel onglet du navigateur.</p>
+</li>
+</ol>
+</details>
+<h3 id="arreter-une-machine-virtuelle"><img alt="‼" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/203c.svg" title=":bangbang:" /> Arrêter une Machine virtuelle <img alt="‼" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/203c.svg" title=":bangbang:" /></h3>
+<div class="admonition danger">
+<p class="admonition-title">Les ordinateurs virtuels entraînent des coûts que lorsqu’ils sont en cours d’exécution. <br><br> Vous devez arrêter votre ordinateur virtuel lorsqu’il n’est pas utilisé pour éviter des frais inutiles. <br><br> Votre machine virtuelle a un temps d’arrêt automatique de 7pm PST.</p>
+<ol>
+<li>À partir de la page Vue d’ensemble de votre machine virtuelle, cliquez sur le bouton <strong>Arrêter</strong>.
+<img alt="stop VM Image_FR" src="../imagesFR/VM/dtlstop.PNG" /></li>
+</ol>
+</div>
 <h2 id="erreurs-courantes-et-correctifs">Erreurs courantes et correctifs</h2>
 <table>
 <thead>
@@ -800,85 +814,56 @@ Ces MV libre-service ne sont PAS optimisées pour le rendu géospatial.</p>
 </thead>
 <tbody>
 <tr>
-<td><img alt="error1" src="images/error_bastion_falseStart.png" /></td>
+<td><img alt="error1" src="../imagesFR/error_bastion_falseStart.png" /></td>
 <td></td>
 <td>Votre MV est en train de démarrer; attendez une minute et réessayez.</td>
 </tr>
 <tr>
-<td><img alt="error2" src="images/error_loginFailed.png" /></td>
+<td><img alt="error2" src="../imagesFR/error_loginFailed.png" /></td>
 <td></td>
 <td>Vous avez probablement saisi de manière incorrecte le nom d’utilisateur ou le mot de passe de la MV; réessayez.</td>
 </tr>
 <tr>
-<td><img alt="error3" src="images/error_bastion.png" /></td>
+<td><img alt="error3" src="../imagesFR/error_bastion.png" /></td>
 <td></td>
 <td>Vous subissez une certaine latence de réseau; ce problème se résout généralement de lui-même. Si ce n’est pas le cas, essayez de redémarrer votre MV.</td>
 </tr>
 </tbody>
 </table>
-<hr style="height:1px; background-color:green">
-
+<hr />
 <h2 id="conseils">Conseils</h2>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> •  Consultez le  <a href="/condaFR">Centre de connaissances</a> pour obtenir de l’aide sur la configuration des bibliothèques et progiciels Python.</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> L’utilisation de raccourcis clavier lors de la connexion à une MV peut ne pas entraîner l’action attendue (p. ex. Ctrl + z fermera la fenêtre principale de votre navigateur, et non la fenêtre du navigateur de la MV).</p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> •  L’heure d’arrêt automatique des MV est 19 h (HNC) <a href="faq.md">cela peut être réglé sur demande :FAQ</a></p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">• Le fait de déplacer la barre des tâches en haut ou sur le côté de la MV pourrait aider à différencier votre espace de travail de la zone des opérations de votre PC et de MV.</a></p>
-<p><img alt="🍁" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f341.png" title=":maple_leaf:" /> Vous avez plusieurs écrans? Vous ne pouvez pas modifier les paramètres d’affichage des MV, mais il existe un moyen de pratiquement utiliser plusieurs écrans. Utilisez le bouton Niveau inférieur dans la fenêtre de votre navigateur, puis faites-le glisser pour redimensionner la fenêtre sur plusieurs écrans afin d’obtenir un effet multi-écran. Il vous faudra peut-être régler certaines configurations dans les paramètres d’affichage de votre ZO-ordinateur portatif. <img width=15px src="https://img.icons8.com/small/512/restore-down.png"></p>
+<details class="tip"><summary>conseils</summary><p><img alt="🍁" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f341.svg" title=":maple_leaf:" /> •  Consultez le  <a href="/condaFR">Centre de connaissances</a> pour obtenir de l’aide sur la configuration des bibliothèques et progiciels Python.</p>
+<p><img alt="🍁" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f341.svg" title=":maple_leaf:" /> L’utilisation de raccourcis clavier lors de la connexion à une MV peut ne pas entraîner l’action attendue (p. ex. Ctrl + z fermera la fenêtre principale de votre navigateur, et non la fenêtre du navigateur de la MV).</p>
+<p><img alt="🍁" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f341.svg" title=":maple_leaf:" /> •  L’heure d’arrêt automatique des MV est 19 h (HNC) <a href="/faqFR.md">cela peut être réglé sur demande :FAQ</a></p>
+<p><img alt="🍁" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f341.svg" title=":maple_leaf:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">• Le fait de déplacer la barre des tâches en haut ou sur le côté de la MV pourrait aider à différencier votre espace de travail de la zone des opérations de votre PC et de MV.</a></p>
+<p><img alt="🍁" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f341.svg" title=":maple_leaf:" /> Vous avez plusieurs écrans? Vous ne pouvez pas modifier les paramètres d’affichage des MV, mais il existe un moyen de pratiquement utiliser plusieurs écrans. Utilisez le bouton Niveau inférieur dans la fenêtre de votre navigateur, puis faites-le glisser pour redimensionner la fenêtre sur plusieurs écrans afin d’obtenir un effet multi-écran. Il vous faudra peut-être régler certaines configurations dans les paramètres d’affichage de votre ZO-ordinateur portatif. <img width=15px src="https://img.icons8.com/small/512/restore-down.png"></p>
+</details>
 <hr style="height:1px; background-color:green">
 
 <p><a href="https://statcan.github.io/cae-eac/en/VirtualMachines/">En savoir davantage sur les MV de l’EAC</a>  <br />
 <a href="https://statcan.github.io/daaas/en/#experiments">En savoir davantage sur les espaces de travail de l’ETAA</a></p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../loginFR/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connexion" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Connexion
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../pipelineFR/" class="md-footer__link md-footer__link--next" aria-label="Next: Ingestion et stockage des données" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Ingestion et stockage des données
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03b
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.05
     </div>
   
   
@@ -897,10 +882,11 @@ Ces MV libre-service ne sont PAS optimisées pour le rendu géospatial.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
       
     
   </body>

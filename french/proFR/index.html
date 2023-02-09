@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,8 +8,14 @@
       
       
       
+      
+        <link rel="prev" href="../portalFR/">
+      
+      
+        <link rel="next" href="../insightsFR/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
     
     
       
@@ -17,16 +23,13 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4cae4f">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
@@ -39,10 +42,11 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -53,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
   
     
     
@@ -64,7 +68,7 @@
       
         
         <a href="#arcgis-pro-on-daaas-geo" class="md-skip">
-          Skip to content
+          Aller au contenu
         </a>
       
     </div>
@@ -76,7 +80,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
       
   
@@ -112,14 +116,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Recherche">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -129,9 +133,9 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Initialisation de la recherche
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -257,21 +261,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipelineFR/" class="md-nav__link">
-        Ingestion et stockage des données
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../postgresqlFR/" class="md-nav__link">
         PostgreSQL + PostGIS
       </a>
@@ -292,18 +281,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Écosystème ArcGIS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Écosystème ArcGIS" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Écosystème ArcGIS
         </label>
@@ -332,7 +322,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -349,7 +339,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
@@ -358,55 +348,42 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect-pro-to-enterprise-portal" class="md-nav__link">
-    Connect Pro to Enterprise Portal
+  <a href="#connecter-pro-au-portail-arcgis-enterprise" class="md-nav__link">
+    Connecter Pro au portail ArcGIS Enterprise
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-pro-to-a-postgresql-postgis-database" class="md-nav__link">
-    Connect Pro to a PostgreSQL +PostGIS Database
+  <a href="#se-connecter-a-une-base-de-donnees-postgresql" class="md-nav__link">
+    Se connecter à une base de données PostgreSQL
   </a>
-  
-    <nav class="md-nav" aria-label="Connect Pro to a PostgreSQL +PostGIS Database">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connect-to-a-postgresql-database" class="md-nav__link">
-    Connect to a PostgreSQL Database
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publishing-to-enterprise-portal" class="md-nav__link">
-    Publishing to Enterprise Portal
+  <a href="#publication-sur-le-portail-arcgis-enterprise" class="md-nav__link">
+    Publication sur le portail ArcGIS Enterprise
   </a>
   
-    <nav class="md-nav" aria-label="Publishing to Enterprise Portal">
+    <nav class="md-nav" aria-label="Publication sur le portail ArcGIS Enterprise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-data-from-arcgis-enterprise" class="md-nav__link">
-    Importing data from ArcGIS Enterprise
+  <a href="#importation-de-donnees-a-partir-darcgis-enterprise" class="md-nav__link">
+    Importation de données à partir d’ArcGIS Enterprise
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharing-data-to-arcgis-enterprise" class="md-nav__link">
-    Sharing data to ArcGIS Enterprise
+  <a href="#partage-de-donnees-avec-arcgis-enterprise" class="md-nav__link">
+    Partage de données avec ArcGIS Enterprise
   </a>
   
 </li>
@@ -471,18 +448,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Multi-plateforme (ETAA/EAC)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Multi-plateforme (ETAA/EAC)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Multi-plateforme (ETAA/EAC)
         </label>
@@ -533,18 +511,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           Centre de connaissances
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Centre de connaissances" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Centre de connaissances
         </label>
@@ -625,7 +604,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
@@ -634,55 +613,42 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect-pro-to-enterprise-portal" class="md-nav__link">
-    Connect Pro to Enterprise Portal
+  <a href="#connecter-pro-au-portail-arcgis-enterprise" class="md-nav__link">
+    Connecter Pro au portail ArcGIS Enterprise
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-pro-to-a-postgresql-postgis-database" class="md-nav__link">
-    Connect Pro to a PostgreSQL +PostGIS Database
+  <a href="#se-connecter-a-une-base-de-donnees-postgresql" class="md-nav__link">
+    Se connecter à une base de données PostgreSQL
   </a>
-  
-    <nav class="md-nav" aria-label="Connect Pro to a PostgreSQL +PostGIS Database">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connect-to-a-postgresql-database" class="md-nav__link">
-    Connect to a PostgreSQL Database
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publishing-to-enterprise-portal" class="md-nav__link">
-    Publishing to Enterprise Portal
+  <a href="#publication-sur-le-portail-arcgis-enterprise" class="md-nav__link">
+    Publication sur le portail ArcGIS Enterprise
   </a>
   
-    <nav class="md-nav" aria-label="Publishing to Enterprise Portal">
+    <nav class="md-nav" aria-label="Publication sur le portail ArcGIS Enterprise">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-data-from-arcgis-enterprise" class="md-nav__link">
-    Importing data from ArcGIS Enterprise
+  <a href="#importation-de-donnees-a-partir-darcgis-enterprise" class="md-nav__link">
+    Importation de données à partir d’ArcGIS Enterprise
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharing-data-to-arcgis-enterprise" class="md-nav__link">
-    Sharing data to ArcGIS Enterprise
+  <a href="#partage-de-donnees-avec-arcgis-enterprise" class="md-nav__link">
+    Partage de données avec ArcGIS Enterprise
   </a>
   
 </li>
@@ -700,138 +666,104 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
 
 
 <h1 id="arcgis-pro-on-daaas-geo">ArcGIS Pro on DAaaS GEO</h1>
-<details class="info">
-<summary>Your ArcGIS Pro license</summary>
-<p>ArcGIS Pro licenses are managed by the <strong>StatCan GeoHelp</strong> team.<br />
-This is the same license that you use to access ArcGIS Pro on NetA-B/AVD and ArcGIS Online.<br />
-DAaaS can not provide you with a license. </p>
-<p><strong>Please contact GeoHelp for assistance: geohelp@statcan.gc.ca</strong></p>
+<details class="info"><summary>Votre licence ArcGIS Pro </summary><p>Les licences ArcGIS Pro sont gérées par l’équipe StatCan GeoHelp.</p>
+<p>Il s’agit de la même licence que celle que vous utilisez pour accéder à ArcGIS Pro sur AVD et ArcGIS Online. </p>
+<p>l'ADS ne peut pas vous fournir de licence.  </p>
+<p><strong>Veuillez contacter GeoHelp pour obtenir de l’aide : geohelp@statcan.gc.ca</strong></p>
 </details>
-<details class="tip">
-<summary>ArcGIS Pro Official Documentation</summary>
-<p><a href="https://pro.arcgis.com/en/pro-app/latest/help/main/welcome-to-the-arcgis-pro-app-help.htm">Learn More: ArcGIS Pro Official Documentation</a></p>
+<details class="tip"><summary>Documentation officielle d'ArcGIS Pro</summary><p><a href="https://pro.arcgis.com/fr/pro-app/latest/help/main/welcome-to-the-arcgis-pro-app-help.htm">En savoir davantage</a></p>
 </details>
-<h2 id="connect-pro-to-enterprise-portal">Connect Pro to Enterprise Portal</h2>
-<p>A connection to the DAaaS GEO ArcGIS Enterprise Portal needs to be established in order to publish from ArcGIS Pro to the Portal.  Follow these steps:</p>
+<h2 id="connecter-pro-au-portail-arcgis-enterprise">Connecter Pro au portail ArcGIS Enterprise</h2>
+<p>Une connexion au portail ArcGIS Enterprise de DAaaS GEO doit être établie pour pouvoir publier depuis ArcGIS Pro vers le portail. Procédez comme suit:</p>
 <ol>
 <li>
-<p><em>a:</em> From the ArcGIS Pro home screen select <strong>Settings</strong>, then select <strong>Portals</strong><br />
-<img alt="pro_portal1" src="../imagesFR/pro/pro_lan1.PNG" /></p>
-<p><strong>OR</strong></p>
-<p><em>b:</em> Within a project right-click your name at the top right of the window and select: <strong>Manage Portals</strong>
-<img alt="pro_portal6" src="../imagesFR/pro/portal2b.png" /></p>
+<p>a: Dans l’écran d’accueil d’ArcGIS Pro, sélectionnez <strong>Paramètres</strong>, puis <strong>Portails</strong></p>
+<p><img alt="pro add portal a image_fr" src="/imagesFR/pro/pro_portal_a.PNG" /></p>
+<p><strong>OU</strong></p>
+<p>b : Dans un projet, cliquez avec le bouton droit sur votre nom en haut à droite de la fenêtre et sélectionnez : <strong>Gérer les portails</strong></p>
+<p><img alt="pro add portal b image_fr" src="/imagesFR/pro/pro_portal_b.PNG" /> </p>
 </li>
 <li>
-<p>Select <strong>Add Portal</strong> and enter the following URL: <strong>https://geoanalytics.cloud.statcan.ca/portal/</strong>
-    <img alt="pro_portal3" src="https://statcan.github.io/daaas-dads-geo/english/images/pro_portal3.PNG" /></p>
+<p>Sélectionnez <strong>Ajouter un portail</strong> et entrez l’URL suivant: <strong>https://geoanalytics.cloud.statcan.ca/portal/</strong> </p>
+<p><img alt="pro add portal url image_fr" src="/imagesFR/pro/pro_portal3.PNG" /></p>
 </li>
 <li>
-<p>The connection will then be listed.  Select the <strong>more</strong> button <strong>'...'</strong>, then select <em>Sign in</em>.<br />
-<img alt="pro_portal5" src="../imagesFR/pro/portal3.png" />
-    We also suggest after the connection is completed you select the  <strong>Set As Active Portal</strong> from the <strong>more...</strong> drop-down.</p>
+<p>La connexion sera alors répertoriée. Sélectionnez <strong>le bouton plus '...',</strong> puis sélectionnez <strong>Se connecter</strong>.</p>
+<p><img alt="pro portal singin image_fr" src="/imagesFR/pro/pro_portal4.PNG" /></p>
+<p>Nous vous suggérons également, une fois la connexion terminée, de sélectionner le portail Définir comme Actif dans le menu <strong>plus...</strong> déroulant.</p>
 </li>
 <li>
-<p>A browser window will open, click the <strong>'Azure Cloud Login'</strong> login button and follow the prompts.  Once Azure authenitication is completed, you will be returned to the ArcGIS Pro screen.</p>
-<p><br></p>
-<p>Learn more about <a href="portal.md">Self-Registering in the Portal</a></p>
-<p>Learn more: <a href="https://pro.arcgis.com/en/pro-app/latest/help/projects/manage-portal-connections-from-arcgis-pro.htm">Manage portal connections from ArcGIS Pro</a></p>
+<p>Une fenêtre de navigation s’ouvrira, cliquer sur le bouton de connexion <strong>Azure Cloud Login</strong> et suivre les invites de commande. Une fois l’authentification Azure terminée, vous serez renvoyé à l’écran ArcGIS Pro.</p>
 </li>
 </ol>
+<p><a href="/portalFR">En savoir plus sur l’auto-inscription dans le portail</a></p>
+<p><a href="https://pro.arcgis.com/fr/pro-app/latest/help/projects/manage-portal-connections-from-arcgis-pro.htm">Pour en savoir plus : Gérer les connexions au portail à partir d’ArcGIS Pro</a></p>
 <hr style="height:1px; background-color:green">
 
-<h2 id="connect-pro-to-a-postgresql-postgis-database">Connect Pro to a PostgreSQL +PostGIS Database</h2>
-<details class="bug">
-<summary>This section is incomplete</summary>
-<p>More information coming soon!</p>
+<h2 id="se-connecter-a-une-base-de-donnees-postgresql">Se connecter à une base de données PostgreSQL</h2>
+<p>GAE a rationalisé le processus de connexion ArcGIS Pro-PostgreSQL en utilisant une connexion de fichier .sde.</p>
+<ol>
+<li>
+<p>Dans le volet Catalogue, cliquez avec le bouton droit sur Bases de données et sélectionnez Ajouter une base de données propost1</p>
+<p><img alt="arcpro catalog image_fr" src="/imagesFR/pro/propost1.PNG" /></p>
+</li>
+<li>
+<p>Dans la nouvelle fenêtre, ouvrir Ce PC et localisez votre projet Fileshared (monté en tant que lecteur) </p>
+<p><img alt="arcpro fileshare image_fr" src="/imagesFR/pro/propost2.PNG" /></p>
+</li>
+<li>
+<p>Sélectionnez le fichier .sde, puis cliquez sur Ok</p>
+</li>
+<li>
+<p>La base de données PostgreSQL n’apparaîtra pas sous Bases de données dans le volet Catalogue.</p>
+</li>
+</ol>
+<p>En savoir davantage: <a href="https://pro.arcgis.com/fr/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
+<h2 id="publication-sur-le-portail-arcgis-enterprise">Publication sur le portail ArcGIS Enterprise</h2>
+<details class="bug"><summary>Cette section n’est pas encore complète.</summary><p>De plus amples renseignements seront disponibles sous peu!</p>
 </details>
-<hr style="height:1px; background-color:green">
+<p>En tant que membre sur GAE, vous aurez un rôle d’utilisateur Membre de projet ou de Visionneuse de projet. Les mêmes privilèges seront étendus à ArcGIS Enterprise et à ArcGIS Pro.</p>
+<h3 id="importation-de-donnees-a-partir-darcgis-enterprise">Importation de données à partir d’ArcGIS Enterprise</h3>
+<p>Les utilisateurs ayant les rôles Membre du projet et Visionneuse de projet auront la possibilité d’utiliser (afficher) les données partagées de leurs groupes de projets dans ArcGIS Pro ainsi que les données personnelles.</p>
+<p>Dans le volet <em>Catalogue</em> (si le volet Catalogue est fermé, cliquez sur l’onglet <strong>Afficher</strong> du ruban principal. Dans le groupe Windows, cliquez sur Volet Catalogue), sélectionnez <strong>l’onglet Portail</strong>. </p>
+<p>Les mêmes Onglets de Contenu d’ArcGIS Enterprise s’afficheront; Mon contenu, Mes favoris, Mes groupes, Mon organisation, ArcGIS Enterprise et Living Atlas.</p>
+<p><img alt="ProToPortalSteps" src="../imagesFR/ProToPortalSteps.png" /></p>
+<h3 id="partage-de-donnees-avec-arcgis-enterprise">Partage de données avec ArcGIS Enterprise</h3>
+<p>Seuls les utilisateurs disposant du rôle Membre du projet auront la possibilité de télécharger et de partager du contenu sur le portail.</p>
+<p>Faites un clic droit sur une couche dans la fenêtre Contenu (si la fenêtre Contenu est fermée, cliquez sur l’onglet Afficher du ruban principal.</p>
+<p>Dans le groupe Windows, cliquez sur Contenu) et sélectionnez Partager &gt; Partager en tant que Couche Web dans le menu déroulant. Une nouvelle fenêtre Partager en tant que couche Web apparaîtra.</p>
+<p><img alt="AddDataToPortalSteps" src="../imagesFR/AddDataToPortalSteps.png" /></p>
 
-<h3 id="connect-to-a-postgresql-database">Connect to a PostgreSQL Database</h3>
-<ol>
-<li>Navigate to the <strong>Insert</strong> tab, select <strong>Connections</strong>, then select <strong>Database</strong> &gt; <strong>New Database Connection</strong>.</li>
-</ol>
-<p><img alt="pro_post2" src="images/pro_post1.PNG" /></p>
-<ol>
-<li>In the new window, Choose PostgreSQL from the Database Platform drop-down list. Enter the database information provided to you during onboarding (see email: <em>Welcome to DAaaS GEO</em>).</li>
-</ol>
-<p><img alt="pro_post2" src="images/pro_post2.PNG" /></p>
-<ol>
-<li>Open/Navigate to the <strong>Catalog</strong> pane, Expand <strong>Databases</strong> and the new connection will be listed there.</li>
-</ol>
-<p><img alt="pro_post3" src="images/pro_post3.PNG" /></p>
-<p>Learn More: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
-<h2 id="publishing-to-enterprise-portal">Publishing to Enterprise Portal</h2>
-<details class="bug">
-<summary>This section is incomplete</summary>
-<p>More information coming soon!</p>
-</details>
-<p>As a member on GAE, you will have either a Project Member or Project Viewer user role. The same priviledges will carry across both ArcGIS Enterprise and ArcGIS Pro.</p>
-<h3 id="importing-data-from-arcgis-enterprise">Importing data from ArcGIS Enterprise</h3>
-<p>Both users with the Project Member and Project Viewer roles will have the ability to consume (view) shared data from their project groups in ArcGIS Pro asd well as perosnal data.</p>
-<p>In the <strong>Catalog</strong> pane (if the <strong>Catalog</strong> pane is closed, click the <strong>View</strong> tab on the main ribbon. In the <strong>Windows</strong> group, click <strong>Catalog Pane</strong>), select the <strong>Portal</strong> tab. The same <strong>Content</strong> tabs from ArcGIS Enterprise will appear; <em>My Content</em>, <em>My Favorites</em>, <em>My Groups</em>, <em>My Organization</em>, <em>ArcGIS Enterprise</em>, and <em>Living Atlas</em>. 
-<img alt="ProToPortalSteps" src="images/ProToPortalSteps.png" /></p>
-<h3 id="sharing-data-to-arcgis-enterprise">Sharing data to ArcGIS Enterprise</h3>
-<p>Only users with the Project Member role will have the ability upload and share content to the Portal.</p>
-<p>Right click on a layer in the <strong>Contents</strong> pane (if the <strong>Contents</strong> pane is closed, click the <strong>View</strong> tab on the main ribbon. In the <strong>Windows</strong> group, click <strong>Contents</strong>) and select <strong>Sharing</strong> &gt; <strong>Share as Web Layer</strong> from the drop down menu. A new <strong>Share As Web Layer</strong> window will appear. 
-<img alt="AddDataToPortalSteps" src="images/AddDataToPortalSteps.png" /></p>
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../portalFR/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ArcGIS Portal" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              ArcGIS Portal
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../insightsFR/" class="md-footer__link md-footer__link--next" aria-label="Next: ArcGIS Insights" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ArcGIS Insights
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.03b
+      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.05
     </div>
   
   
@@ -850,10 +782,11 @@ DAaaS can not provide you with a license. </p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
       
     
   </body>
