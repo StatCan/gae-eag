@@ -15,11 +15,11 @@
         <link rel="next" href="../portalFR/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>PostgreSQL + PostGIS - L’Environnement Géospatial - Development Draft</title>
+        <title>PostgreSQL + PostGIS - L’Environnement Géospatial</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-header__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            L’Environnement Géospatial - Development Draft
+            L’Environnement Géospatial
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    L’Environnement Géospatial - Development Draft
+    L’Environnement Géospatial
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -304,6 +304,13 @@
         <li class="md-nav__item">
   <a href="#comment-charger-des-donnees-dans-votre-base-de-donnees" class="md-nav__link">
     Comment charger des données dans votre base de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils" class="md-nav__link">
+    Conseils
   </a>
   
 </li>
@@ -521,7 +528,7 @@
   
     <li class="md-nav__item">
       <a href="../condaFR/" class="md-nav__link">
-        Anaconda & Python
+        Python (Conda)
       </a>
     </li>
   
@@ -602,6 +609,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conseils" class="md-nav__link">
+    Conseils
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -621,19 +635,19 @@
 <p><center> <img alt="postgis logo" src="/imagesFR/postgresql/post.png" />
  </center></p>
 <h1 id="postgresqlpostgis">PostgreSQL+PostGIS &nbsp;&nbsp;&nbsp;&nbsp;</h1>
-<details class="bug"><summary>Fonction en cours d’élaboration</summary><p>Cette fonction et cette section sont en cours d’élaboration. De plus amples renseignements seront disponibles sous peu!</p>
-</details>
 <hr />
-<details class="success"><summary>Exigences préalables</summary><ol>
+<details class="success">
+<summary>Exigences préalables</summary>
+<ol>
 <li>Un projet intégré avec une base de données demandée  </li>
 <li>Une machine virtuelle dans l’environnement ADS avec pgAdmin, ArcGIS Pro, QGIS ou CAE Services Azure de l’EAC. See the <a href="../vmFR/">Voir la page MV pour en savoir davantage.</a></li>
 </ol>
 </details>
-<details class="tip"><summary>En savoir davantage PostgreSQL + PostGIS</summary><p>En savoir davantage:  <a href="https://www.postgresql.org/">À propos de PostgreSQL (EN)</a></p>
-<p>En savoir davantage:  <a href="https://postgis.net/">À propos de PostGIS (EN)</a></p>
-</details>
+<hr />
 <h2 id="acces-a-votre-base-de-donnees">Accès à votre base de données:</h2>
-<details class="example"><summary>1. pgAdmin</summary><p>C’est l’un des outils les plus courants pour l’administration de base de données PostgreSQL. 
+<details class="example">
+<summary>1. pgAdmin</summary>
+<p>C’est l’un des outils les plus courants pour l’administration de base de données PostgreSQL. 
 PG-Admin a été installé sur votre Machine virtuelle. </p>
 <ol>
 <li>
@@ -658,7 +672,9 @@ PG-Admin a été installé sur votre Machine virtuelle. </p>
 </ol>
 <p>En savoir davantage: <a href="https://www.pgadmin.org/docs/pgadmin4/latest/getting_started.html">pgAdmin docs</a></p>
 </details>
-<details class="example"><summary>2. ArcPro</summary><p>GAE a rationalisé le processus de connexion ArcGIS Pro-PostgreSQL en utilisant une connexion de fichier .sde.</p>
+<details class="example">
+<summary>2. ArcPro</summary>
+<p>GAE a rationalisé le processus de connexion ArcGIS Pro-PostgreSQL en utilisant une connexion de fichier .sde.</p>
 <ol>
 <li>
 <p>Dans le volet Catalogue, cliquez avec le bouton droit sur Bases de données et sélectionnez Ajouter une base de données propost1
@@ -677,7 +693,9 @@ PG-Admin a été installé sur votre Machine virtuelle. </p>
 </ol>
 <p>En savoir davantage: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
 </details>
-<details class="example"><summary>3. QGIS</summary><ol>
+<details class="example">
+<summary>3. QGIS</summary>
+<ol>
 <li>
 <p>Sous l’onglet du navigateur, cliquez avec le bouton droit de la souris sur PostgreSQL, puis sélectionnez New Connection (nouvelle connexion).</p>
 <p><img alt="post_gis1" src="../imagesFR/postgresql/postq1.PNG" /></p>
@@ -760,27 +778,59 @@ PG-Admin a été installé sur votre Machine virtuelle. </p>
 </li>
 </ul>
 </details>
-<details class="example"><summary>4. EAC – services infonuagiques Azure</summary><p><strong>Azure Data Factory, Azure Databricks, Azure Synapse</strong></p>
+<details class="example">
+<summary>4. EAC – services infonuagiques Azure</summary>
+<p><strong>Azure Data Factory, Azure Databricks, Azure Synapse</strong></p>
 <p><a href="https://statcan.github.io/cae-eac/en/PostgreSQL/">Apprendre à utiliser les services de l’EAC</a></p>
 <p>Si vous avez besoin d’aide, veuillez communiquer avec l’équipe de soutien par le biais du canal https://cae-eac.slack.com.</p>
 </details>
-<hr style="height:1px; background-color:green">
+<details class="example">
+<summary>5. Python</summary>
+<p>Remplacez les espaces réservés par les détails de votre propre base de données pour vous connecter à votre propre base de données PostgreSQL.</p>
+<div class="highlight"><pre><span></span><code>```
+import psycopg2
+
+conn = psycopg2.connect(
+    dbname=&quot;your_database_name&quot;,
+    user=&quot;your_username&quot;,
+    password=&quot;your_password&quot;,
+    host=&quot;your_host&quot;,
+    port=5432
+)
+
+# Define the SQL query to select data from the table
+query = &quot;SELECT * FROM your_table;&quot;
+
+# Use pandas to read the query results into a dataframe
+df = pd.read_sql_query(query, conn)
+
+# Close the database connection
+conn.close()
+
+# Print the dataframe
+print(df)
+```
+</code></pre></div>
+</details>
+<hr />
 <h2 id="comment-charger-des-donnees-dans-votre-base-de-donnees">Comment charger des données dans votre base de données</h2>
-<details class="example"><summary>1. Python</summary><p>Il existe de nombreux progiciels Python pour travailler avec PostgreSQL (SQLAlchemy, psycopg*, ogr2ogr, etc.). Cet exemple utilise sqlalchemy avec l’aide de geoPandas pour charger un fichier forme dans la base de données:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># create the sqlalchemy connection engine</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># replace the &lt; &gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#Example: &quot;postgresql://myUsername:myPassword@geopostgresqlflex.postgres.database.azure.com:5432/myDataBase&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">db_connection_url</span> <span class="o">=</span> <span class="s2">&quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;instance&gt;:&lt;port&gt;/&lt;database&gt;&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">link</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">db_connection_url</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># read in the data into a geo-dataframe</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Push the geo-dataframe to postgresql</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">gdf</span><span class="o">.</span><span class="n">to_postgis</span><span class="p">(</span><span class="s2">&quot;&lt;table_name&gt;&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span> 
+<details class="example">
+<summary>1. Python</summary>
+<p>Il existe de nombreux progiciels Python pour travailler avec PostgreSQL (SQLAlchemy, psycopg*, ogr2ogr, etc.). Cet exemple utilise sqlalchemy avec l’aide de geoPandas pour charger un fichier forme dans la base de données:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># create the sqlalchemy connection engine</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># replace the &lt; &gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">#Example: &quot;postgresql://myUsername:myPassword@geopostgresqlflex.postgres.database.azure.com:5432/myDataBase&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">db_connection_url</span> <span class="o">=</span> <span class="s2">&quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;instance&gt;:&lt;port&gt;/&lt;database&gt;&quot;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">link</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">db_connection_url</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># read in the data into a geo-dataframe</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Push the geo-dataframe to postgresql</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">gdf</span><span class="o">.</span><span class="n">to_postgis</span><span class="p">(</span><span class="s2">&quot;&lt;table_name&gt;&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span> 
 </code></pre></div>
 En savoir davantage:</p>
 <ul>
@@ -795,10 +845,14 @@ En savoir davantage:</p>
 </li>
 </ul>
 </details>
-<details class="example"><summary>2. pgAdmim</summary><p>Documents d’aide de pgAdmin : <a href="https://www.pgadmin.org/docs/pgadmin4/development/import_export_data.html">Importation/Exportation de données</a></p>
+<details class="example">
+<summary>2. pgAdmim</summary>
+<p>Documents d’aide de pgAdmin : <a href="https://www.pgadmin.org/docs/pgadmin4/development/import_export_data.html">Importation/Exportation de données</a></p>
 <p><img alt="Import/Export_postgresql" src="../imagesFR/PGimport_export_options.png" /></p>
 </details>
-<details class="example"><summary>3. QGIS</summary><p>In current versions of QGIS you can export shape files to PostGIS using the build in DB Manager.  Somewhat counterintuitively, QGIS refers to this as 'importing to Postgis'. </p>
+<details class="example">
+<summary>3. QGIS</summary>
+<p>In current versions of QGIS you can export shape files to PostGIS using the build in DB Manager.  Somewhat counterintuitively, QGIS refers to this as 'importing to Postgis'. </p>
 <ol>
 <li>
 <p>Ouvrez le gestionnaire de base de données. 
@@ -828,7 +882,9 @@ En savoir davantage:</p>
 </li>
 </ul>
 </details>
-<details class="example"><summary>4. ArcPro</summary><p>Pour simplifier le processus, GAE a créé un fichier de connexion à une base de données pour votre projet; fichier .sde. Cela peut être situé dans le partage de fichiers de votre projet qui est monté en tant que lecteur vers votre Machine virtuelle.</p>
+<details class="example">
+<summary>4. ArcPro</summary>
+<p>Pour simplifier le processus, GAE a créé un fichier de connexion à une base de données pour votre projet; fichier .sde. Cela peut être situé dans le partage de fichiers de votre projet qui est monté en tant que lecteur vers votre Machine virtuelle.</p>
 <ol>
 <li>
 <p>Lorsque vous êtes prêt à importer vos données dans la base de données PostgreSQL à partir d’arc pro, utilisez l’outil Classe d’entités vers classe d’entités.
@@ -845,6 +901,36 @@ En savoir davantage:</p>
 <p>Sélectionnez Exécuter</p>
 </li>
 </ol>
+</details>
+<hr />
+<h2 id="conseils">Conseils</h2>
+<details class="tip">
+<summary>Meilleures pratiques</summary>
+<ul>
+<li>
+<p>Optimisez votre base de données : utilisez les index appropriés et partitionnez vos données pour améliorer les performances.</p>
+</li>
+<li>
+<p>Utilisez des projections et des systèmes de coordonnées : utilisez toujours la projection et le système de coordonnées corrects pour vos données. PostGIS fournit des fonctions pour transformer entre les systèmes de coordonnées et les projections.</p>
+</li>
+<li>
+<p>Gardez votre base de données propre : nettoyez régulièrement votre base de données en vidant, analysant et supprimant les données inutiles.</p>
+</li>
+<li>
+<p>Utilisez des transactions : utilisez des transactions pour vous assurer que vos opérations de base de données sont atomiques et cohérentes. Cela peut prévenir la corruption des données et améliorer les performances.</p>
+</li>
+<li>
+<p>Utilisez une stratégie de sauvegarde : créez et maintenez des sauvegardes régulières de votre base de données pour prévenir la perte de données.</p>
+</li>
+<li>
+<p>Documentez votre base de données : documentez votre schéma de base de données, vos structures de données et autres détails importants pour que les autres puissent comprendre et utiliser votre base de données.</p>
+</li>
+</ul>
+</details>
+<details class="tip">
+<summary>En savoir davantage PostgreSQL + PostGIS</summary>
+<p>En savoir davantage:  <a href="https://www.postgresql.org/">À propos de PostgreSQL (EN)</a></p>
+<p>En savoir davantage:  <a href="https://postgis.net/">À propos de PostGIS (EN)</a></p>
 </details>
 
 
@@ -867,7 +953,7 @@ En savoir davantage:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.05
+      © 2023 Statistics Canada; DAS-GAE Early Adopter's Guide; V.1.0.0
     </div>
   
   
@@ -890,7 +976,7 @@ En savoir davantage:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>

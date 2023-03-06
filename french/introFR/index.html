@@ -15,11 +15,11 @@
         <link rel="next" href="../condaFR/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>Introduction simple au SIG - L’Environnement Géospatial - Development Draft</title>
+        <title>Introduction simple au SIG - L’Environnement Géospatial</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-header__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            L’Environnement Géospatial - Development Draft
+            L’Environnement Géospatial
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    L’Environnement Géospatial - Development Draft
+    L’Environnement Géospatial
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -501,6 +501,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-propos-de-lanalyse-geospatiale" class="md-nav__link">
+    À propos de l'analyse géospatiale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vocabulaire-du-sig" class="md-nav__link">
     Vocabulaire du SIG
   </a>
@@ -523,7 +530,7 @@
   
     <li class="md-nav__item">
       <a href="../condaFR/" class="md-nav__link">
-        Anaconda & Python
+        Python (Conda)
       </a>
     </li>
   
@@ -598,6 +605,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-propos-de-lanalyse-geospatiale" class="md-nav__link">
+    À propos de l'analyse géospatiale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vocabulaire-du-sig" class="md-nav__link">
     Vocabulaire du SIG
   </a>
@@ -631,22 +645,56 @@
 <p>Les SIG sont composés d’éléments matériels et logiciels. En raison d’importants volumes de données spatiales et de la nécessité d’afficher les valeurs à la volée, le matériel du SIG dispose souvent de grandes capacités de stockage, d’une vitesse de calcul rapide et d’une mémoire puissante.  <b>L’ADS a été conçue pour répondre aux besoins de ces utilisateurs.</b></p>
 <hr />
 <h3 id="a-propos-des-donnees-spatiales">À propos des données spatiales</h3>
-<p>Les données spatiales sont des types de données (fichiers, bases de données, services Web) qui codent l’information géographique destinée à être utilisée dans des applications fondées sur l’emplacement. Il en existe deux types :</p>
+<p>Les données spatiales font référence aux informations qui ont une composante de localisation ou géographique associée. Ce sont des <strong>données qui ont une référence spatiale, comme la latitude et la longitude ou une adresse de rue</strong>, qui permettent de les afficher sur une carte et de les analyser à l'aide d'un logiciel de système d'information géographique (SIG). Les données spatiales peuvent être largement classées en deux types : les données vectorielles et les données raster.</p>
 <ol>
-    <li> <b>Données vectorielles</b>
-        <ul>
-        <li>points (coordonnées x, y, (z))
-        <li>lignes (routes, réseaux)) 
-        <li>polygones (zones).
-        </ul></li>
-
-    <li> <b>Données de trame</b>
-        <ul>
-        <li>imagesFR ou grilles de valeurs numériques (p. ex. imagerie satellitaire).
-        </li></ul>
+<li>
+<p><strong>Données vectorielles</strong> : Les données vectorielles représentent les caractéristiques géographiques à l'aide de points, de lignes et de polygones. Les exemples de données vectorielles comprennent :</p>
+<ul>
+<li><strong>Points</strong> : adresses, villes, aéroports, hôpitaux et autres emplacements discrets.</li>
+<li><strong>Lignes</strong> : routes, rivières, chemins de fer et autres caractéristiques linéaires.</li>
+<li><strong>Polygones</strong> : pays, états, comtés, parcs et autres zones ayant des limites bien définies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Données raster</strong> : Les données raster représentent les caractéristiques géographiques sous forme de grille de cellules, où chaque cellule a une valeur qui représente un aspect de la caractéristique représentée. Les exemples de données raster comprennent :</p>
+<ul>
+<li>Données d'élévation : modèles numériques d'élévation (MNE) et modèles numériques de terrain (MNT).</li>
+<li>Imagerie satellite : photographies aériennes, imagerie multispectrale et imagerie thermique.</li>
+<li>Données climatiques : température, précipitations et autres données météorologiques.</li>
+</ul>
+</li>
 </ol>
-
-<p>Une <strong>base de données spatiales</strong> – également appelée <em>base de données géospatiales</em>– est construite pour capturer et stocker les points, les lignes et les polygones.</p>
+<p>Les données vectorielles et raster peuvent être utilisées dans un large éventail d'applications SIG, telles que l'analyse spatiale, la cartographie et la modélisation environnementale.</p>
+<p>Une <b>base de données spatiale</b>, également connue sous le nom de "géodatabase", est conçue pour capturer et stocker les points, les lignes et les polygones.</p>
+<p>Une géodatabase est un type de base de données utilisé pour stocker et gérer des données géospatiales, y compris des entités, des attributs et des relations. Elle est conçue pour prendre en charge le stockage, la requête et la manipulation de données géographiques de manière à préserver les relations spatiales et temporelles entre les entités. Une géodatabase peut stocker de nombreux types de données différents, notamment des points, des lignes, des polygones et des jeux de données raster, et elle peut être utilisée pour une large gamme d'applications, notamment l'analyse SIG, la production de cartes et la gestion de données. Les géodatabases sont généralement créées et gérées à l'aide de logiciels spécialisés, tels que ArcGIS d'Esri.</p>
+<h3 id="a-propos-de-lanalyse-geospatiale">À propos de l'analyse géospatiale</h3>
+<p>Les méthodes d'analyse géospatiale sont des techniques utilisées pour analyser et visualiser les données spatiales. Voici quelques-unes des méthodes d'analyse géospatiale courantes :</p>
+<ol>
+<li>
+<p>Analyse de système d'information géographique (SIG) : le SIG est un système informatique utilisé pour capturer, stocker, manipuler, analyser et présenter des données géospatiales. Il permet de créer, d'éditer et d'analyser des cartes, ainsi que de réaliser des requêtes et des analyses spatiales.</p>
+</li>
+<li>
+<p>Télédétection : la télédétection est le processus d'acquisition de données sur la surface de la Terre à distance, généralement par le biais de satellites ou d'aéronefs. Ces données peuvent être utilisées pour analyser la couverture terrestre, la végétation et d'autres variables environnementales.</p>
+</li>
+<li>
+<p>Statistiques spatiales : les statistiques spatiales sont une branche des statistiques qui traite des données ayant une composante spatiale. Elle permet d'analyser les modèles et les relations dans les données spatiales, tels que l'autocorrélation spatiale, le regroupement spatial et l'interpolation spatiale.</p>
+</li>
+<li>
+<p>Interpolation spatiale : l'interpolation spatiale est le processus d'estimation des valeurs à des emplacements non échantillonnés en fonction des valeurs aux emplacements échantillonnés à proximité. Elle est souvent utilisée dans la modélisation environnementale, comme pour prédire la qualité de l'air ou de l'eau à des emplacements non mesurés.</p>
+</li>
+<li>
+<p>Analyse de réseau : l'analyse de réseau est le processus d'analyse de la structure et de la fonction des réseaux de transport, tels que les réseaux routiers ou les systèmes de transport en commun. Elle peut être utilisée pour optimiser les itinéraires, estimer les temps de déplacement et identifier les goulots d'étranglement et les congestions.</p>
+</li>
+<li>
+<p>Géostatistique : la géostatistique est une sous-ensemble des statistiques spatiales qui se concentre sur l'analyse et la modélisation des données spatiales présentant une dépendance spatiale ou une autocorrélation spatiale.</p>
+</li>
+<li>
+<p>Exploration de données spatiales : l'exploration de données spatiales est le processus de découverte de modèles et de relations dans de grands ensembles de données géospatiales. Elle implique souvent l'utilisation d'algorithmes d'apprentissage automatique, tels que le regroupement, la classification et la régression.</p>
+</li>
+<li>
+<p>Visualisation : la visualisation est le processus de représentation visuelle de données géospatiales, généralement par le biais de cartes, de graphiques et de tableaux.</p>
+</li>
+</ol>
 <h3 id="vocabulaire-du-sig">Vocabulaire du SIG</h3>
 <table>
 <thead>
@@ -750,7 +798,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.05
+      © 2023 Statistics Canada; DAS-GAE Early Adopter's Guide; V.1.0.0
     </div>
   
   
@@ -773,7 +821,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>

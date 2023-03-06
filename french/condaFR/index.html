@@ -15,11 +15,11 @@
         <link rel="next" href="../sdmxFR/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>Anaconda & Python - L’Environnement Géospatial - Development Draft</title>
+        <title>Python (Conda) - L’Environnement Géospatial</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-header__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-header__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,13 +94,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            L’Environnement Géospatial - Development Draft
+            L’Environnement Géospatial
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anaconda & Python
+              Python (Conda)
             
           </span>
         </div>
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="L’Environnement Géospatial - Development Draft" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial - Development Draft" data-md-component="logo">
+    <a href=".." title="L’Environnement Géospatial" class="md-nav__button md-logo" aria-label="L’Environnement Géospatial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    L’Environnement Géospatial - Development Draft
+    L’Environnement Géospatial
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -480,14 +480,16 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Anaconda & Python
+          Python (Conda)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Anaconda & Python
+        Python (Conda)
       </a>
       
         
@@ -495,6 +497,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -504,9 +508,118 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-conda" class="md-nav__link">
-    Python &amp; Conda
+  <a href="#environnements-virtuels" class="md-nav__link">
+    Environnements virtuels
   </a>
+  
+    <nav class="md-nav" aria-label="Environnements virtuels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-nouvel-environnement" class="md-nav__link">
+    Créer un nouvel environnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activer-votre-environnement-remplacer-__" class="md-nav__link">
+    Activer votre environnement (remplacer &lt;__&gt;):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-des-paquets" class="md-nav__link">
+    Installation des paquets:
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation des paquets:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    Conda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    PIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmez-linstallation-de-votre-paquet" class="md-nav__link">
+    Confirmez l'installation de votre paquet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-exemples-de-base" class="md-nav__link">
+    Quelques exemples de base :
+  </a>
+  
+    <nav class="md-nav" aria-label="Quelques exemples de base :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wfs-into-pandas-dataframe" class="md-nav__link">
+    WFS into pandas DataFrame:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shapefile-to-geodataframe-spatial-dataframe" class="md-nav__link">
+    Shapefile to GeoDataFrame (Spatial DataFrame)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-geodataframe-to-arcgis-enterprise" class="md-nav__link">
+    Export GeoDataFrame to ArcGIS Enterprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-csv-to-shpas-sdf-then-export-to-arcgis-enterprise" class="md-nav__link">
+    Join CSV to SHP(as sdf) then Export to ArcGIS Enterprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geocode-a-dataframe-using-osm-api" class="md-nav__link">
+    GeoCode a dataframe using OSM API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster-analysis-with-gdal" class="md-nav__link">
+    Raster Analysis with GDAL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -577,6 +690,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -585,9 +700,118 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-conda" class="md-nav__link">
-    Python &amp; Conda
+  <a href="#environnements-virtuels" class="md-nav__link">
+    Environnements virtuels
   </a>
+  
+    <nav class="md-nav" aria-label="Environnements virtuels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-nouvel-environnement" class="md-nav__link">
+    Créer un nouvel environnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activer-votre-environnement-remplacer-__" class="md-nav__link">
+    Activer votre environnement (remplacer &lt;__&gt;):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-des-paquets" class="md-nav__link">
+    Installation des paquets:
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation des paquets:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    Conda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    PIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmez-linstallation-de-votre-paquet" class="md-nav__link">
+    Confirmez l'installation de votre paquet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-exemples-de-base" class="md-nav__link">
+    Quelques exemples de base :
+  </a>
+  
+    <nav class="md-nav" aria-label="Quelques exemples de base :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wfs-into-pandas-dataframe" class="md-nav__link">
+    WFS into pandas DataFrame:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shapefile-to-geodataframe-spatial-dataframe" class="md-nav__link">
+    Shapefile to GeoDataFrame (Spatial DataFrame)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-geodataframe-to-arcgis-enterprise" class="md-nav__link">
+    Export GeoDataFrame to ArcGIS Enterprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-csv-to-shpas-sdf-then-export-to-arcgis-enterprise" class="md-nav__link">
+    Join CSV to SHP(as sdf) then Export to ArcGIS Enterprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geocode-a-dataframe-using-osm-api" class="md-nav__link">
+    GeoCode a dataframe using OSM API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster-analysis-with-gdal" class="md-nav__link">
+    Raster Analysis with GDAL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -614,42 +838,221 @@
 
 
 
-  <h1>Anaconda & Python</h1>
-
-<h2 id="python-conda">Python &amp; Conda</h2>
-<div class="admonition warning">
-<p class="admonition-title">Cette section n’est pas encore complète.</p>
-<p>De plus amples renseignements seront disponibles sous peu!</p>
-</div>
-<p>Conda est une distribution de source ouverte des langages Python et R qui simplifie la gestion et le déploiement de paquets.</p>
-<p><strong>Pour créer un nouvel environnement en utilisant une fenêtre CMD ou Python :</strong></p>
-<p>Créer un nouvel environnement <em>(remplacer &lt;__&gt;)</em> :
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
+<h1 id="python-conda">Python &amp; Conda</h1>
+<h2 id="environnements-virtuels">Environnements virtuels</h2>
+<h3 id="creer-un-nouvel-environnement">Créer un nouvel environnement</h3>
+<details class="tip">
+<summary>Meilleure pratique : travailler avec des environnements virtuels Conda</summary>
+<p>L'utilisation d'environnements virtuels avec Conda peut vous aider à créer des environnements cohérents, reproductibles et isolés pour vos projets, ce qui peut vous faire gagner du temps et éviter les problèmes causés par des dépendances conflictuelles ou des modifications au niveau du système.</p>
+<p>Par exemple, les produits ArcGIS fonctionnent mieux avec <em>python 3.7</em>. En créant un environnement ArcGIS séparé, vous pouvez installer la version 3.7 sans provoquer de conflits avec la version moderne de python 3.10.</p>
+</details>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
+</code></pre></div>
+exemple:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">n</span> <span class="n">arc</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
 </code></pre></div></p>
-<p>Activer votre environnement <em>(remplacer &lt;__&gt;)</em>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span>
+<h3 id="activer-votre-environnement-remplacer-__">Activer votre environnement <em>(remplacer &lt;__&gt;)</em>:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">env_name</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id="installation-des-paquets">Installation des paquets:</h2>
+<details class="info">
+<summary>Paquets géo-spécifiques communs disponibles</summary>
+<p>Cette liste n'est pas exhaustive, mais voici quelques-uns des paquets les plus courants:</p>
+<div class="highlight"><pre><span></span><code>- GeoPandas
+- Shapely
+- Fiona
+- GDAL/OGR
+- PyProj
+- Cartopy
+- Rasterio
+- Geoplot
+- Basemap
+- Bokeh
+- PySAL
+- Spatial Pandas
+- NetworkX
+- PyShp
+- TileStache
+- GdalUtils
+- Scipy
+- PyTopo
+- Geopy
+- Plotly
+</code></pre></div>
+</details>
+<h3 id="conda">Conda</h3>
+<p>La plateforme d’ADS utilise <em>Artifactory</em> pour la gestion des paquets et des bibliothèques :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
 </code></pre></div></p>
-<p>Installation des paquets:
-La plateforme d’ADS utilise <em>Artifactory</em> pour la gestion des paquets et des bibliothèques :```
-https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>À utiliser:
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>```python
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ [package]
+<p><strong>À utiliser:</strong></p>
+<p>La forge minimale et l'artefactaire Conda ont déjà été ajoutés à votre chemin système.</p>
+<p><strong>Vous ne devriez pas avoir besoin de spécifier le canal.</strong></p>
+<p>Si cela échoue, nous avons inclus des exemples sur les connexions directes après les exemples simples.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span>
+</code></pre></div>
+<p>Pour des versions spécifiques
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="n">geopandas</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">conda</span> <span class="n">install</span> <span class="n">matplotlib</span><span class="o">=</span><span class="mf">3.7.0</span>
 </code></pre></div></p>
-<p>Pour une version de paquet particulière :
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">...</span><span class="p">]</span>
+<p>En se connectant directement au 'artifactory channel'</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">-</span><span class="n">remote</span><span class="o">/</span> <span class="p">[</span><span class="n">package</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="pip">PIP</h3>
+<p>Pour PIP, vous <strong>doit</strong> spécifier le dépôt :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>https://jfrog.aaw.cloud.statcan.ca/artifactory/pypi-remote/.pypi/
 </code></pre></div></p>
-<p>Exemple :
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda create --name geo
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>conda activate geo
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ geopandas
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote/ matplotlib=3.5.2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span> <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jfrog</span><span class="o">.</span><span class="n">aaw</span><span class="o">.</span><span class="n">cloud</span><span class="o">.</span><span class="n">statcan</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">artifactory</span><span class="o">/</span><span class="n">pypi</span><span class="o">-</span><span class="n">remote</span><span class="o">/.</span><span class="n">pypi</span><span class="o">/</span>
+</code></pre></div>
+<h3 id="confirmez-linstallation-de-votre-paquet">Confirmez l'installation de votre paquet</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">conda</span> <span class="nb">list</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">pip</span> <span class="nb">list</span>
 </code></pre></div></p>
+<hr />
+<h2 id="quelques-exemples-de-base">Quelques exemples de base :</h2>
+<h3 id="wfs-into-pandas-dataframe">WFS into pandas DataFrame:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># Set WFS URL and layer name</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">wfs_url</span> <span class="o">=</span> <span class="s1">&#39;https://mywfs.com/wfs&#39;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">layer_name</span> <span class="o">=</span> <span class="s1">&#39;my_layer&#39;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Read WFS into a geopandas dataframe</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">wfs_url</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1"># Convert geopandas dataframe to pandas dataframe</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">df</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1"># Preview the dataframe</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="shapefile-to-geodataframe-spatial-dataframe">Shapefile to GeoDataFrame (Spatial DataFrame)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># Define the path to the shapefile</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">shapefile_path</span> <span class="o">=</span> <span class="s1">&#39;path/to/your/shapefile.shp&#39;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># Use geopandas to read the shapefile into a GeoDataFrame</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shapefile_path</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># Print the GeoDataFrame</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="export-geodataframe-to-arcgis-enterprise">Export GeoDataFrame to ArcGIS Enterprise</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Define the URL of your ArcGIS Enterprise portal</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">portal_url</span> <span class="o">=</span> <span class="s1">&#39;https://geoanalytics.cloud.statcan.ca/portal/&#39;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Create a connection to your portal</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">portal_url</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Define the name of the feature layer to be created</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">layer_name</span> <span class="o">=</span> <span class="s1">&#39;your_layer_name&#39;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># Publish the GeoDataFrame to your portal as a feature layer</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">feature_layer</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">import_data</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="c1"># Print the URL of the feature layer</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">feature_layer</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="join-csv-to-shpas-sdf-then-export-to-arcgis-enterprise">Join CSV to SHP(as sdf) then Export to ArcGIS Enterprise</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kn">from</span> <span class="nn">arcgis.features</span> <span class="kn">import</span> <span class="n">SpatialDataFrame</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1"># Load the CSV file into a Pandas dataframe</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">csv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;path/to/csv_file.csv&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="c1"># Load the spatial data into a SpatialDataFrame using ArcGIS API for Python</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">sdf</span> <span class="o">=</span> <span class="n">SpatialDataFrame</span><span class="o">.</span><span class="n">from_featureclass</span><span class="p">(</span><span class="s1">&#39;path/to/spatial_data.shp&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1"># Join the CSV dataframe to the spatial dataframe based on a common field</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">joined_sdf</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">csv_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;common_field&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1"># Export the joined spatial dataframe to ArcGIS Enterprise using the ArcGIS API for Python</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s1">&#39;https://geoanalytics.cloud.statcan.ca/portal/&#39;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">joined_fc</span> <span class="o">=</span> <span class="n">joined_sdf</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">to_featureclass</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="s1">&#39;path/to/output.gdb&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="n">joined_item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">add</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Feature Service&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Joined Data&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="s1">&#39;Data&#39;</span><span class="p">},</span> <span class="n">data</span><span class="o">=</span><span class="n">joined_fc</span><span class="p">)</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="n">joined_item</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+</code></pre></div>
+Ce code commence par charger un fichier CSV dans un dataframe Pandas en utilisant la fonction pd.read_csv(). Ensuite, il charge un jeu de données spatiales dans un SpatialDataFrame en utilisant la méthode SpatialDataFrame.from_featureclass() de l'API ArcGIS pour Python. Les deux dataframes sont ensuite joints en fonction d'un champ commun à l'aide de la méthode merge() du SpatialDataFrame.</p>
+<p>Enfin, le SpatialDataFrame joint est exporté vers une classe d'entités en utilisant la méthode spatial.to_featureclass() du SpatialDataFrame, puis publié sur ArcGIS Enterprise en utilisant les méthodes gis.content.add() et publish() de l'API ArcGIS pour Python. Notez que vous devrez remplacer les chemins d'exemple et l'URL du serveur par les chemins et l'URL réels pour vos données et votre instance d'ArcGIS Enterprise.</p>
+<h3 id="geocode-a-dataframe-using-osm-api">GeoCode a dataframe using OSM API</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">def</span> <span class="nf">geocode_address</span><span class="p">(</span><span class="n">address</span><span class="p">):</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="sd">    Geocode a single address using the OpenStreetMap API</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://nominatim.openstreetmap.org/search&quot;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;json&quot;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    <span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>        <span class="n">results</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>            <span class="k">return</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="k">def</span> <span class="nf">geocode_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">address_column</span><span class="p">):</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="sd">    Geocode a Pandas dataframe using the OpenStreetMap API</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>    <span class="c1"># Create a new dataframe to store the geocoding results</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    <span class="n">geocoded_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">])</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>    <span class="c1"># Loop through each row in the original dataframe</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>        <span class="c1"># Get the address from the specified column</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>        <span class="n">address</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">address_column</span><span class="p">]</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>        <span class="c1"># Geocode the address using the OpenStreetMap API</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">geocode_address</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>        <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>            <span class="c1"># Add the latitude and longitude to the new dataframe</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>            <span class="n">geocoded_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]]</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>            <span class="c1"># If geocoding failed, add NaN values to the new dataframe</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>            <span class="n">geocoded_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;NaN&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;NaN&quot;</span><span class="p">)]</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>    <span class="c1"># Add the new columns to the original dataframe</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">geocoded_df</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">geocoded_df</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+Pour utiliser ce code, il suffit d'appeler la fonction geocode_dataframe avec votre dataframe Pandas et le nom de la colonne contenant les données d'adresse.
+Cela ajoutera deux nouvelles colonnes au dataframe, "latitude" et "longitude", qui contiennent les coordonnées géocodées pour chaque adresse. Notez que ce code utilise la bibliothèque requests pour effectuer des requêtes HTTP vers l'API OpenStreetMap, vous devrez donc vous assurer qu'elle est installée dans votre environnement avant d'exécuter le code. <em>À l'heure actuelle, l'API OSM est bloquée par le pare-feu.</em></p>
+<h3 id="raster-analysis-with-gdal">Raster Analysis with GDAL</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Open the raster file</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">raster_ds</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s1">&#39;path/to/raster.tif&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Read the raster band into a NumPy array</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">raster_band</span> <span class="o">=</span> <span class="n">raster_ds</span><span class="o">.</span><span class="n">GetRasterBand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">raster_array</span> <span class="o">=</span> <span class="n">raster_band</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="c1"># Perform some analysis on the raster data</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="c1"># For example, calculate the mean pixel value</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">mean_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">raster_array</span><span class="p">)</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="c1"># Print the result</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean pixel value: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mean_value</span><span class="p">))</span>
+</code></pre></div>
+Ce code ouvre un fichier raster en utilisant la méthode gdal.Open() et lit le premier bande du raster dans un tableau NumPy en utilisant la méthode ReadAsArray() de l'objet gdal.Band. Ensuite, il effectue une analyse sur les données raster, dans ce cas en calculant la valeur moyenne des pixels en utilisant la fonction np.mean() de NumPy. Enfin, il affiche le résultat dans la console.</p>
+<p>Vous pouvez modifier ce code pour effectuer d'autres types d'analyse sur les données raster, telles que calculer les valeurs minimales, maximales ou d'écart type des pixels, ou effectuer des calculs entre plusieurs bandes. GDAL fournit une large gamme de fonctions et d'outils pour travailler avec des données raster, donc les possibilités sont presque infinies.</p>
+<hr />
 <h2 id="conda-ide-memoire">Conda ide-mémoire</h2>
 <p><img alt="conda cheat" src="../imagesFR/conda-cheatsheeta.png" /></p>
 <p><strong><a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">Lien vers la version intégrale de l’aide-mémoire Conda</a></strong></p>
-<hr style="height:1px; background-color:green">
-
+<hr />
 <p><a href="https://github.com/StatCan/cae-eac/blob/Artifactory-draft/docs/en/Artifactory.md">En savoir davantage sur Artifactory</a></p>
 <p><a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">En savoir davantage sur Conda</a></p>
 
@@ -673,7 +1076,7 @@ https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAaaS GAE Early Adopter's Guide; Version 0.0.05
+      © 2023 Statistics Canada; DAS-GAE Early Adopter's Guide; V.1.0.0
     </div>
   
   
@@ -696,7 +1099,7 @@ https://jfrog.aaw.cloud.statcan.ca/artifactory/conda-forge-remote
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
