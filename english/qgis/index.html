@@ -15,11 +15,11 @@
         <link rel="next" href="../aaw/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>QGIS - Geospatial Environment - Development Draft</title>
+        <title>QGIS - Geospatial Environment</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-header__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Geospatial Environment - Development Draft
+            Geospatial Environment
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-nav__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Geospatial Environment - Development Draft
+    Geospatial Environment
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -434,6 +434,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best Practices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#more-resources" class="md-nav__link">
     More Resources
   </a>
@@ -561,7 +568,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Anaconda & Python
+        Python (Conda)
       </a>
     </li>
   
@@ -676,6 +683,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best Practices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#more-resources" class="md-nav__link">
     More Resources
   </a>
@@ -699,14 +713,18 @@
 
 
 <h1 id="qgis-free-and-open-source"><img alt="qgis logo" src="../images/qgis1.png" /> QGIS - Free and Open Source</h1>
-<details class="quote"><summary>What is QGIS</summary><p>QGIS is free geospatial analysis desktop software that provides a intuitive user interface and supports a wide variety of data types and formats.</p>
+<details class="quote">
+<summary>What is QGIS</summary>
+<p>QGIS is free geospatial analysis desktop software that provides a intuitive user interface and supports a wide variety of data types and formats.</p>
 <p>QGIS provides a large number of basic GIS analysis functions and visualizations; and the option to download extension for more complex analysis. </p>
 </details>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="geo-virtual-machine">GEO Virtual Machine</h3>
 <p>QGIS comes installed on your VM by default. It can be found under the start menu:
     <img alt="qgis start vm" src="../images/qgis_start.PNG" /></p>
-<details class="info"><summary>AAW</summary><p>QGIS is also available on the <em>Remote Desktops</em> available through the AAW.</p>
+<details class="info">
+<summary>AAW</summary>
+<p>QGIS is also available on the <em>Remote Desktops</em> available through the AAW.</p>
 <p><b> Setting up a workspace in the AAW: </b>
 <a href="https://statcan.github.io/daaas/en/1-Experiments/Remote-Desktop/" target="_blank"> Learn how to deploy a remote desktop in the AAW environment </a></p>
 </details>
@@ -801,8 +819,32 @@
 <p><a href="https://www.line-45.com/post/using-qgis-postgis-dynamic-duo">Line 45- Using QGIS with PostGIS: A Dynamic Duo (whitepaper - English only)</a></p>
 </li>
 </ul>
-<hr style="height:1px; background-color:green">
-
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>
+<p>Use a Project File: Always start by creating a project file for your work. This helps you keep your layers organized and makes it easy to share your work with others.</p>
+</li>
+<li>
+<p>Use Layer Styling: QGIS provides a lot of options for layer styling. Use them to make your maps look better and more professional.</p>
+</li>
+<li>
+<p>Keep Your Data Organized: Keep your data organized and up to date. Use descriptive file names and keep your data in logical folders.</p>
+</li>
+<li>
+<p>Use Plugins: QGIS has a large community of developers who create plugins to extend its functionality. Take advantage of these plugins to make your work easier and more efficient.</p>
+</li>
+<li>
+<p>Use Projections: Make sure you understand projections and use them appropriately. This will help ensure that your data is accurate and that your maps are meaningful.</p>
+</li>
+<li>
+<p>Learn Keyboard Shortcuts: QGIS has a lot of keyboard shortcuts that can save you time and effort. Take the time to learn them and you'll be more productive.</p>
+</li>
+<li>
+<p>Use the QGIS Community: QGIS has a large and active community of users and developers. Use the community to learn more about the software, get help with problems, and share your work with others.</p>
+</li>
+</ul>
+<hr />
 <h2 id="more-resources">More Resources</h2>
 <ul>
 <li>
@@ -836,7 +878,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAS GAE Early Adopter's Guide; Version 0.0.12
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.1.0.0
     </div>
   
   
@@ -859,7 +901,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>

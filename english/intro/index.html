@@ -15,11 +15,11 @@
         <link rel="next" href="../conda/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>Simple GIS Intro - Geospatial Environment - Development Draft</title>
+        <title>Simple GIS Intro - Geospatial Environment</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-header__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Geospatial Environment - Development Draft
+            Geospatial Environment
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-nav__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Geospatial Environment - Development Draft
+    Geospatial Environment
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -501,6 +501,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#about-geospatial-analysis" class="md-nav__link">
+    About Geospatial Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gis-vocabulary" class="md-nav__link">
     GIS Vocabulary
   </a>
@@ -523,7 +530,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Anaconda & Python
+        Python (Conda)
       </a>
     </li>
   
@@ -598,6 +605,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#about-geospatial-analysis" class="md-nav__link">
+    About Geospatial Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gis-vocabulary" class="md-nav__link">
     GIS Vocabulary
   </a>
@@ -628,26 +642,59 @@
 <p>Geospatial data is data about phenomena that have a location on the surface of the earth. The location may be static (ex- the location of a road, a disaster event, citizens living in poverty), or dynamic (ex- a moving vehicle or pedestrian, the spread of COVID)
 <br></p>
 <p>A GIS (Geospatial Information System) helps us analyze spatial relationships and patterns amongst these phenomena. It is particularly useful for visualizing spatial data and reporting results of analysis.</p>
-<p>GIS' are composed of both hardware and software components. Due to the large volumes of spatial data and the need to display values on the fly, GIS hardware often have large storage capacities, fast computing speed, and powerful memory. <b>DAaaS has been designed meet these users needs.</b></p>
+<p>GIS' are composed of both hardware and software components. Due to the large volumes of spatial data and the need to display values on the fly, GIS hardware often have large storage capacities, fast computing speed, and powerful memory. <b>DAS-GAE has been designed meet these users needs.</b></p>
 <hr />
 <h3 id="about-spatial-data">About Spatial Data</h3>
-<p>Spatial data are data types (files, databases, web services) that encode geographic information for use in location-aware applications.
-There are two types:</p>
+<p>Spatial data refers to information that has a location or geographic component associated with it. It is <strong>data that has a spatial reference, such as latitude and longitude or a street address</strong>, that allows it to be displayed on a map and analyzed using geographic information system (GIS) software. Spatial data can be broadly classified into two types: vector data and raster data.</p>
 <ol>
-    <li> <b>Vector data</b>
-        <ul>
-        <li>points (x, y, z coordinates)
-        <li>lines (roads, networks) 
-        <li>polygons (areas).
-        </ul></li>
-
-    <li> <b>Raster data</b>
-        <ul>
-        <li> images or grids of digital values; eg. satellite imagery.
-        </li></ul>
+<li>
+<p><strong>Vector data</strong>: Vector data represents geographic features using points, lines, and polygons. Examples of vector data include:</p>
+<ul>
+<li><strong>Points</strong>: addresses, cities, airports, hospitals, and other discrete locations.</li>
+<li><strong>Lines</strong>: roads, rivers, railroads, and other linear features.</li>
+<li><strong>Polygons</strong>: countries, states, counties, parks, and other areas with well-defined boundaries.</li>
+</ul>
+</li>
+<li>
+<p><strong>Raster data</strong>: Raster data represents geographic features as a grid of cells, where each cell has a value that represents some aspect of the feature being represented. Examples of raster data include:</p>
+<ul>
+<li>Elevation data: digital elevation models (DEMs) and digital terrain models (DTMs).</li>
+<li>Satellite imagery: aerial photographs, multispectral imagery, and thermal imagery.</li>
+<li>Climate data: temperature, precipitation, and other weather-related data.</li>
+</ul>
+</li>
 </ol>
-
+<p>Both vector and raster data can be used in a wide range of GIS applications, such as spatial analysis, cartography, and environmental modeling.</p>
 <p>A <b>spatial database</b> — also known as a “<b>geodatabase</b>” — is built to capture and store the points, lines, and polygons.</p>
+<p>A geodatabase is a type of database used to store and manage geospatial data, including features, attributes, and relationships. It is designed to support the storage, query, and manipulation of geographic data in a way that preserves the spatial and temporal relationships between features. A geodatabase can store many different types of data, including points, lines, polygons, and raster datasets, and it can be used for a wide range of applications, including GIS analysis, map production, and data management. Geodatabases are typically created and managed using specialized software, such as Esri's ArcGIS.</p>
+<h3 id="about-geospatial-analysis">About Geospatial Analysis</h3>
+<p>Geospatial analysis methods are techniques used to analyze and visualize spatial data. Here are some common geospatial analysis methods:</p>
+<ol>
+<li>
+<p>Geographic Information System (GIS) analysis: GIS is a computer-based system used to capture, store, manipulate, analyze, and present geospatial data. It allows you to create, edit, and analyze maps, as well as perform spatial queries and analysis.</p>
+</li>
+<li>
+<p>Remote sensing: Remote sensing is the process of acquiring data about the Earth's surface from a distance, typically through the use of satellites or aircraft. This data can be used to analyze land cover, vegetation, and other environmental variables.</p>
+</li>
+<li>
+<p>Spatial statistics: Spatial statistics is a branch of statistics that deals with data that has a spatial component. It allows you to analyze patterns and relationships in spatial data, such as spatial autocorrelation, spatial clustering, and spatial interpolation.</p>
+</li>
+<li>
+<p>Spatial interpolation: Spatial interpolation is the process of estimating values at unsampled locations based on values at nearby sampled locations. It is often used in environmental modeling, such as predicting air quality or water quality at unmeasured locations.</p>
+</li>
+<li>
+<p>Network analysis: Network analysis is the process of analyzing the structure and function of transportation networks, such as road networks or public transportation systems. It can be used to optimize routes, estimate travel times, and identify bottlenecks and congestion.</p>
+</li>
+<li>
+<p>Geostatistics: Geostatistics is a subset of spatial statistics that focuses on analyzing and modeling spatial data that exhibit spatial dependence or spatial autocorrelation.</p>
+</li>
+<li>
+<p>Spatial data mining: Spatial data mining is the process of discovering patterns and relationships in large geospatial datasets. It often involves the use of machine learning algorithms, such as clustering, classification, and regression.</p>
+</li>
+<li>
+<p>Visualization: Visualization is the process of representing geospatial data visually, typically through the use of maps, graphs, and charts. </p>
+</li>
+</ol>
 <h3 id="gis-vocabulary">GIS Vocabulary</h3>
 <table>
 <thead>
@@ -751,7 +798,7 @@ There are two types:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAS GAE Early Adopter's Guide; Version 0.0.12
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.1.0.0
     </div>
   
   
@@ -774,7 +821,7 @@ There are two types:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>

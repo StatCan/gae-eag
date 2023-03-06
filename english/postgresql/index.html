@@ -15,11 +15,11 @@
         <link rel="next" href="../portal/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>PostgreSQL + PostGIS - Geospatial Environment - Development Draft</title>
+        <title>PostgreSQL + PostGIS - Geospatial Environment</title>
       
     
     
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-header__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-header__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Geospatial Environment - Development Draft
+            Geospatial Environment
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -167,13 +167,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Geospatial Environment - Development Draft" class="md-nav__button md-logo" aria-label="Geospatial Environment - Development Draft" data-md-component="logo">
+    <a href=".." title="Geospatial Environment" class="md-nav__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    Geospatial Environment - Development Draft
+    Geospatial Environment
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -304,6 +304,13 @@
         <li class="md-nav__item">
   <a href="#how-to-add-data-into-your-database" class="md-nav__link">
     How to add data into your database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
   </a>
   
 </li>
@@ -521,7 +528,7 @@
   
     <li class="md-nav__item">
       <a href="../conda/" class="md-nav__link">
-        Anaconda & Python
+        Python (Conda)
       </a>
     </li>
   
@@ -602,6 +609,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -619,18 +633,17 @@
 
 
 <h1 id="postgresqlpostgis">PostgreSQL+PostGIS &nbsp;&nbsp;&nbsp;&nbsp; <img alt="postgis logo" src="../images/post.png" /></h1>
-<details class="bug"><summary>Feature Under Development</summary><p>This feature and section is under development.  More information coming soon</p>
-</details>
-<details class="success"><summary>Prerequisites</summary><ol>
+<details class="success">
+<summary>Prerequisites</summary>
+<ol>
 <li>An onboarded project with a requested database   </li>
 <li>A <strong>virtual machine</strong> in the DAaaS Environment with <strong>pgAdmin</strong> and/or <strong>ArcGIS Pro</strong> and/or <strong>QGIS</strong> and/or <strong>CAE Azure Services</strong>. See the <a href="../vm/">VM page</a> for more information</li>
 </ol>
 </details>
-<details class="tip"><summary>Learn more about PostgreSQL + PostGIS</summary><p>Learn More: <a href="https://www.postgresql.org/">About PostgreSQL</a></p>
-<p>Learn More: <a href="https://postgis.net/">About PostGIS</a></p>
-</details>
 <h2 id="accessing-your-database">Accessing your Database:</h2>
-<details class="example"><summary>1. pgAdmin</summary><p>This is one of the more common tool for PostgreSQL database administration. PG-Admin has been installed on your VM.</p>
+<details class="example">
+<summary>1. pgAdmin</summary>
+<p>This is one of the more common tool for PostgreSQL database administration. PG-Admin has been installed on your VM.</p>
 <ol>
 <li>
 <p>Connect to your cloud VM and launch <strong>pgAdmin</strong>.
@@ -651,17 +664,12 @@
    Click on it to connect and you will be asked to enter a password
     <img alt="EnterPassword" src="../images/PgSql_04.png" /></p>
 </li>
-<li>
-<p>The password you need to enter is a Azure AD access Token that will be generated for an authenticated Azure AD user. 
-   From PowerShell, you can generate this access token by entering the following command</p>
-</li>
 </ol>
-<p><em>az account get-access-token --resource https://ossrdbms-aad.database.windows.net</em></p>
-<p>The output is as follow, where you will need to copy the value for accessToken and use it as Password in  pgAdmin
-    <img alt="AccessToken" src="../images/PgSql_05.png" /></p>
 <p>Learn More: <a href="https://www.pgadmin.org/docs/pgadmin4/latest/getting_started.html">pgAdmin docs</a></p>
 </details>
-<details class="example"><summary>2. ArcPro</summary><p>GAE has streamlined the ArcGIS Pro-PostgreSQL connection process by utilizing a <em>.sde</em> file connection.</p>
+<details class="example">
+<summary>2. ArcPro</summary>
+<p>GAE has streamlined the ArcGIS Pro-PostgreSQL connection process by utilizing a <em>.sde</em> file connection.</p>
 <ol>
 <li>
 <p>In the Catalog pane, right-click <em>Databases</em> and select <em>Add Database</em>
@@ -680,7 +688,9 @@
 </ol>
 <p>Learn More: <a href="https://pro.arcgis.com/en/pro-app/2.8/help/data/databases/connect-postgresql.htm">ArcGIS Pro Documentation</a></p>
 </details>
-<details class="example"><summary>3. QGIS</summary><ol>
+<details class="example">
+<summary>3. QGIS</summary>
+<ol>
 <li>
 <p>Under the browser tab, Right-click PostgreSQL, and select <em>New Connection</em></p>
 <p><img alt="post_gis1" src="../images/post_qgis1.PNG" /></p>
@@ -763,29 +773,94 @@
 </li>
 </ul>
 </details>
-<details class="example"><summary>4. CAE- Azure Cloud Services</summary><p><strong>Azure Data Factory, Azure Data Bricks, Azure Synapse</strong></p>
+<details class="example">
+<summary>4. CAE- Azure Cloud Services</summary>
+<p><strong>Azure Data Factory, Azure Data Bricks, Azure Synapse</strong></p>
 <p><a href="https://statcan.github.io/cae-eac/en/PostgreSQL/">Learn how to use CAE services</a></p>
 <p>Please contact the support team through the https://cae-eac.slack.com channel if you need assistance.</p>
 </details>
+<details class="example">
+<summary>5. Python</summary>
+<p>Replace the placeholders with your own database details to connect to your own PostgreSQL database.</p>
+<div class="highlight"><pre><span></span><code>```
+import psycopg2
+
+conn = psycopg2.connect(
+    dbname=&quot;your_database_name&quot;,
+    user=&quot;your_username&quot;,
+    password=&quot;your_password&quot;,
+    host=&quot;your_host&quot;,
+    port=5432
+)
+
+# Define the SQL query to select data from the table
+query = &quot;SELECT * FROM your_table;&quot;
+
+# Use pandas to read the query results into a dataframe
+df = pd.read_sql_query(query, conn)
+
+# Close the database connection
+conn.close()
+
+# Print the dataframe
+print(df)
+```
+</code></pre></div>
+</details>
 <hr style="height:1px; background-color:green">
 <h2 id="how-to-add-data-into-your-database">How to add data into your database</h2>
-<details class="example"><summary>1. Python</summary><p>There are many python packages available for working with PostgreSQL (SQLAlchemy, psycopg*, ogr2ogr...)  This example uses sqlalchemy with help from geoPandas to load a shapefile into the database:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># create the sqlalchemy connection engine</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># replace the &lt; &gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#Example: &quot;postgresql://myUsername:myPassword@geopostgresqlflex.postgres.database.azure.com:5432/myDataBase&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">db_connection_url</span> <span class="o">=</span> <span class="s2">&quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;instance&gt;:&lt;port&gt;/&lt;database&gt;&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">link</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">db_connection_url</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># read in the data into a geo-dataframe</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Push the geo-dataframe to postgresql</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">gdf</span><span class="o">.</span><span class="n">to_postgis</span><span class="p">(</span><span class="s2">&quot;&lt;table_name&gt;&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span> 
+<details class="example">
+<summary>1. Python</summary>
+<p>There are many python packages available for working with PostgreSQL (SQLAlchemy, psycopg*, ogr2ogr...)  This example uses sqlalchemy with help from geoPandas to load a shapefile into the database:</p>
+<div class="highlight"><pre><span></span><code>```
+import geopandas as gpd
+from sqlalchemy import create_engine
+
+# create the sqlalchemy connection engine
+# replace the &lt; &gt;
+#Example: &quot;postgresql://myUsername:myPassword@geopostgresqlflex.postgres.database.azure.com:5432/myDataBase&quot;
+db_connection_url = &quot;postgresql://&lt;username&gt;:&lt;password&gt;@&lt;instance&gt;:&lt;port&gt;/&lt;database&gt;&quot;
+link = create_engine(db_connection_url)
+
+# read in the data into a geo-dataframe
+gdf = gpd.read_file(r&#39;path_to_file&#39;)
+
+# Push the geo-dataframe to postgresql
+gdf.to_postgis(&quot;&lt;table_name&gt;&quot;, link, index=False, if_exists=&#39;replace&#39;) 
+```
 </code></pre></div>
-Learn More:</p>
+<hr />
+<div class="highlight"><pre><span></span><code>```
+import psycopg2
+from sqlalchemy import create_engine
+import pandas as pd
+
+# Connect to the database
+conn = psycopg2.connect(
+    host=&quot;your_host&quot;,
+    database=&quot;your_database&quot;,
+    user=&quot;your_username&quot;,
+    password=&quot;your_password&quot;
+)
+
+# Create a SQLAlchemy engine to connect to the database
+engine = create_engine(&#39;postgresql://your_username:your_password@your_host/your_database&#39;)
+
+# Define the name of the table to be created in the database
+table_name = &#39;your_table&#39;
+
+# Define the dataframe to be exported
+df = pd.DataFrame()
+
+# Use the to_sql method of the dataframe to export it to the database
+df.to_sql(table_name, engine, if_exists=&#39;replace&#39;)
+
+# Close the database connection
+conn.close()
+```
+</code></pre></div>
+<hr />
+<p>Learn More:</p>
 <ul>
 <li>
 <p><a href="https://docs.sqlalchemy.org/en/14/">SQLAlchemy Docs</a></p>
@@ -798,10 +873,14 @@ Learn More:</p>
 </li>
 </ul>
 </details>
-<details class="example"><summary>2. pgAdmim</summary><p>pgAdmin Help Docs: <a href="https://www.pgadmin.org/docs/pgadmin4/development/import_export_data.html">Import/Export Data</a></p>
+<details class="example">
+<summary>2. pgAdmim</summary>
+<p>pgAdmin Help Docs: <a href="https://www.pgadmin.org/docs/pgadmin4/development/import_export_data.html">Import/Export Data</a></p>
 <p><img alt="Import/Export_postgresql" src="../images/PGimport_export_options.png" /></p>
 </details>
-<details class="example"><summary>3. QGIS</summary><p>In current versions of QGIS you can export shape files to PostGIS using the build in DB Manager.  Somewhat counterintuitively, QGIS refers to this as 'importing to Postgis'. </p>
+<details class="example">
+<summary>3. QGIS</summary>
+<p>In current versions of QGIS you can export shape files to PostGIS using the build in DB Manager.  Somewhat counterintuitively, QGIS refers to this as 'importing to Postgis'. </p>
 <ol>
 <li>
 <p>Open DB Manager
@@ -829,7 +908,9 @@ Learn More:</p>
 </li>
 </ul>
 </details>
-<details class="example"><summary>4. ArcPro</summary><p>To simplify the process, GAE has crated a database connection file for your project; .sde file.  This can be located in your project's file share which is mounted as a drive to your VM.</p>
+<details class="example">
+<summary>4. ArcPro</summary>
+<p>To simplify the process, GAE has crated a database connection file for your project; .sde file.  This can be located in your project's file share which is mounted as a drive to your VM.</p>
 <ol>
 <li>
 <p>When ready import your data into the PostgreSQL DB from arc pro, use the <em>Feature Class to Feature Class</em> tool.
@@ -846,6 +927,37 @@ Learn More:</p>
 <p>Select run</p>
 </li>
 </ol>
+</details>
+<hr />
+<h2 id="tips">Tips</h2>
+<details class="tip">
+<summary>Best Practices</summary>
+<ul>
+<li>
+<p>Optimize your database: Use the appropriate indexes, and partition your data to improve performance.</p>
+</li>
+<li>
+<p>Use projections and coordinate systems: Always use the correct projection and coordinate system for your data. PostGIS provides functions for transforming between coordinate systems and projections.</p>
+</li>
+<li>
+<p>Keep your database clean: Regularly clean up your database by vacuuming, analyzing, and deleting unnecessary data.</p>
+</li>
+<li>
+<p>Use transactions: Use transactions to ensure that your database operations are atomic and consistent. This can prevent data corruption and improve performance.</p>
+</li>
+<li>
+<p>Use a backup strategy: Create and maintain regular backups of your database to prevent data loss.</p>
+</li>
+<li>
+<p>Document your database: Document your database schema, data structures, and other important details to ensure that others can understand and use your database.</p>
+</li>
+</ul>
+</details>
+<hr />
+<details class="tip">
+<summary>Learn more about PostgreSQL + PostGIS</summary>
+<p>Learn More: <a href="https://www.postgresql.org/">About PostgreSQL</a></p>
+<p>Learn More: <a href="https://postgis.net/">About PostGIS</a></p>
 </details>
 
 
@@ -868,7 +980,7 @@ Learn More:</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2022 Statistics Canada; DAS GAE Early Adopter's Guide; Version 0.0.12
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.1.0.0
     </div>
   
   
@@ -891,7 +1003,7 @@ Learn More:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
