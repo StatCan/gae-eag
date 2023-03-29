@@ -15,7 +15,7 @@
         <link rel="next" href="../pro/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -79,7 +79,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Geospatial Environment" class="md-header__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
@@ -478,12 +480,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#working-with-multiple-vesrions-devprod" class="md-nav__link">
-    Working with Multiple Vesrions (DEV&gt;PROD)
+  <a href="#working-with-multiple-vesrions-dev-prod" class="md-nav__link">
+    Working with Multiple Vesrions (DEV-PROD)
   </a>
   
-    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV&gt;PROD)">
+    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV-PROD)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utalizing-seperate-workspaces" class="md-nav__link">
+    Utalizing seperate 'workspaces'
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#replacing-a-layer-within-an-existing-web-map" class="md-nav__link">
@@ -898,12 +907,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#working-with-multiple-vesrions-devprod" class="md-nav__link">
-    Working with Multiple Vesrions (DEV&gt;PROD)
+  <a href="#working-with-multiple-vesrions-dev-prod" class="md-nav__link">
+    Working with Multiple Vesrions (DEV-PROD)
   </a>
   
-    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV&gt;PROD)">
+    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV-PROD)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utalizing-seperate-workspaces" class="md-nav__link">
+    Utalizing seperate 'workspaces'
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#replacing-a-layer-within-an-existing-web-map" class="md-nav__link">
@@ -951,7 +967,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
 
 
   <h1>ArcGIS Portal</h1>
@@ -1097,7 +1112,14 @@ The output will redirect you to a web page where you can login to the Portal usi
 </code></pre></div>
 <h3 id="learn-more-about-the-api-esri-documentation"><a href="https://developers.arcgis.com/python/">Learn More about the API; ESRI Documentation</a></h3>
 <hr />
-<h2 id="working-with-multiple-vesrions-devprod">Working with Multiple Vesrions (DEV&gt;PROD)</h2>
+<h2 id="working-with-multiple-vesrions-dev-prod">Working with Multiple Vesrions (DEV-PROD)</h2>
+<h3 id="utalizing-seperate-workspaces">Utalizing seperate 'workspaces'</h3>
+<p>Creating separate test and production workspaces can provide significant benefits to project, including improving their development processes, reducing risk, and enhancing the reliability and security of their systems. </p>
+<p>However, physical separation of dev-test-prod workspaces is not feasible on DAS. Nonetheless, GAE can help by creating separate groups that emulate separate workspaces. Since each project has unique needs, there is no one-size-fits-all solution. However, the general process usually looks like this:
+<img alt="client-test-prod" src="../images/portal/client-test-prod.png" /></p>
+<p>If you are using an ArcGIS Site to share your app, the workflow will typically look like this:
+<img alt="test-prod-flow" src="../images/portal/test-prod-flow.png" /></p>
+<p>Users can use the ArcGIS Onine Assistant to repare/relink layers and maps as needed.  See the next section for advice on using the tool.  IIt is essential to follow best practices, especially in naming and data organization when working with multiple workspaces.</p>
 <h3 id="replacing-a-layer-within-an-existing-web-map">Replacing a layer within an existing Web Map</h3>
 <p>There may be a scenario where you want to replace a layer in a map with an updated version or a replacement dataset.  There are several ways to accomplish this, one of the easier methods is using the <strong><a href="https://ago-assistant.esri.com/">ArcGIS Online Assistant</a></strong></p>
 <details class="warning">
@@ -1113,28 +1135,28 @@ The output will redirect you to a web page where you can login to the Portal usi
 </li>
 <li>
 <p>Enter the Portal URL https://geoanalytics.cloud.statcan.ca/portal ,and, your APP ID (API Key) from the ArcGIS Portal
-<img alt="assistant_2" src="/images/assistant/assistant_2.PNG" /></p>
+<img alt="assistant_2" src="../images/assistant/assistant_2.PNG" /></p>
 </li>
 <li>
 <p>A pop-up window will appear, <strong>select StatCan Azure Cloud Login</strong>
-<img alt="assistant_3" src="/images/assistant/assistant_3.PNG" /></p>
+<img alt="assistant_3" src="../images/assistant/assistant_3.PNG" /></p>
 </li>
 <li>
 <p>In the Assistant Home page, <strong>Select the folder</strong> where you map is saved on the Portal
-<img alt="assistant_4" src="/images/assistant/assistant_4.PNG" /></p>
+<img alt="assistant_4" src="../images/assistant/assistant_4.PNG" /></p>
 </li>
 <li>
 <p>Select <strong>I want to</strong>, then <strong>Update the URLs of Services in a Web Map</strong>
-<img alt="assistant_5" src="/images/assistant/assistant_5.PNG" /></p>
+<img alt="assistant_5" src="../images/assistant/assistant_5.PNG" /></p>
 </li>
 </ol>
 <p>6.In the <em>Find</em> file, enter the URL of the old layer you want to replace.  In <em>replace</em> enter the new URL. Scroll down and select <strong>Update</strong> Then wait for the <em>Success</em> message. <br />
-<img alt="assistant_6" src="/images/assistant/assistant_6.PNG" /></p>
+<img alt="assistant_6" src="../images/assistant/assistant_6.PNG" /></p>
 <details class="info">
 <summary>Where to find the Feature Service URL</summary>
-<p>The URL Can be found in the Portal, on the Feature Services Overview Page:
-<img alt="URL" src="/images/assistant/URL.PNG" /></p>
+<p>The URL Can be found in the Portal, on the Feature Services Overview Page:</p>
 </details>
+<p><img alt="URL" src="../images/assistant/URL.PNG" /></p>
 <p>The data in your map will now reflect the new service.  You will may need to adjust the <em>Name</em> of the layer on your map, as it will reflect the origina layer.</p>
 <p>For those who prefer to do things via Python API; <a href="https://enterprise.arcgis.com/en/portal/10.8/administer/linux/example-update-the-url-of-a-service-in-a-web-map.htm">follow these instructions provided by ESRI</a></p>
 <h3 id="replacing-a-web-map-within-an-existing-web-app">Replacing a Web Map within an existing Web App</h3>
@@ -1148,35 +1170,35 @@ The output will redirect you to a web page where you can login to the Portal usi
 <ol>
 <li>
 <p>Log in to Portal for ArgGIS
-<img alt="assistant_1" src="/images/assistant/assistant_1.PNG" /></p>
+<img alt="assistant_1" src="../images/assistant/assistant_1.PNG" /></p>
 </li>
 <li>
 <p>Enter the Portal URL https://geoanalytics.cloud.statcan.ca/portal ,and, your APP ID (API Key) from the ArcGIS Portal
-<img alt="assistant_2" src="/images/assistant/assistant_2.PNG" /></p>
+<img alt="assistant_2" src="../images/assistant/assistant_2.PNG" /></p>
 </li>
 <li>
 <p>A pop-up window will appear, <strong>select StatCan Azure Cloud Login</strong>
-<img alt="assistant_3" src="/images/assistant/assistant_3.PNG" /></p>
+<img alt="assistant_3" src="../images/assistant/assistant_3.PNG" /></p>
 </li>
 <li>
 <p>In the Assistant Home page, <strong>Select the folder</strong> where you map is saved on the Portal
-<img alt="assistant_4" src="/images/assistant/assistant_4.PNG" /></p>
+<img alt="assistant_4" src="../images/assistant/assistant_4.PNG" /></p>
 </li>
 <li>
 <p>From the <em>I want to...</em> button, <strong>select View an Item's JSON</strong>, then select the desired app from the highlighted list.  The JSON data will appear on the right.
-<img alt="assistant_8" src="/images/assistant/assistant_8.PNG" /></p>
+<img alt="assistant_8" src="../images/assistant/assistant_8.PNG" /></p>
 </li>
 <li>
 <p><strong>Scroll down</strong> on the JSON data pane, to the <em>Data</em> category, and <strong>Select the Edit icon</strong>.  The data tile will turn to dark-mode, signifying it is in edit mode.
-<img alt="assistant_9" src="/images/assistant/assistant_9.PNG" /></p>
+<img alt="assistant_9" src="../images/assistant/assistant_9.PNG" /></p>
 </li>
 <li>
 <p>In the data tile, <em><em>locate the </em>map</em> attribute, and replace the <em>itemID</em> field with the new maps ID. 
-<img alt="assistant_10" src="/images/assistant/assistant_10.PNG" /></p>
+<img alt="assistant_10" src="../images/assistant/assistant_10.PNG" /></p>
 <details class="info">
 <summary>How to find a Map Id</summary>
 <p>The Map Id can be obtained by visiting the Map's overview page, and copying it from the URL
-<img alt="mapId" src="/images/assistant/mapid.PNG" /></p>
+<img alt="mapId" src="../images/assistant/mapid.PNG" /></p>
 </details>
 </li>
 <li>
@@ -1277,10 +1299,10 @@ Confirm the changes in your app, and reconfigure widgets as needed.  </p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>
