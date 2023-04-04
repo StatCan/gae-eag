@@ -15,7 +15,7 @@
         <link rel="next" href="../pro/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -79,9 +79,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Geospatial Environment" class="md-header__button md-logo" aria-label="Geospatial Environment" data-md-component="logo">
       
@@ -480,16 +478,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#working-with-multiple-vesrions-dev-prod" class="md-nav__link">
-    Working with Multiple Vesrions (DEV-PROD)
+  <a href="#working-with-multiple-versions-dev-prod" class="md-nav__link">
+    Working with Multiple Versions (DEV-PROD)
   </a>
   
-    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV-PROD)">
+    <nav class="md-nav" aria-label="Working with Multiple Versions (DEV-PROD)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utalizing-seperate-workspaces" class="md-nav__link">
-    Utalizing seperate 'workspaces'
+  <a href="#utilizing-separate-workspaces" class="md-nav__link">
+    Utilizing separate 'workspaces'
   </a>
   
 </li>
@@ -733,6 +731,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -907,16 +919,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#working-with-multiple-vesrions-dev-prod" class="md-nav__link">
-    Working with Multiple Vesrions (DEV-PROD)
+  <a href="#working-with-multiple-versions-dev-prod" class="md-nav__link">
+    Working with Multiple Versions (DEV-PROD)
   </a>
   
-    <nav class="md-nav" aria-label="Working with Multiple Vesrions (DEV-PROD)">
+    <nav class="md-nav" aria-label="Working with Multiple Versions (DEV-PROD)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utalizing-seperate-workspaces" class="md-nav__link">
-    Utalizing seperate 'workspaces'
+  <a href="#utilizing-separate-workspaces" class="md-nav__link">
+    Utilizing separate 'workspaces'
   </a>
   
 </li>
@@ -967,6 +979,7 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
 
 
   <h1>ArcGIS Portal</h1>
@@ -1112,19 +1125,19 @@ The output will redirect you to a web page where you can login to the Portal usi
 </code></pre></div>
 <h3 id="learn-more-about-the-api-esri-documentation"><a href="https://developers.arcgis.com/python/">Learn More about the API; ESRI Documentation</a></h3>
 <hr />
-<h2 id="working-with-multiple-vesrions-dev-prod">Working with Multiple Vesrions (DEV-PROD)</h2>
-<h3 id="utalizing-seperate-workspaces">Utalizing seperate 'workspaces'</h3>
+<h2 id="working-with-multiple-versions-dev-prod">Working with Multiple Versions (DEV-PROD)</h2>
+<h3 id="utilizing-separate-workspaces">Utilizing separate 'workspaces'</h3>
 <p>Creating separate test and production workspaces can provide significant benefits to project, including improving their development processes, reducing risk, and enhancing the reliability and security of their systems. </p>
 <p>However, physical separation of dev-test-prod workspaces is not feasible on DAS. Nonetheless, GAE can help by creating separate groups that emulate separate workspaces. Since each project has unique needs, there is no one-size-fits-all solution. However, the general process usually looks like this:
 <img alt="client-test-prod" src="../images/portal/client-test-prod.png" /></p>
 <p>If you are using an ArcGIS Site to share your app, the workflow will typically look like this:
 <img alt="test-prod-flow" src="../images/portal/test-prod-flow.png" /></p>
-<p>Users can use the ArcGIS Onine Assistant to repare/relink layers and maps as needed.  See the next section for advice on using the tool.  IIt is essential to follow best practices, especially in naming and data organization when working with multiple workspaces.</p>
+<p>Users can use the ArcGIS Online Assistant to repair/relink layers and maps as needed.  See the next section for advice on using the tool.  IIt is essential to follow best practices, especially in naming and data organization when working with multiple workspaces.</p>
 <h3 id="replacing-a-layer-within-an-existing-web-map">Replacing a layer within an existing Web Map</h3>
 <p>There may be a scenario where you want to replace a layer in a map with an updated version or a replacement dataset.  There are several ways to accomplish this, one of the easier methods is using the <strong><a href="https://ago-assistant.esri.com/">ArcGIS Online Assistant</a></strong></p>
 <details class="warning">
 <summary>Proceed with Caution!</summary>
-<p>Changing a layer in an existing map may have unintended consequences. App Widgets and controls linked to the map might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatability, but there is no guarantee.<br />
+<p>Changing a layer in an existing map may have unintended consequences. App Widgets and controls linked to the map might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatibility, but there is no guarantee.<br />
 <br><br />
 <strong>Risks include: Corrupting content, losing access to items, breaking apps built ontop of the map.</strong></p>
 </details>
@@ -1162,11 +1175,11 @@ The output will redirect you to a web page where you can login to the Portal usi
 <h3 id="replacing-a-web-map-within-an-existing-web-app">Replacing a Web Map within an existing Web App</h3>
 <details class="warning">
 <summary>Proceed with Caution!</summary>
-<p>Changing a map in an existing web app may have unintended consequences. Widgets and controls might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatability, but there is no guarantee.  DAS-GAE recommends experimenting on a demo/copied app first.
+<p>Changing a map in an existing web app may have unintended consequences. Widgets and controls might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatibility, but there is no guarantee.  DAS-GAE recommends experimenting on a demo/copied app first.
 <br>
 <strong>Risks include: Corrupting content, losing access to items, breaking apps built ontop of the map.</strong></p>
 </details>
-<p>There may be a senerio where you want to replace a web map with a new map in an already built web app.  We will walk you through how to do this using the AGO Assistant.  We will use the same ArcGIS Online Assistant tool as above, but with a different workflow.</p>
+<p>There may be a scenario where you want to replace a web map with a new map in an already built web app.  We will walk you through how to do this using the AGO Assistant.  We will use the same ArcGIS Online Assistant tool as above, but with a different workflow.</p>
 <ol>
 <li>
 <p>Log in to Portal for ArgGIS
@@ -1238,7 +1251,7 @@ Confirm the changes in your app, and reconfigure widgets as needed.  </p>
 <li>Use many appropriate tags - this is how most people will find your work. </li>
 <li>Use common tags for items that are related.</li>
 </ul>
-<p><strong>Content Managment</strong></p>
+<p><strong>Content Management</strong></p>
 <ul>
 <li>
 <p>Organize content: Use a structured and logical system to organize content in the portal. This can include creating folders, groups, and categories to make it easier for users to find and access content.</p>
@@ -1279,7 +1292,7 @@ Confirm the changes in your app, and reconfigure widgets as needed.  </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2023 Statistics Canada; DAS-GAE User Guide; V.1.0.0
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.1.0.1
     </div>
   
   
@@ -1299,10 +1312,10 @@ Confirm the changes in your app, and reconfigure widgets as needed.  </p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
