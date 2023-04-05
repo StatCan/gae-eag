@@ -653,7 +653,7 @@
 <h2 id="connexion-au-portail-arcgis-enterprise-a-laide-de-linterface-de-protocole-dapplication-arcgis">Connexion au portail ArcGIS Enterprise à l’aide de l’interface de protocole d’application ArcGIS</h2>
 <p>Lors de l’intégration, votre groupe de projet recevra un identificateur de client qui sera utilisé pour se connecter au portail ArcGIS Enterprise. Collez l’identificateur de client entre les guillemets <code>client_id=' '</code>. </p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connecté avec succès en tant que: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
 </code></pre></div>
 La sortie vous redirigera vers une page Web où vous pouvez vous connecter au portail en utilisant l’option de connexion StatCan Azure. Une fois que vous aurez réussi à ouvrir une session, vous recevrez un code pour vous connecter en utilisant le langage de balisage des déclarations de sécurité (SAML). Collez ce code dans la sortie.</p>
 <p><img alt="OAuth2 Approval" src="../imagesFR/OAuth2Key.png" /></p>
@@ -687,7 +687,7 @@ La sortie vous redirigera vers une page Web où vous pouvez vous connecter au po
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2023 Statistics Canada; DAS-GAE Early Adopter's Guide; V.1.0.1
+      © 2023 Statistics Canada; DAS-GAE Early Adopter's Guide; V.1.1.0
     </div>
   
   
