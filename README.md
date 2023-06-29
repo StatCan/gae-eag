@@ -3,7 +3,7 @@
 ---
 
 ## GAE User Guide: https://statcan.github.io/gae-eag/
-
+(The source files are in their own branch; gh-pages)
 ---
 
 ## Notebooks:
