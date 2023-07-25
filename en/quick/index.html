@@ -1,0 +1,1190 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../contact/">
+      
+      
+        <link rel="next" href="../login/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Quick Start - DAS; Geospatial Analytics Environment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAS; Geospatial Analytics Environment" class="md-header__button md-logo" aria-label="DAS; Geospatial Analytics Environment" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAS; Geospatial Analytics Environment
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Welcome
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Knowledge Centre
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link">
+        Analysis
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualization
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Storage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAS; Geospatial Analytics Environment" class="md-nav__button md-logo" aria-label="DAS; Geospatial Analytics Environment" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    DAS; Geospatial Analytics Environment
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Welcome
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Welcome
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About DAS GAE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Quick Start
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Cloud Sign In
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Virtual Machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Language Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Knowledge Centre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge Centre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        GIS Theory Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Training, Tutorials, &, Links
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        DAS Cross-Platform
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Maps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Static Maps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisPortal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started">Getting Started</h1>
+<p>This page provides short, summarized help for common FAQs. Each help block links to a more detailed guide for further information.</p>
+<hr />
+<details class="tip">
+<summary>How to launch your VM - External Users</summary>
+<ol>
+<li>Visit: <a href="https://www.statcan.gc.ca/data-analytics-services/gae">DAS Portal</a></li>
+<li>Sign in using your <em>@ext.statcan.ca</em> account</li>
+<li>Scroll down to the bottom of the page, select your VM</li>
+<li>In the Azure page which opens, Start your VM, then use 'Browser Connect'</li>
+<li>Enter your credentials, your VM will open in a new tab (ensure pop-ups are allowed)</li>
+</ol>
+</details>
+<details class="tip">
+<summary>How to launch your VM - StatCan Employees</summary>
+<details class="success">
+<summary>Prerequisites</summary>
+<p>You have already claimed your VM </p>
+</details>
+<p><strong>Full Help:
+<a href="/vm/#start-your-virtual-machine">Link to VM Help Page</a></strong></p>
+<p><strong>Quick Help:</strong></p>
+<ol>
+<li>Access the Azure Portal: <em>https://portal.azure.com/#home</em></li>
+<li>Select More Services and search for: DevTest Labs</li>
+<li>Ensure <em>Subscription Equals</em> is set to <em>ALL</em></li>
+<li>Select <em>geop-prod-intuser-dtl</em></li>
+<li>Locate and Select your VM</li>
+<li>Select <em>Start</em>, wait for confirmation, Select <em>Browser Connect</em></li>
+<li><img alt="‼" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/203c.svg" title=":bangbang:" /> Remember to <strong>STOP</strong> your VM when finished <img alt="‼" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/203c.svg" title=":bangbang:" /></li>
+</ol>
+</details>
+<details class="info">
+<summary>Acccess ArcGIS Enterprise Portal Interface</summary>
+<p><strong>Full Help:
+<a href="/arcgisPortal/">Link to Help ArcGIS Enterprise Portal Page</a></strong></p>
+<p><strong>Quick Help:</strong></p>
+<ol>
+<li>Access via this URL: <a href="https://geoanalytics.cloud.statcan.ca/portal/home/">DAS GEA Enterprise Portal</a></li>
+<li>Click the <em>StatCan Azure Cloud Login</em></li>
+<li>If this is your first time accessing it, you will have to do some registration steps, then contact DAS GEA to have your account configured</li>
+</ol>
+</details>
+<details class="info">
+<summary>Connect to GAE ArcGIS Enterprise Portal via API</summary>
+<p>Your project group will be provided with a Client ID upon onboarding which will be used to connect to the ArcGIS Enterprise Portal. Paste the Client ID in-between the quotations
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#This will trigger a pop-up window  to authenticate, then provide you with a key to enter into the IDE</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="example">
+<summary>How to access your Database</summary>
+<p><strong>Full Help:
+<a href="/postgresql/">Link to PostgreSQL+PostGIS Help Page</a></strong></p>
+<p><strong>In ArcPro</strong> </p>
+<ol>
+<li>
+<p>In the Catalog pane, right-click <strong>Databases</strong> and select <strong>Add Database</strong></p>
+</li>
+<li>
+<p>In the new window, expand <strong>This PC</strong> and located your project File-share (mounted as a drive), select the <strong>.sde file</strong></p>
+</li>
+</ol>
+<p><hr>
+<strong>In QGIS</strong></p>
+<ol>
+<li>
+<p>Under the browser tab, Right-click <strong>PostgreSQL</strong>, and select <strong>New Connection</strong></p>
+</li>
+<li>
+<p>Enter the following information:</p>
+<ul>
+<li><strong>Name</strong> = chosen name(alias) for the database</li>
+<li><strong>Host</strong> = Database Instance <em>see project file-share</em></li>
+<li><strong>Port</strong> = 5432</li>
+<li><strong>Database</strong> = The true name of the schema <em>see project file-share</em></li>
+<li><strong>SSL mode</strong> = allow</li>
+<li><strong>Authentication</strong> = <em>Press the green + button, then </em>see project file-share*</li>
+<li><strong>Also list tables with no geometry</strong> = YES </li>
+</ul>
+</li>
+<li>
+<p>Select <strong>Test Connection</strong></p>
+</li>
+</ol>
+<p><hr>
+<strong>With python</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="kn">import</span> <span class="nn">psycopg2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="n">dbname</span><span class="o">=</span><span class="s2">&quot;your_database_name&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="n">user</span><span class="o">=</span><span class="s2">&quot;your_username&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;your_password&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;your_host&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM your_table;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+</details>
+<!------
+I have no clue why, but for the next block 'field filers'; in order to have two \\ in the example for step 2, you need to put three \\\ in the md file
+----->
+
+<details class="example">
+<summary>How to access your Field Filer (Internal users)</summary>
+<p><strong>Full Help:
+<a href="/filers/">Link to Full Help page</a></strong></p>
+<ol>
+<li>
+<p>Open Windows File Explorer</p>
+</li>
+<li>
+<p>Paste FieldFiler path into the address bar <strong>AND append .statcan.ca to the path</strong></p>
+<blockquote>
+<p>example:  \\filer03.statcan.ca</p>
+</blockquote>
+</li>
+<li>
+<p>Authenticate
+    Username: <strong> Add stc\ </strong> before your username</p>
+<blockquote>
+<p>example: <strong> stc\namenick </strong></p>
+</blockquote>
+</li>
+<li>Locate the root folder, right click, Map Network Drive</li>
+</ol>
+</details>
+<details class="question">
+<summary>How to contact DAS GAE</summary>
+<p><strong>Full Help:
+<a href="/contact">Link to Contact Help Page</a></strong></p>
+<p><strong>Quick Help:</strong></p>
+<p>Email: statcan.dassupport-soutiendelads.statcan@statcan.gc.ca</p>
+<p>For StatCan Employees, please submit a ticket via Jira:</p>
+<ol>
+<li>Open Statistics Canada Jira software: <a href="https://jirab.statcan.ca/projects/DASGEO/summary">DAS Geospatial Environment (DASGAE)</a></li>
+<li>From the Menu Bar, select the button “Create”:</li>
+<li>In the Jira Create Issue Window, Select the Issue Type = “Client Support”:</li>
+<li>In the Jira Create Issue window, enter the information related to your request</li>
+</ol>
+</details>
+<details class="success">
+<summary>Useful DAS Links</summary>
+<p><a href="https://geoanalytics.cloud.statcan.ca/portal/home/">DAS GAE ArcGIS Portal</a></p>
+<hr style="height:0.5px">
+<p><a href="">Collaborative Analytics Environment</a></p>
+<p><a href="https://statcan.github.io/cae-eac/en/">CAE Self-Help Guidebook</a></p>
+<hr style="height:0.5px">
+<p><a href="https://analytics-platform.statcan.gc.ca/covid19">Advanced Analytics Workspace</a></p>
+<p><a href="https://statcan.github.io/daaas/en/">AAW Self-Help Guidebook</a></p>
+<hr style="height:0.5px">
+<p><a href="https://enterprise.arcgis.com/en/portal/latest/use/what-is-portal-for-arcgis-.htm">ESRI ArcGIS Enterprise Portal Help</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/?product=popular">Azure Help Documents</a></p>
+<p><a href="https://docs.qgis.org/3.22/en/docs/user_manual/index.html">QGIS Help Documents</a></p>
+<p><a href="https://gcgeo.gc.ca/">Federal Geospatial Platform</a></p>
+<hr style="height:1px; background-color:green">
+<p><strong>DAS Acronyms &amp; Terms</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th></th>
+<th>Description/Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DAS</td>
+<td></td>
+<td>Data Analytics Services</td>
+</tr>
+<tr>
+<td>GAE</td>
+<td></td>
+<td>Geospatial Analytic Environment</td>
+</tr>
+<tr>
+<td>AAW</td>
+<td></td>
+<td>Advanced Analytics Workspace [link]</td>
+</tr>
+<tr>
+<td>CAE</td>
+<td></td>
+<td>Creative Analytic Environment [link]</td>
+</tr>
+<tr>
+<td>FAIR(FDI)</td>
+<td></td>
+<td><strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable; Data Infrastructure &amp; Pipelines</td>
+</tr>
+<tr>
+<td>Jira</td>
+<td></td>
+<td>Support ticketing and tracking software in STC</td>
+</tr>
+<tr>
+<td>VM</td>
+<td></td>
+<td>Virtual Machine(s)</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td></td>
+<td>Graphics processing unit; GEA VMs</td>
+</tr>
+<tr>
+<td>AVD</td>
+<td></td>
+<td>Azure Virtual Desktop</td>
+</tr>
+<tr>
+<td>2(M)FA</td>
+<td></td>
+<td>Two+ factor authentication</td>
+</tr>
+<tr>
+<td>Azure ID</td>
+<td></td>
+<td>StatCan Cloud login; first.last@cloud.statcan.ca</td>
+</tr>
+</tbody>
+</table>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.2.0.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

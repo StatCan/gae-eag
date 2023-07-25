@@ -1,0 +1,1238 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../arcgisMaps/">
+      
+      
+        <link rel="next" href="../notebook/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>ArcGIS Apps and Sites - DAS; Geospatial Analytics Environment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-and-share-spatial-apps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DAS; Geospatial Analytics Environment" class="md-header__button md-logo" aria-label="DAS; Geospatial Analytics Environment" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAS; Geospatial Analytics Environment
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ArcGIS Apps and Sites
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Welcome
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Knowledge Centre
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link">
+        Analysis
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link md-tabs__link--active">
+        Visualization
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Storage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DAS; Geospatial Analytics Environment" class="md-nav__button md-logo" aria-label="DAS; Geospatial Analytics Environment" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    DAS; Geospatial Analytics Environment
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Welcome
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Welcome
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        About DAS GAE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Cloud Sign In
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Virtual Machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Language Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Knowledge Centre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge Centre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        GIS Theory Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Training, Tutorials, &, Links
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        DAS Cross-Platform
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Maps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ArcGIS Apps and Sites
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ArcGIS Apps and Sites
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#no-code-apps" class="md-nav__link">
+    No-Code Apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-code-sitespages" class="md-nav__link">
+    No-Code Sites/Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-multiple-versions-dev-prod" class="md-nav__link">
+    Working with Multiple Versions (DEV-PROD)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Static Maps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisPortal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#no-code-apps" class="md-nav__link">
+    No-Code Apps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-code-sitespages" class="md-nav__link">
+    No-Code Sites/Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-multiple-versions-dev-prod" class="md-nav__link">
+    Working with Multiple Versions (DEV-PROD)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="build-and-share-spatial-apps">Build and Share Spatial-Apps</h1>
+<details class="success">
+<summary>Before you begin: ArcGIS Portal Intro</summary>
+<p>To create a web map in Portal, start by self-registering for an Enterprise account and then publishing data into the Portal. 
+For detailed instructions, refer to this page which provides a complete step-by-step guide: <a href="/portal">GAE Storage- ArcGIS Portal</a>   </p>
+</details>
+<p>ArcGIS Enterprise offers a range of no-code apps that allow users to create and share interactive geospatial applications without coding skills. </p>
+<p>Both <strong>Apps</strong> and <strong>Sites</strong> are made from your published data-layers and maps.  The first step to creating an App/Site is to have you analysis completed, and all your layers and maps published.   </p>
+<blockquote>
+<p>Data goes into Layers;</p>
+<blockquote>
+<p>Layers go into Maps;</p>
+<blockquote>
+<p>Maps and Layers go into Apps;</p>
+<blockquote>
+<p>Maps and Apps go into Sites (data can be downloaded from Sites). </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="no-code-apps">No-Code Apps</h2>
+<p>These <strong>Apps</strong> enhance data visualization, and support data-driven decision-making. </p>
+<details class="example">
+<summary>Creating Interactive Apps</summary>
+<p>To create an app, navigate to the <strong>Content</strong> tab in the main ribbon and click <strong>My Content</strong>. </br> There is a <strong>Create app</strong> button that will allow you to work with different types of interactive apps. </p>
+<p><img alt="portal_apps" src="../images/portal/portal_apps.PNG" /></p>
+<ol>
+<li>
+<p><strong>Instant Apps</strong>: Enables quick building and configuration of templated web apps with streamlined and customizable options.</p>
+</li>
+<li>
+<p><strong>Experience Builder</strong>: Build and create engaging app experiences by combining maps, media, and other content with customizable layouts and themes.</p>
+</li>
+<li>
+<p><strong>StoryMaps</strong>: Create narrative-driven stories by combining maps, text, images, and multimedia to engage and inform the audience.</p>
+</li>
+<li>
+<p><strong>Dashboards</strong>: Visualize real-time data with dynamic charts, maps, and gauges to monitor key performance indicators and communicate insights effectively.</p>
+</li>
+<li>
+<p><strong>Web AppBuilder</strong><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> : Build web applications by configuring pre-built widgets and templates, with a drag-and-drop interface.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> <em>AppBuilder as part of ArcGIS Enterprise is considered deprecated. Although still available, users should switch to Experience Builder moving forward</em></p>
+</li>
+<li>
+<p><strong>Configurable Apps</strong><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> :  Build web apps from your web maps, scenes, and groups without having to write code</p>
+<p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> <em>Configurable Apps as although still available in Enterprise, uses JavaScript 3.x and should be avoided, Instant Apps is better</em></p>
+</li>
+</ol>
+<p><strong>Learn More: <a href="https://enterprise.arcgis.com/en/portal/latest/use/get-started-with-apps.htm">Get started with apps—Portal for ArcGIS | Documentation for ArcGIS Enterprise</a></strong></p>
+</details>
+<h2 id="no-code-sitespages">No-Code Sites/Pages</h2>
+<p><strong>Sites</strong> enables users to create interactive web pages and websites without coding, showcasing maps, data, and multimedia content with customizable templates and seamless integration.</p>
+<details class="quote">
+<summary>What is an Enterprise Site?</summary>
+<p>ArcGIS Enterprise Sites allows you to create a tailored web page experience to help you share your GIS products to others  more easily, even if they are not used to working in your GIS. Instead of learning to navigate the portal and access groups, consumers can go directly to the custom web page you create to navigate the content relevant to them.  Consumers will require a <em>Viewer</em> role.</p>
+<p>Sites features a built-in web page designer that integrates a drag-and-drop experience with HTML markup, giving you absolute control over the design of the web pages you create. You can also add non-GIS content, such as videos and documents, to your Site to create a central place for material relevant to your users to be hosted and accessed.</p>
+<p>Users more familiar with ArGIS Online deployment/portal will known this feature as <em>Hubs</em></p>
+</details>
+<details class="example">
+<summary>Creating an Enterprise Site</summary>
+<p><strong>To Begin:</strong></p>
+<p>To request (initialize) a Site, contact the DAS-GAE team via the Jira Board.  <a href="/english/faq/">How to submit a technical request or report a problem</a>. </p>
+<p>Please include what you would prefer the URL to be.  The URL will be formatted as:
+    <code>https://geoanalytics.cloud.statcan.ca/portal/apps/sites/#/{YOUR_CHOSEN_URL}</code></p>
+<p>Along with your Site, 2 groups will be created.  One for editors, and one for viewers only.  These groups will control who has access to your site, and which items they can interact with.</p>
+<p><strong>Once your site is initialized:</strong></p>
+<ol>
+<li>Access the ArcGIS Sites application.</li>
+<li>Choose a template or layout that suits your needs.</li>
+<li>Customize the site by adding maps, data, multimedia content, and text.</li>
+<li>
+<p>Configure the appearance of the site by selecting colors, fonts, and branding elements.</p>
+<blockquote>
+<p>ESRI leverages a custom theme and build of the Bootstrap(3) system for page design.<br />
+Knowledgeable users who want to use custom HTML in the SiteApp should reference this resource: <a href="http://esri.github.io/calcite-bootstrap/index.html">Calcite Bootstrap Theme by ESRI</a></p>
+</blockquote>
+</li>
+<li>
+<p>Embed additional ArcGIS content such as maps, apps, and dashboards if desired.</p>
+</li>
+<li>Preview and review the site to ensure it meets your requirements.</li>
+<li>Publish the site to make it accessible to others.</li>
+<li>Share the site URL or embed it on other web pages to reach your intended audience.</li>
+</ol>
+</details>
+<h2 id="working-with-multiple-versions-dev-prod">Working with Multiple Versions (DEV-PROD)</h2>
+<p>Creating separate test and production workspaces can provide significant benefits to project, including improving their development processes, reducing risk, and enhancing the reliability and security of their systems. </p>
+<p>However, physical separation of dev-test-prod workspaces is not feasible on DAS. Nonetheless, GAE can help by creating separate groups that emulate separate workspaces. Since each project has unique needs, there is no one-size-fits-all solution. </p>
+<details class="info">
+<summary>Typical process flow</summary>
+<p><img alt="client-test-prod" src="../images/portal/client-test-prod.png" /></p>
+<p>If you are using an ArcGIS Site to share your app, the workflow will typically look like this:</p>
+<p><br>
+<img alt="test-prod-flow" src="../images/portal/test-prod-flow.png" /></p>
+<p>Users can use the ArcGIS Online Assistant to repair/relink layers and maps as needed.  See the next section for advice on using the tool.  <strong>It is essential to follow best practices, especially in naming and data organization when working with multiple workspaces.</strong></p>
+</details>
+<details class="abstract">
+<summary>Replacing a layer within an Web Map</summary>
+<p>There may be a scenario where you want to replace a layer in a map with an updated version or a replacement dataset.  There are several ways to accomplish this, one of the easier methods is using the <strong><a href="https://ago-assistant.esri.com/">ArcGIS Online Assistant</a></strong></p>
+<details class="warning">
+<summary>Proceed with Caution!</summary>
+<p>Changing a layer in an existing map may have unintended consequences. App Widgets and controls linked to the map might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatibility, but there is no guarantee.<br />
+<br><br />
+<strong>Risks include: Corrupting content, losing access to items, breaking apps built ontop of the map.</strong></p>
+</details>
+<ol>
+<li>
+<p>Log in to Portal for ArgGIS
+<img alt="assistant_1" src="/images/portal/assistant/assistant_1.PNG" /></p>
+</li>
+<li>
+<p>Enter the Portal URL https://geoanalytics.cloud.statcan.ca/portal ,and, your APP ID (API Key) from the ArcGIS Portal
+<img alt="assistant_2" src="../images/portal/assistant/assistant_2.PNG" /></p>
+</li>
+<li>
+<p>A pop-up window will appear, <strong>select StatCan Azure Cloud Login</strong>
+<img alt="assistant_3" src="../images/portal/assistant/assistant_3.PNG" /></p>
+</li>
+<li>
+<p>In the Assistant Home page, <strong>Select the folder</strong> where you map is saved on the Portal
+<img alt="assistant_4" src="../images/portal/assistant/assistant_4.PNG" /></p>
+</li>
+<li>
+<p>Select <strong>I want to</strong>, then <strong>Update the URLs of Services in a Web Map</strong>
+<img alt="assistant_5" src="../images/portal/assistant/assistant_5.PNG" /></p>
+</li>
+</ol>
+<p>6.In the <em>Find</em> file, enter the URL of the old layer you want to replace.  In <em>replace</em> enter the new URL. Scroll down and select <strong>Update</strong> Then wait for the <em>Success</em> message. <br />
+<img alt="assistant_6" src="../images/portal/assistant/assistant_6.PNG" /></p>
+<details class="info">
+<summary>Where to find the Feature Service URL</summary>
+<p>The URL Can be found in the Portal, on the Feature Services Overview Page:</p>
+</details>
+<p><img alt="URL" src="../images/portal/assistant/URL.PNG" /></p>
+<p>The data in your map will now reflect the new service.  You will may need to adjust the <em>Name</em> of the layer on your map, as it will reflect the origina layer.</p>
+<p>For those who prefer to do things via Python API; <a href="https://enterprise.arcgis.com/en/portal/10.8/administer/linux/example-update-the-url-of-a-service-in-a-web-map.htm">follow these instructions provided by ESRI</a></p>
+</details>
+<details class="abstract">
+<summary>Replacing a Web Map within a Web App</summary>
+<details class="warning">
+<summary>Proceed with Caution!</summary>
+<p>Changing a map in an existing web app may have unintended consequences. Widgets and controls might break and need to be reconfigured.  Ensuring layer names and table headers match old versions will help keep compatibility, but there is no guarantee.  DAS-GAE recommends experimenting on a demo/copied app first.
+<br>
+<strong>Risks include: Corrupting content, losing access to items, breaking apps built ontop of the map.</strong></p>
+</details>
+<p>There may be a scenario where you want to replace a web map with a new map in an already built web app.  We will walk you through how to do this using the AGO Assistant.  We will use the same ArcGIS Online Assistant tool as above, but with a different workflow.</p>
+<ol>
+<li>
+<p>Log in to Portal for ArgGIS
+<img alt="assistant_1" src="../images/portal/assistant/assistant_1.PNG" /></p>
+</li>
+<li>
+<p>Enter the Portal URL https://geoanalytics.cloud.statcan.ca/portal ,and, your APP ID (API Key) from the ArcGIS Portal
+<img alt="assistant_2" src="../images/portal/assistant/assistant_2.PNG" /></p>
+</li>
+<li>
+<p>A pop-up window will appear, <strong>select StatCan Azure Cloud Login</strong>
+<img alt="assistant_3" src="../images/portal/assistant/assistant_3.PNG" /></p>
+</li>
+<li>
+<p>In the Assistant Home page, <strong>Select the folder</strong> where you map is saved on the Portal
+<img alt="assistant_4" src="../images/portal/assistant/assistant_4.PNG" /></p>
+</li>
+<li>
+<p>From the <em>I want to...</em> button, <strong>select View an Item's JSON</strong>, then select the desired app from the highlighted list.  The JSON data will appear on the right.
+<img alt="assistant_8" src="../images/portal/assistant/assistant_8.PNG" /></p>
+</li>
+<li>
+<p><strong>Scroll down</strong> on the JSON data pane, to the <em>Data</em> category, and <strong>Select the Edit icon</strong>.  The data tile will turn to dark-mode, signifying it is in edit mode.
+<img alt="assistant_9" src="../images/portal/assistant/assistant_9.PNG" /></p>
+</li>
+<li>
+<p>In the data tile, <em><em>locate the </em>map</em> attribute, and replace the <em>itemID</em> field with the new maps ID. 
+<img alt="assistant_10" src="../images/portal/assistant/assistant_10.PNG" /></p>
+<details class="info">
+<summary>How to find a Map Id</summary>
+<p>The Map Id can be obtained by visiting the Map's overview page, and copying it from the URL
+<img alt="mapId" src="../images/portal/assistant/mapid.PNG" /></p>
+</details>
+</li>
+<li>
+<p>Scroll up to the beginning of the data tile and <strong>select Save</strong>.<br />
+Confirm the changes in your app, and reconfigure widgets as needed.  </p>
+</li>
+</ol>
+</details>
+<details class="abstract">
+<summary>Cloning with the API</summary>
+<details class="warning">
+<summary>Proceed with Caution: CLONE vs COPY</summary>
+<p>This clone method does not always work.  Some dataset, layers, items, etc, will be COPIED instead of CLONED. Copies reference back to the original item, pay close attention to the items ID.  It will <strong>NOT</strong> work for 'map image layers'.</p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Connect to the source portal</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">source_gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalytics.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Connect to the destination portal</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">target_gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalytics.cloud.statcan.ca/portal&quot;</span><span class="p">,</span><span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Get source content</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">item_id</span> <span class="o">=</span> <span class="n">source_gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;#################&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Clone the item to the target portal</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">cloned_item</span> <span class="o">=</span> <span class="n">target_gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">clone_items</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="n">item_id</span><span class="p">],</span> <span class="n">copy_data</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; DAS-GAE User Guide; V.2.0.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
