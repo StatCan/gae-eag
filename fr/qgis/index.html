@@ -1,0 +1,1304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../insights/">
+      
+      
+        <link rel="next" href="../post/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>QGIS - SAD; L’Environnement d'Analyse Géospatial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qgis-source-libre-et-ouverte" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-header__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAD; L’Environnement d'Analyse Géospatial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QGIS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Bienvenue
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link">
+        Pour commencer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Centre du savoir
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link md-tabs__link--active">
+        Analyse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualisation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Stockage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-nav__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    SAD; L’Environnement d'Analyse Géospatial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Bienvenue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bienvenue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A propos de SAD-EAG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Démarrage rapide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Connexion au cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Machine virtuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Langues Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Centre du savoir
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Centre du savoir
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Les bases de la théorie SIG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Formation, tutoriels et liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Analyse-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          QGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        QGIS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pour-commencer" class="md-nav__link">
+    Pour commencer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importation-de-donnees" class="md-nav__link">
+    Importation de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse" class="md-nav__link">
+    Analyse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formation" class="md-nav__link">
+    Formation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-savoir-plus" class="md-nav__link">
+    En savoir plus
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        Multi-plateforme (ETAA/EAC)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Visualisation-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          ArcGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Cartes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Statique Cartes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Stockage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Stockage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisportal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pour-commencer" class="md-nav__link">
+    Pour commencer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importation-de-donnees" class="md-nav__link">
+    Importation de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse" class="md-nav__link">
+    Analyse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formation" class="md-nav__link">
+    Formation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-savoir-plus" class="md-nav__link">
+    En savoir plus
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="qgis-source-libre-et-ouverte"><img alt="qgis logo" src="../imagesFR/qgis/qgis1.png" /> QGIS - Source libre et ouverte</h1>
+<details class="quote">
+<summary>Qu'est-ce que QGIS</summary>
+<p>QGIS est un logiciel de bureau d'analyse géospatiale gratuit qui offre une interface utilisateur intuitive et prend en charge une large variété de types et de formats de données.</p>
+<p>QGIS propose un grand nombre de fonctions d'analyse SIG de base et de visualisations ; ainsi que la possibilité de télécharger des extensions pour des analyses plus complexes.</p>
+</details>
+<h2 id="pour-commencer">Pour commencer</h2>
+<details class="success">
+<summary>QGIS sur une machine virtuelle</summary>
+<p>QGIS est préinstallé sur votre machine virtuelle par défaut. Vous pouvez le trouver dans le menu Démarrer :
+    <img alt="qgis start vm" src="../imagesFR/qgis/qgis_start.PNG" /></p>
+<details class="info">
+<summary>AAW</summary>
+<p>QGIS est également disponible sur les <em>Bureaux à distance</em> accessibles via l'AAW.</p>
+<p><b> Configuration d'un espace de travail dans l'AAW : </b>
+<a href="https://statcan.github.io/daaas/fr/1-Experiments/Remote-Desktop/" target="_blank"> Apprenez comment déployer un bureau à distance dans l'environnement AAW </a></p>
+</details>
+</details>
+<h2 id="importation-de-donnees">Importation de données</h2>
+<details class="example">
+<summary>Connexion à une base de données PostgreSQL</summary>
+<p>QGIS &amp; PostgreSQL+PostGIS
+1. Sous l'onglet Explorateur, faites un clic droit sur PostgreSQL, puis sélectionnez <em>Nouvelle connexion</em></p>
+<div class="highlight"><pre><span></span><code>![post_gis1](imagesFR/qgis/postq1.PNG)
+</code></pre></div>
+<ol>
+<li>
+<p>Une nouvelle fenêtre s'ouvrira :</p>
+<p><img alt="post_gis2" src="../imagesFR/qgis/postq2.PNG" /></p>
+</li>
+<li>
+<p>Entrez les informations suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th></th>
+<th>Entrée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom</td>
+<td></td>
+<td>Le nom choisi (alias) pour la base de données</td>
+</tr>
+<tr>
+<td>Hôte</td>
+<td></td>
+<td>Instance de la base de données <em>voir les informations de configuration</em></td>
+</tr>
+<tr>
+<td>Port</td>
+<td></td>
+<td>5432</td>
+</tr>
+<tr>
+<td>Base de données</td>
+<td></td>
+<td>Le nom réel de la base de données <em>voir les informations de configuration</em></td>
+</tr>
+<tr>
+<td>Mode SSL</td>
+<td></td>
+<td>allow</td>
+</tr>
+<tr>
+<td>Authentification</td>
+<td></td>
+<td>*Appuyez sur le bouton vert +, puis saisissez vos informations d'identification cloud</td>
+</tr>
+<tr>
+<td>Afficher également les tables sans géométrie</td>
+<td></td>
+<td>OUI</td>
+</tr>
+<tr>
+<td>**Tous les autres champs peuvent être laissés vides.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Sélectionnez <em>Tester la connexion</em></p>
+</li>
+<li>
+<p>La base de données apparaîtra désormais sous l'en-tête <em>PostgreSQL</em> dans l'Explorateur de QGIS</p>
+</li>
+</ol>
+</details>
+<details class="example">
+<summary>Ajout d'une couche - Glisser-Déposer</summary>
+<ol>
+<li>Localisez vos fichiers de données dans l'explorateur de fichiers Windows.</li>
+<li>Sélectionnez les fichiers de données que vous souhaitez ajouter (par exemple, shapefiles, fichiers raster).</li>
+<li>Faites glisser les fichiers sélectionnés dans la fenêtre de QGIS. Les données seront ajoutées en tant que couches dans le projet.</li>
+</ol>
+</details>
+<details class="example">
+<summary>Ajout d'une couche - Gestionnaire de source de données</summary>
+<ol>
+<li>Allez dans le menu "Couche" et sélectionnez "Ajouter une couche" &gt; "Ajouter une couche vecteur" ou "Ajouter une couche raster" (selon le type de vos données).</li>
+<li>Dans la boîte de dialogue Gestionnaire de source de données, cliquez sur le bouton "Parcourir" et naviguez jusqu'à l'emplacement où vos données sont stockées.</li>
+<li>Sélectionnez le(s) fichier(s) de données que vous souhaitez ajouter et cliquez sur "Ouvrir" pour les ajouter au projet.</li>
+</ol>
+</details>
+<details class="example">
+<summary>Ajout d'une couche - Ajout rapide de couche</summary>
+<ol>
+<li>Cliquez sur l'icône "Ajout rapide de couche" dans la barre d'outils.</li>
+<li>Dans la boîte de dialogue, choisissez le type de données que vous souhaitez ajouter (par exemple, shapefile, raster).</li>
+<li>Parcourez l'emplacement de votre fichier de données et sélectionnez-le.</li>
+<li>Cliquez sur "Ajouter" pour ajouter les données en tant que couche dans le projet.</li>
+</ol>
+</details>
+<h2 id="analyse">Analyse</h2>
+<details class="example">
+<summary>Utilisation des outils de traitement de QGIS</summary>
+<ol>
+<li>
+<p>Accéder aux outils d'analyse : Dans l'interface de QGIS, localisez la boîte à outils de traitement. Elle peut généralement être trouvée soit dans le menu principal sous "Traitement", soit sous forme d'icône dans la barre d'outils. Cliquez sur la boîte à outils de traitement pour l'ouvrir.</p>
+</li>
+<li>
+<p>Choisissez l'outil d'analyse : Parcourez les différents outils d'analyse disponibles, organisés dans différentes catégories. Ces outils couvrent différents aspects de l'analyse géospatiale, tels que les statistiques spatiales, l'analyse de proximité, la gestion des données, et bien plus encore.</p>
+</li>
+<li>
+<p>Configurez les paramètres de l'outil : Une fois que vous avez sélectionné un outil d'analyse, une boîte de dialogue apparaîtra où vous pourrez configurer les paramètres de l'outil. Selon l'outil spécifique, vous devrez peut-être spécifier les couches d'entrée, définir les paramètres d'analyse, définir les options de sortie et ajuster d'autres paramètres.</p>
+</li>
+<li>
+<p>Exécutez l'analyse : Après avoir configuré les paramètres de l'outil, cliquez sur "Exécuter" ou "OK" pour lancer l'analyse. L'outil traitera les données en fonction des paramètres spécifiés et générera la sortie souhaitée.</p>
+</li>
+</ol>
+</details>
+<h2 id="formation">Formation</h2>
+<details class="tip">
+<summary>Vidéos QGIS du SGC</summary>
+<p>Le Centre de géomatique statistique (SGC) de STC a produit une série de conférences en ligne qui offre une introduction à QGIS. Ces vidéos sont idéales pour les débutants, ceux qui passent d'un produit COST à QGIS, et les utilisateurs avancés souhaitant se remettre à niveau.</p>
+<p>Vidéo 1 - <a href="https://www.statcan.gc.ca/fra/wtc/online-lectures/qgis/2019001">Qu'est-ce qu'un SIG et pourquoi utiliser QGIS</a> (lien externe)</p>
+<p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8oEnJvLzDnQ" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p><a href="https://ouvert.canada.ca/data/fr/dataset/89be0c73-6f1f-40b7-b034-323cb40b8eff" target="_blank"> <b>Voir le catalogue complet de la série de conférences</b></a> (lien externe)</p>
+</details>
+<details class="tip">
+<summary>Feuille de triche QGIS</summary>
+<p><img alt="Image des raccourcis QGIS" src="../imagesFR/qgis/qgis_shorts.png" /></p>
+</details>
+<h2 id="en-savoir-plus">En savoir plus</h2>
+<details class="tip">
+<summary>Liens utiles</summary>
+<ul>
+<li>
+<p><a href="https://docs.qgis.org/testing/fr/docs/user_manual/managing_data_source/opening_data.html#creating-a-stored-connection">Documentation de QGIS</a></p>
+</li>
+<li>
+<p><a href="https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/qgis-azure-database-for-postgresql-postgis/ba-p/1152249">Documentation QGIS + Azure</a></p>
+</li>
+<li>
+<p><a href="https://www.line-45.com/post/using-qgis-postgis-dynamic-duo">Ligne 45 - Utilisation de QGIS avec PostGIS: Un duo dynamique (livre blanc - uniquement en anglais)</a></p>
+</li>
+<li>
+<p><a href="https://docs.qgis.org/3.16/fr/docs/training_manual/index.html" target="_blank"> Manuel de formation officiel de QGIS </a></p>
+</li>
+<li>
+<p><a href="https://plugins.qgis.org/plugins/" target="_blank"> Répertoire des plugins Python QGIS </a></p>
+</li>
+<li>
+<p><a href="https://www.qgistutorials.com/fr/" target="_blank"> Tutoriels et astuces QGIS </a></p>
+</li>
+</ul>
+</details>
+<details class="tip">
+<summary>Meilleures pratiques</summary>
+<ul>
+<li>
+<p>Utilisez un fichier de projet : Commencez toujours par créer un fichier de projet pour votre travail. Cela vous aide à organiser vos couches et facilite le partage de votre travail avec d'autres personnes.</p>
+</li>
+<li>
+<p>Utilisez le style des couches : QGIS offre de nombreuses options de style pour les couches. Utilisez-les pour rendre vos cartes plus belles et professionnelles.</p>
+</li>
+<li>
+<p>Gardez vos données organisées : Tenez vos données organisées et à jour. Utilisez des noms de fichiers descriptifs et conservez vos données dans des dossiers logiques.</p>
+</li>
+<li>
+<p>Utilisez les plugins : QGIS dispose d'une grande communauté de développeurs qui créent des plugins pour étendre ses fonctionnalités. Profitez de ces plugins pour rendre votre travail plus facile et plus efficace.</p>
+</li>
+<li>
+<p>Utilisez les projections : Assurez-vous de comprendre les projections et utilisez-les de manière appropriée. Cela garantira que vos données sont précises et que vos cartes ont du sens.</p>
+</li>
+<li>
+<p>Apprenez les raccourcis clavier : QGIS propose de nombreux raccourcis clavier qui peuvent vous faire gagner du temps et des efforts. Prenez le temps de les apprendre et vous serez plus productif.</p>
+</li>
+<li>
+<p>Utilisez la communauté QGIS : QGIS dispose d'une communauté nombreuse et active d'utilisateurs et de développeurs. Utilisez la communauté pour en savoir plus sur le logiciel, obtenir de l'aide pour résoudre des problèmes et partager votre travail avec d'autres personnes.</p>
+</li>
+</ul>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

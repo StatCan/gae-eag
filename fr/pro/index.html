@@ -1,0 +1,1421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../analysis_ov/">
+      
+      
+        <link rel="next" href="../insights/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>ArcGIS Pro - SAD; L’Environnement d'Analyse Géospatial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arcgis-pro-sur-das-gae" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-header__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAD; L’Environnement d'Analyse Géospatial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ArcGIS Pro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Bienvenue
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link">
+        Pour commencer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Centre du savoir
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link md-tabs__link--active">
+        Analyse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualisation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Stockage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-nav__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    SAD; L’Environnement d'Analyse Géospatial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Bienvenue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bienvenue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A propos de SAD-EAG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Démarrage rapide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Connexion au cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Machine virtuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Langues Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Centre du savoir
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Centre du savoir
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Les bases de la théorie SIG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Formation, tutoriels et liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Analyse-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ArcGIS Pro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ArcGIS Pro
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-initiale" class="md-nav__link">
+    Configuration initiale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajout-de-donnees-a-votre-projet" class="md-nav__link">
+    Ajout de données à votre projet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partage-des-resultats" class="md-nav__link">
+    Partage des résultats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-savoir-plus" class="md-nav__link">
+    En savoir plus :
+  </a>
+  
+    <nav class="md-nav" aria-label="En savoir plus :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meilleures-pratiques" class="md-nav__link">
+    Meilleures pratiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-officielle-darcgis-pro" class="md-nav__link">
+    Documentation officielle d'ArcGIS Pro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        Multi-plateforme (ETAA/EAC)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Visualisation-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          ArcGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Cartes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Statique Cartes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Stockage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Stockage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisportal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-initiale" class="md-nav__link">
+    Configuration initiale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajout-de-donnees-a-votre-projet" class="md-nav__link">
+    Ajout de données à votre projet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partage-des-resultats" class="md-nav__link">
+    Partage des résultats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-savoir-plus" class="md-nav__link">
+    En savoir plus :
+  </a>
+  
+    <nav class="md-nav" aria-label="En savoir plus :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meilleures-pratiques" class="md-nav__link">
+    Meilleures pratiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-officielle-darcgis-pro" class="md-nav__link">
+    Documentation officielle d'ArcGIS Pro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="arcgis-pro-sur-das-gae">ArcGIS Pro sur DAS GAE</h1>
+<h2 id="configuration-initiale">Configuration initiale</h2>
+<details class="success">
+<summary>Connectez votre licence ArcPro - Utilisateurs externes (@ext.statcan.ca)</summary>
+<p>Pour les utilisateurs externes, DAS est un service de type <em>Apportez votre propre licence</em>.</p>
+<ol>
+<li>Dans l'application ArcGIS Pro, allez à l'onglet "Projet" dans le ruban.</li>
+<li>Cliquez sur "Licence" dans l'onglet "Projet".</li>
+<li>Dans le volet Licence, sélectionnez l'option "ArcGIS Online".</li>
+<li>Cliquez sur le bouton "Se connecter" et saisissez vos informations d'identification ArcGIS Online (nom d'utilisateur et mot de passe) pour vous connecter à votre compte ArcGIS Online.</li>
+<li>Une fois connecté, ArcGIS Pro vérifiera vos droits de licence et activera le logiciel en utilisant votre licence ArcGIS Online.</li>
+</ol>
+</details>
+<details class="success">
+<summary>Connectez votre licence ArcPro - Employés de StatCan - Utilisateurs internes</summary>
+<details class="success">
+<summary>À propos de votre licence ArcGIS Pro</summary>
+<p>Les licences ArcGIS Pro sont gérées par l'équipe <strong>StatCan GeoHelp</strong>.
+Il s'agit de la même licence que celle utilisée pour accéder à ArcGIS Pro sur NetA-B/AVD.</p>
+</details>
+<p><strong>Veuillez contacter GeoHelp pour obtenir de l'aide : geohelp@statcan.gc.ca</strong></p>
+<ol>
+<li>Dans le menu Paramètres, sélectionnez "Licence" dans la liste à gauche. Il est normal que le gestionnaire de licences mette plusieurs minutes à s'initialiser.</li>
+<li>Cliquez sur <strong>Configurer vos options de licence</strong>
+<img alt="license1" src="../imagesFR/pro/license1.PNG" /></li>
+<li>Dans le menu déroulant <em>Type de licence</em>, sélectionnez l'option <strong>Utilisation simultanée</strong>.</li>
+<li>Dans le champ <em>Gestionnaire de licences</em>, saisissez le nom d'hôte : <strong>5200@stmcapp-200statcan.ca</strong>
+<!-- replace <img alt="license2" src="imagesFR/pro/license2.PNG" />--></li>
+<li>Cliquez sur le bouton "OK" pour enregistrer vos modifications.</li>
+<li>Redémarrez ArcGIS Pro pour activer les nouveaux paramètres de licence.</li>
+</ol>
+<p>Une fois connecté au serveur de licences simultanées, vous devriez pouvoir voir les licences du logiciel ArcGIS Pro et toutes les extensions incluses.</p>
+</details>
+<details class="success">
+<summary>Connecter Pro à DAS Enterprise Portal</summary>
+<p>Une connexion au portail ArcGIS Enterprise DAaaS GEO doit être établie afin de publier depuis ArcGIS Pro vers le portail. Suivez ces étapes :</p>
+<ol>
+<li>
+<p><em>a:</em> À partir de l'écran d'accueil d'ArcGIS Pro, sélectionnez <strong>Paramètres</strong>, puis sélectionnez <strong>Portails</strong><br />
+<img alt="pro_portal1" src="../imagesFR/pro/pro_portal_a.PNG" /></p>
+<p><strong>OU</strong></p>
+<p><em>b:</em> Dans un projet, faites un clic droit sur votre nom en haut à droite de la fenêtre et sélectionnez : <strong>Gérer les portails</strong>
+<img alt="pro_portal6" src="../imagesFR/pro/pro_portal_b.PNG" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Ajouter un portail</strong> et saisissez l'URL suivante : <strong>https://geoanalytics.cloud.statcan.ca/portal/</strong>
+    <img alt="pro_portal3" src="../imagesFR/pro/pro_portal3.PNG" /></p>
+</li>
+<li>
+<p>La connexion sera ensuite répertoriée. Sélectionnez le bouton <strong>plus</strong> <strong>'...'</strong>, puis sélectionnez <em>Se connecter</em>.<br />
+<img alt="pro_portal5" src="../imagesFR/pro/pro_portal5.PNG" />
+    Nous vous suggérons également, une fois la connexion établie, de sélectionner le <strong>Définir comme portail actif</strong> dans le menu déroulant <strong>plus...</strong>.</p>
+</li>
+<li>
+<p>Une fenêtre de navigateur s'ouvrira, cliquez sur le bouton de connexion <strong>'Azure Cloud Login'</strong> et suivez les instructions. Une fois l'authentification Azure terminée, vous serez renvoyé à l'écran d'ArcGIS Pro.</p>
+</li>
+</ol>
+<p><br></p>
+<p>En savoir plus sur <a href="../portal/">l'auto-inscription dans le portail</a></p>
+<p>En savoir plus : <a href="https://pro.arcgis.com/fr/pro-app/latest/help/projects/manage-portal-connections-from-arcgis-pro.htm">Gérer les connexions de portail depuis ArcGIS Pro</a></p>
+</details>
+<h2 id="ajout-de-donnees-a-votre-projet">Ajout de données à votre projet</h2>
+<details class="example">
+<summary>Ajouter des données à partir d'un champ ou d'un dossier local</summary>
+<ol>
+<li>Dans le volet Catalogue, qui se trouve généralement sur le côté droit de l'interface d'ArcGIS Pro; Faites un clic droit sur Dossiers, sélectionnez Ajouter une connexion de dossier, localisez le dossier souhaité et sélectionnez-le.
+<img alt="catalog" src="../imagesFR/pro/catalog.png" /></li>
+<li>
+<p>Développez la source de données qui contient les données que vous souhaitez ajouter. Par exemple, si vous avez des fichiers shapefile stockés dans un dossier, développez le dossier.</p>
+</li>
+<li>
+<p>Localisez l'ensemble de données spécifique que vous souhaitez ajouter à votre projet.</p>
+</li>
+<li>
+<p>Pour ajouter les données à la carte en cours, faites simplement glisser-déposer l'ensemble de données sur la vue de la carte ou faites un clic droit sur l'ensemble de données et sélectionnez "Ajouter à la carte en cours" ou "Ajouter au projet".</p>
+</li>
+<li>
+<p>Après avoir ajouté les données, elles seront visibles dans le volet Contenu, qui se trouve généralement sur le côté gauche de l'interface d'ArcGIS Pro. Vous pouvez interagir avec les données ajoutées en les sélectionnant dans le volet Contenu et en utilisant les outils et fonctionnalités disponibles en haut.</p>
+</li>
+</ol>
+</details>
+<details class="example">
+<summary>Connexion à une base de données PostgreSQL</summary>
+<p>GAE a simplifié le processus de connexion ArcGIS Pro-PostgreSQL en utilisant un fichier de connexion <em>.sde</em>.</p>
+<ol>
+<li>
+<p>Dans le volet Catalogue, faites un clic droit sur <em>Bases de données</em> et sélectionnez <em>Ajouter une base de données</em>
+<img alt="propost1" src="../imagesFR/pro/propost1.PNG" /></p>
+</li>
+<li>
+<p>Dans la nouvelle fenêtre, développez <em>This PC</em> et localisez le partage de fichiers de votre projet (monté en tant que lecteur)
+<img alt="propost2" src="../imagesFR/pro/propost2.PNG" /></p>
+</li>
+<li>
+<p>Sélectionnez le fichier <em>.sde</em> et cliquez sur <em>Ok</em></p>
+</li>
+<li>
+<p>La base de données PostgreSQL apparaîtra dans <em>Bases de données</em> dans le volet <em>Catalogue</em>.</p>
+</li>
+</ol>
+<p>En savoir plus : <a href="https://pro.arcgis.com/fr/pro-app/2.8/help/data/databases/connect-postgresql.htm">Documentation d'ArcGIS Pro</a></p>
+</details>
+<details class="example">
+<summary>Importer des données depuis ArcGIS Enterprise</summary>
+<p>En tant que membre sur GAE, vous aurez soit le rôle d'utilisateur Project Member, soit le rôle d'utilisateur Project Viewer. Les mêmes privilèges s'appliqueront à la fois à ArcGIS Enterprise et à ArcGIS Pro.</p>
+<p>Les utilisateurs ayant les rôles Project Member et Project Viewer auront la possibilité de consulter (afficher) des données partagées à partir de leurs groupes de projet dans ArcGIS Pro, ainsi que des données personnelles.</p>
+<p>Dans le volet <strong>Catalogue</strong> (si le volet <strong>Catalogue</strong> est fermé, cliquez sur l'onglet <strong>Affichage</strong> dans le ruban principal. Dans le groupe <strong>Fenêtres</strong>, cliquez sur <strong>Volet Catalogue</strong>), sélectionnez l'onglet <strong>Portail</strong>. Les mêmes onglets <strong>Contenu</strong> d'ArcGIS Enterprise apparaîtront ; <em>Mon Contenu</em>, <em>Mes Favoris</em>, <em>Mes Groupes</em>, <em>Mon Organisation</em>, <em>ArcGIS Enterprise</em> et <em>Living Atlas</em>.
+<img alt="ProToPortalSteps" src="../imagesFR/pro/ProToPortalSteps.png" /></p>
+</details>
+<details class="example">
+<summary>Analyse via la barre d'outils</summary>
+<p>Une fois que vous avez ajouté les données nécessaires à votre projet :</p>
+<ol>
+<li>Dans l'onglet "Analyse" du ruban d'ArcGIS Pro, cliquez sur le bouton "Boîtes à outils". Le bouton "Boîtes à outils" permet d'accéder à différentes boîtes à outils de géotraitement.
+<img alt="toolboxes" src="/imagesFR/pro/toolbox.png" /></li>
+<li>
+<p>Parcourez et explorez les boîtes à outils disponibles pour trouver celle qui contient les outils spécifiques dont vous avez besoin pour votre analyse. Les boîtes à outils sont organisées en fonction de leur fonctionnalité, telle que la gestion des données, les statistiques spatiales, la conversion, et plus encore.</p>
+</li>
+<li>
+<p>Développez la boîte à outils sélectionnée pour afficher son contenu, qui comprend des outils de géotraitement individuels.</p>
+</li>
+<li>
+<p>Localisez l'outil que vous souhaitez utiliser pour votre analyse. Chaque outil effectue une fonction spécifique et peut nécessiter des paramètres d'entrée spécifiques.</p>
+</li>
+<li>
+<p>Double-cliquez sur l'outil pour ouvrir sa boîte de dialogue. La boîte de dialogue vous permet de définir les paramètres d'entrée et de configurer les paramètres de l'outil.</p>
+</li>
+<li>
+<p>Remplissez les paramètres requis, tels que les données d'entrée, les emplacements de sortie et toute autre information pertinente. Les noms et les options des paramètres varieront en fonction de l'outil sélectionné.</p>
+</li>
+<li>
+<p>Consultez la documentation de l'outil ou les ressources d'aide si vous avez besoin de plus d'informations sur les paramètres ou le fonctionnement de l'outil.</p>
+</li>
+<li>
+<p>Une fois que vous avez défini les paramètres, cliquez sur le bouton "Exécuter" pour lancer l'analyse à l'aide de l'outil sélectionné. L'outil traitera les données et générera les résultats en fonction des paramètres spécifiés.</p>
+</li>
+<li>
+<p>Après la fin de l'analyse, vous pouvez examiner et explorer les résultats. Les résultats peuvent être affichés sur la carte, dans le volet de géotraitement ou dans une nouvelle couche ou table.</p>
+</li>
+<li>
+<p>Affinez davantage les résultats de votre analyse en visualisant et en interrogeant les données, en effectuant des analyses supplémentaires ou en partageant vos découvertes via des cartes, des graphiques ou des rapports.</p>
+</li>
+</ol>
+<p><a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/main/arcgis-pro-tool-reference.htm">En savoir plus sur les outils disponibles ici</a></p>
+</details>
+<details class="example">
+<summary>Analyse via ModelBuilder (réutilisable)</summary>
+<details class="quote">
+<summary>Qu'est-ce que ModelBuilder ?</summary>
+<p>ModelBuilder dans ArcGIS Pro est un outil visuel pour créer des flux de travail d'analyse spatiale automatisés. Il simplifie les tâches complexes en vous permettant de connecter visuellement des outils et des données. Avec ModelBuilder, vous pouvez personnaliser vos flux de travail, collaborer avec d'autres personnes et réutiliser vos modèles de manière cohérente et efficace.</p>
+</details>
+<ol>
+<li>Dans l'onglet "Analyse" du ruban d'ArcGIS Pro, cliquez sur le bouton "ModelBuilder". Cela ouvrira l'interface ModelBuilder ; vous verrez un canevas vide où vous pouvez créer votre flux de géotraitement.
+<img alt="model builder" src="/imagesFR/pro/model1.png" /></li>
+<li>
+<p>Commencez à construire votre modèle en ajoutant des outils au canevas. Pour ajouter un outil, vous pouvez soit le rechercher dans la barre de recherche située sur l'interface ModelBuilder, soit naviguer dans les boîtes à outils en cliquant sur le bouton "Boîtes à outils" dans l'onglet "Analyse" et en sélectionnant l'outil souhaité.</p>
+</li>
+<li>
+<p>Faites glisser et déposez l'outil sélectionné sur le canevas. Connectez les outils en cliquant sur le connecteur de sortie d'un outil et en le faisant glisser jusqu'au connecteur d'entrée d'un autre outil. Cela représente le flux de données entre les outils.</p>
+</li>
+<li>
+<p>Configurez les paramètres de chaque outil en cliquant dessus avec le bouton droit de la souris et en sélectionnant "Propriétés". Remplissez les paramètres requis et ajustez les autres paramètres si nécessaire.</p>
+</li>
+<li>
+<p>Continuez à ajouter des outils et à les connecter jusqu'à ce que vous ayez construit votre flux de travail souhaité.</p>
+</li>
+<li>
+<p>Testez votre modèle en cliquant sur le bouton "Exécuter" dans l'interface ModelBuilder. Cela exécutera le flux de travail et traitera les données en fonction des paramètres spécifiés.</p>
+</li>
+<li>
+<p>Une fois que le modèle a été exécuté avec succès et a produit les résultats souhaités, vous pouvez l'enregistrer pour une utilisation ultérieure. Pour enregistrer le modèle, allez dans le menu "Fichier" et sélectionnez "Enregistrer" ou "Enregistrer sous". Choisissez un emplacement et donnez un nom au modèle, puis cliquez sur "Enregistrer". Le modèle sera enregistré avec une extension de fichier .tbx, qui représente une boîte à outils ModelBuilder.</p>
+</li>
+</ol>
+<p>ASTUCE : Vous pouvez également créer des paramètres de modèle pour rendre votre modèle plus flexible et réutilisable. Les paramètres vous permettent de spécifier les emplacements des données d'entrée et de sortie et d'autres variables lors de l'exécution du modèle. Pour créer un paramètre de modèle, cliquez dessus avec le bouton droit de la souris, sélectionnez "Paramètre de modèle" et définissez les propriétés du paramètre.</p>
+<p>ASTUCE : Pour exécuter le modèle avec différentes données d'entrée ou valeurs de paramètres, vous pouvez l'ouvrir à partir du volet Catalogue ou du volet de géotraitement, modifier les valeurs d'entrée ou les paramètres, puis l'exécuter à nouveau.</p>
+</details>
+<details class="example">
+<summary>Analyse via Python et Notebook dans Pro</summary>
+<details class="quote">
+<summary>Qu'est-ce qu'un notebook Python et pourquoi l'utiliser ?</summary>
+<p>Un notebook Python dans ArcGIS Pro combine du code, de la documentation et des visualisations, offrant un environnement interactif pour l'analyse spatiale. Il offre une flexibilité, des fonctionnalités de scripting avancées et une intégration avec des packages Python externes, ce qui en fait un outil idéal pour les flux de travail personnalisés et les techniques d'analyse avancées.</p>
+</details>
+<p>Dans l'interface du notebook, vous pouvez commencer à écrire et à exécuter du code Python pour effectuer votre analyse. Vous pouvez utiliser diverses fonctions ArcPy, des bibliothèques et d'autres packages Python pour l'analyse spatiale.</p>
+<ol>
+<li>Depuis l'onglet "Analyse", sélectionnez "Python", puis sélectionnez soit "Notebook" soit "Python Window", selon votre préférence. Vous pouvez commencer à écrire et à exécuter du code Python pour effectuer votre analyse dans le notebook ou la fenêtre Python nouvellement ouverte. Vous pouvez utiliser diverses fonctions ArcPy, des bibliothèques et d'autres packages Python pour l'analyse spatiale.
+<img alt="arcgis notebook" src="/imagesFR/pro/pronotebook.png" /></li>
+<li>
+<p>Importez les bibliothèques et modules nécessaires en incluant des instructions d'importation au début du notebook. <a href="https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/what-is-conda.htm">Apprenez comment installer des packages ici</a></p>
+</li>
+<li>
+<p>Utilisez les fonctions ArcPy et les outils de géotraitement pour effectuer des tâches d'analyse spatiale. Vous pouvez accéder et manipuler des jeux de données spatiales, effectuer des calculs, exécuter des outils de géotraitement, créer des cartes et générer des sorties. <a href="https://developers.arcgis.com/documentation/arcgis-add-ins-and-automation/arcpy/">En savoir plus sur Arcpy</a></p>
+</li>
+<li>
+<p>Écrivez votre code d'analyse dans des cellules distinctes du notebook. Chaque cellule peut être exécutée individuellement en cliquant sur le bouton "Exécuter" ou en utilisant le raccourci Shift + Entrée.</p>
+</li>
+<li>
+<p>Exécutez les cellules séquentiellement pour exécuter votre analyse étape par étape, en examinant les résultats et les résultats intermédiaires au fur et à mesure de votre progression.</p>
+</li>
+<li>
+<p>Vous pouvez ajouter des cellules de texte formaté (markdown) pour inclure du texte explicatif, de la documentation ou des visualisations dans le notebook afin d'améliorer la lisibilité et la clarté.</p>
+</li>
+<li>
+<p>Enregistrez périodiquement votre notebook Python pour conserver votre code et l'avancement de votre analyse. Utilisez l'option "Enregistrer" dans l'interface du notebook pour sauvegarder vos modifications.</p>
+</li>
+</ol>
+<p>ASTUCE : Une fois votre analyse terminée, vous pouvez exporter le notebook Python sous forme d'un fichier .ipynb autonome à des fins de partage ou d'archivage.</p>
+</details>
+<h2 id="partage-des-resultats">Partage des résultats</h2>
+<details class="abstract">
+<summary>Partage des données avec ArcGIS Enterprise</summary>
+<p>Seuls les utilisateurs ayant le rôle de membre du projet peuvent télécharger et partager du contenu sur le portail.</p>
+<p>Cliquez avec le bouton droit sur une couche dans le volet <strong>Contenu</strong> (si le volet <strong>Contenu</strong> est fermé, cliquez sur l'onglet <strong>Affichage</strong> dans le ruban principal. Dans le groupe <strong>Fenêtres</strong>, cliquez sur <strong>Contenu</strong>) et sélectionnez <strong>Partage</strong> &gt; <strong>Partager en tant que couche web</strong> dans le menu déroulant. Une nouvelle fenêtre <strong>Partager en tant que couche web</strong> apparaîtra.
+<img alt="AddDataToPortalSteps" src="../imagesFR/pro/AddDataToPortalSteps.png" /></p>
+</details>
+<details class="abstract">
+<summary>Archivage de votre projet</summary>
+<p><strong>Ajoutez des métadonnées !</strong></p>
+<p>Couches de données et tables :</p>
+<ol>
+<li>Cliquez avec le bouton droit sur la couche/table dans le volet <strong>Contenu</strong>.</li>
+<li>Sélectionnez <strong>Propriétés</strong>. Accédez à l'onglet <strong>Métadonnées</strong>.</li>
+<li>Cliquez sur <strong>Modifier</strong> et remplissez les détails. Enregistrez.</li>
+</ol>
+<p>ModelBuilder :</p>
+<ol>
+<li>Accédez au menu <strong>Modèle</strong>, puis à <strong>Propriétés du modèle</strong>. Ouvrez l'onglet <strong>Métadonnées</strong>.</li>
+<li>Cliquez sur <strong>Modifier</strong> et fournissez les détails. Enregistrez les métadonnées.</li>
+</ol>
+<p>Carnets Python/Scripts :</p>
+<ul>
+<li>Carnets : Ajoutez des cellules de texte en markdown avec des métadonnées (titre, description, auteur).</li>
+<li>Scripts : Incluez des commentaires au début pour les métadonnées (objectif, auteur, description).</li>
+</ul>
+<p><strong>Packagez votre projet</strong></p>
+<p>ArcGIS Pro propose un outil d'emballage qui vous permet de créer un package de projet contenant l'ensemble des données du projet, des cartes et des paramètres d'analyse.</p>
+<p>Pour créer un package de votre projet, accédez à l'onglet <strong>Partage</strong> dans le ruban d'ArcGIS Pro et cliquez sur le bouton "Projet".</p>
+<p>Suivez les instructions pour spécifier les paramètres du package, y compris l'emplacement de sortie, le nom du package et les options de données ou d'analyse que vous souhaitez inclure. Ce package servira d'archive autonome de votre projet.</p>
+<p><strong>Exporter des données</strong></p>
+<p>Si vous souhaitez archiver séparément des couches de données spécifiques ou des résultats d'analyse, vous pouvez les exporter à partir d'ArcGIS Pro.</p>
+<p>Cliquez avec le bouton droit sur la couche de données ou le résultat dans le volet <strong>Contenu</strong>, sélectionnez <strong>Données</strong> ou <strong>Exporter</strong>, puis choisissez le format d'exportation souhaité.</p>
+<p>Enregistrez les données exportées dans l'emplacement de votre choix pour les archiver.</p>
+</details>
+<hr />
+<h2 id="en-savoir-plus">En savoir plus :</h2>
+<h3 id="meilleures-pratiques">Meilleures pratiques</h3>
+<ul>
+<li>
+<p>Organisez vos données : Créez une structure de dossiers logique et utilisez des noms descriptifs pour vos couches et jeux de données afin de les rendre faciles à trouver et à comprendre.</p>
+</li>
+<li>
+<p>Limitez le nombre de dossiers : Ne créez pas trop de niveaux de dossiers au sein de votre projet, car cela peut rendre la navigation et la localisation des éléments difficiles. Limitez le nombre de niveaux à trois ou quatre au maximum.</p>
+</li>
+<li>
+<p>Utilisez les sous-dossiers avec parcimonie : Utilisez des sous-dossiers uniquement lorsque cela est nécessaire, par exemple lorsque vous avez un grand nombre d'éléments ou lorsque vous devez les organiser par emplacement ou thème.</p>
+</li>
+<li>
+<p>Séparez les données de travail des données publiées : Gardez vos données de travail séparées de vos données publiées. Cela peut vous aider à éviter toute modification ou suppression accidentelle de données importantes.</p>
+</li>
+<li>
+<p>Utilisez le volet du projet : Utilisez le volet du projet pour gérer vos données, cartes et mises en page. Cela facilite le passage entre les différentes parties de votre projet.</p>
+</li>
+<li>
+<p>Utilisez des signets : Utilisez des signets pour enregistrer des vues spécifiques de votre carte. Cela facilite le retour à un emplacement et un niveau de zoom spécifiques.</p>
+</li>
+<li>
+<p>Utilisez les étiquettes avec parcimonie : Utilisez les étiquettes de manière parcimonieuse et assurez-vous qu'elles sont claires et faciles à lire. Envisagez d'utiliser des contours ou des remplissages de fond pour mettre en évidence les étiquettes.</p>
+</li>
+<li>
+<p>Utilisez une symbologie cohérente : Utilisez une symbologie cohérente sur vos cartes pour les rendre plus faciles à lire et à comprendre.</p>
+</li>
+<li>
+<p>Documentez votre travail : Documentez votre travail à l'aide des outils de métadonnées d'ArcGIS Pro. Cela facilite le partage de votre travail avec d'autres personnes et vous aide à suivre les modifications au fil du temps.</p>
+</li>
+<li>
+<p>Utilisez des paquets de cartes : Utilisez des paquets de cartes pour partager vos cartes et données avec d'autres personnes. Cela garantit que toutes les données et les paramètres nécessaires sont inclus.</p>
+</li>
+<li>
+<p>Privilégiez les géodatabases par rapport aux shapefiles : Dans l'ensemble, les géodatabases sont un format de stockage de données plus robuste et polyvalent que les shapefiles.</p>
+</li>
+<li>
+<p>Optimisez votre flux de travail : Optimisez votre flux de travail en utilisant les outils et raccourcis disponibles dans ArcGIS Pro. Cela vous permet de gagner du temps et de travailler de manière plus efficace.</p>
+</li>
+<li>
+<p>Profitez des ressources disponibles : Profitez de la documentation, de la formation et des communautés d'utilisateurs d'ArcGIS Pro pour en savoir plus sur les meilleures pratiques et obtenir de l'aide lorsque vous en avez besoin.</p>
+</li>
+</ul>
+<h3 id="documentation-officielle-darcgis-pro">Documentation officielle d'ArcGIS Pro</h3>
+<p><a href="https://pro.arcgis.com/fr/pro-app/latest/help/main/welcome-to-the-arcgis-pro-app-help.htm">En savoir plus : Documentation officielle d'ArcGIS Pro</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

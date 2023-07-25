@@ -1,0 +1,1237 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../storage_ov/">
+      
+      
+        <link rel="next" href="../postgresql/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>ArcGIS Portal - SAD; L’Environnement d'Analyse Géospatial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#devenir-un-utilisateur" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-header__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAD; L’Environnement d'Analyse Géospatial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ArcGIS Portal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Bienvenue
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link">
+        Pour commencer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Centre du savoir
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link">
+        Analyse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualisation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link md-tabs__link--active">
+        Stockage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-nav__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    SAD; L’Environnement d'Analyse Géospatial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Bienvenue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bienvenue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A propos de SAD-EAG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Démarrage rapide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Connexion au cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Machine virtuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Langues Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Centre du savoir
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Centre du savoir
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Les bases de la théorie SIG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Formation, tutoriels et liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Analyse-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        Multi-plateforme (ETAA/EAC)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Visualisation-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          ArcGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Cartes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Statique Cartes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Stockage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Stockage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ArcGIS Portal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ArcGIS Portal
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devenir-un-utilisateur" class="md-nav__link">
+    Devenir un utilisateur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chargementpublication-de-contenu" class="md-nav__link">
+    Chargement/Publication de contenu
+  </a>
+  
+    <nav class="md-nav" aria-label="Chargement/Publication de contenu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexion" class="md-nav__link">
+    Connexion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chargement-de-contenu" class="md-nav__link">
+    Chargement de contenu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meilleures-pratiques" class="md-nav__link">
+    Meilleures pratiques
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devenir-un-utilisateur" class="md-nav__link">
+    Devenir un utilisateur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chargementpublication-de-contenu" class="md-nav__link">
+    Chargement/Publication de contenu
+  </a>
+  
+    <nav class="md-nav" aria-label="Chargement/Publication de contenu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexion" class="md-nav__link">
+    Connexion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chargement-de-contenu" class="md-nav__link">
+    Chargement de contenu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meilleures-pratiques" class="md-nav__link">
+    Meilleures pratiques
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ArcGIS Portal</h1>
+
+<h2 id="devenir-un-utilisateur">Devenir un utilisateur</h2>
+<details class="success">
+<summary>S'inscrire et créer un compte</summary>
+<ol>
+<li>
+<p>Rendez-vous sur le <strong><a href="https://geoanalytics.cloud.statcan.ca">Portail DAaaS GAE Enterprise</a></strong> pour vous connecter au portail ArcGIS Enterprise.</p>
+</li>
+<li>
+<p>Sélectionnez le bouton <em>StatCan Azure Login</em>.</p>
+<p><img alt="portal_reg1" src="../imagesFR/portal/portal_reg1.PNG" /></p>
+</li>
+<li>
+<p>Si votre mot de passe n'a pas été mémorisé par Azure, on vous demandera de le saisir et de le vérifier par téléphone.</p>
+<p><img alt="Microsoft pick an account prompt" src="../imagesFR/login/select_account.png" /> </p>
+</li>
+<li>
+<p>Vous verrez ensuite cette fenêtre :
+    <img alt="self_reg_success.png" src="../imagesFR/portal/self_reg_success.png" /></p>
+</li>
+<li>
+<p>Pour des raisons de sécurité, votre rôle par défaut sera <em>Viewer Only</em> (consultation seulement). Contactez l'équipe DAaaS Geo pour ajuster vos autorisations.
+Consultez la section <strong><a href="/contact/">Contact</a></strong> pour obtenir de l'aide sur la façon de contacter DAS-GAE.</p>
+</li>
+</ol>
+</details>
+<details class="info">
+<summary>À propos des rôles d'utilisateur</summary>
+<p>Vous serez affecté à un rôle d'utilisateur <em>Project Viewer</em> ou <em>Project Member</em> en fonction de vos besoins.</p>
+<ul>
+<li>
+<p><strong>Project Viewer</strong><br/>
+  Afficher des éléments tels que des cartes, des applications, des scènes et des couches partagées avec le public, l'organisation ou un groupe auquel le membre appartient. Rejoindre des groupes appartenant à l'organisation. Faites glisser des fichiers CSV, texte ou GPX dans Map Viewer Classic (anciennement Map Viewer) pour géocoder des adresses ou des noms de lieux. Obtenez des itinéraires dans un visualiseur de cartes et des applications. Les membres ayant le rôle de Viewer ne peuvent pas créer ou partager de contenu, ni effectuer d'analyses.</p>
+</li>
+<li>
+<p><strong>Project Member</strong><br/>
+  Privilèges de Project Viewer plus la possibilité de créer, mettre à jour et supprimer leur propre contenu. Les utilisateurs peuvent publier des couches d'entités hébergées, des couches de tuiles hébergées, des couches de scènes hébergées et des couches basées sur un serveur. Partager du contenu avec des groupes attribués. Créer du contenu tel que des cartes (y compris des tâches d'analyse des entités), des tableaux de bord, des applications et des récits cartographiques.</p>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>À propos de vos groupes</summary>
+<p>Les groupes auxquels vous appartenez sont des espaces de collaboration avec d'autres utilisateurs travaillant sur le même projet ou la même équipe. Dans l'en-tête principal, cliquez sur "Groupes". C'est là que vous pouvez voir les groupes auxquels vous avez été ajouté.
+<img alt="Page des groupes" src="../imagesFR/portal/groups.png" />
+Cliquez sur le nom du groupe pour voir tout le contenu partagé.</p>
+<p>Vous remarquerez peut-être qu'il existe deux groupes pour le même projet. Ces deux groupes sont destinés à différents rôles d'utilisateurs, garantissant une collaboration efficace et un accès contrôlé aux données au sein du portail ArcGIS.</p>
+<p>Le premier groupe, <strong>Editors</strong>, est désigné pour les membres disposant de privilèges de modification. Cela signifie qu'ils ont la possibilité de modifier et de mettre à jour les éléments du groupe. Ils peuvent ajouter, modifier ou supprimer du contenu, ainsi que apporter des modifications aux éléments existants.</p>
+<p>Le deuxième groupe, <strong>Viewers</strong>, est un groupe en lecture seule. Ses membres ont des autorisations restreintes et sont limités à la visualisation des éléments disponibles dans le groupe. Ils peuvent explorer et accéder au contenu, mais ils n'ont pas l'autorité pour apporter des modifications ou des éditions.</p>
+</details>
+<h2 id="chargementpublication-de-contenu">Chargement/Publication de contenu</h2>
+<details class="example">
+<summary>Chargement du contenu de l'interface</summary>
+<p>Les fichiers shapefile et les géodatabases de fichiers sont les types de fichiers les plus couramment chargés sur le portail. Cependant, une liste complète des éléments pris en charge peut être consultée en cliquant sur le point d'interrogation, comme indiqué dans l'image ci-dessous.</p>
+<p>Cliquez sur l'onglet "Contenu" et, sous "Mon contenu", cliquez sur "Ajouter un élément". Sélectionnez "Depuis votre ordinateur". Cliquez sur "Choisir un fichier" et accédez au dossier compressé contenant le contenu que vous souhaitez charger. Assurez-vous que le type de fichier correct est sélectionné dans le menu déroulant et que l'option "Publier ce fichier en tant que couche hébergée" est sélectionnée. Attribuez un titre et des balises au contenu. Cliquez sur "Ajouter un élément".</p>
+<p>Note : Si vous sélectionnez "Publier ce fichier en tant que couche hébergée", le contenu sera également publié en tant que couche hébergée pouvant être utilisée et partagée entre les membres de votre groupe. Si cette option n'est pas sélectionnée, le fichier lui-même (par exemple, une géodatabase de fichiers) sera téléchargé et disponible en téléchargement pour les autres membres du groupe, mais il ne pourra pas être utilisé par les membres du groupe tant qu'il n'aura pas été publié en tant que couche hébergée.
+<img alt="Chargement de contenu" src="../imagesFR/portal/add_data.png" /></p>
+<p>Des étapes similaires peuvent être suivies pour charger du contenu via une URL vers une couche ou un document sur le web, ou une URL vers une application sur le web.</p>
+<p>Le contenu peut également être chargé directement dans une carte web en utilisant les mêmes méthodes décrites ci-dessus.</p>
+<p><strong>En savoir plus : <a href="https://enterprise.arcgis.com/en/portal/latest/use/add-items.htm">ArcGIS Portal ; Ajouter des éléments</a></strong></p>
+</details>
+<details class="example">
+<summary>Publication de contenu - Chargement sur le portail</summary>
+<ol>
+<li>Les éléments peuvent être publiés directement à partir de vos fichiers, comme indiqué dans la section "Chargement de contenu".</li>
+<li>Si le fichier de l'élément est directement chargé sur le portail, comme un shapefile ou une géodatabase, l'utilisateur peut publier manuellement l'élément.
+<img alt="Publication de contenu" src="../imagesFR/portal/publish.png" /></li>
+<li>Les éléments peuvent également être importés directement dans une carte web (voir la section Carte web pour plus d'informations) et publiés individuellement sur le portail.
+<img alt="Publication de contenu dans une carte web" src="../imagesFR/portal/add%20data%20webmap.png" /></li>
+</ol>
+<p><strong>En savoir plus : <a href="https://enterprise.arcgis.com/en/portal/latest/use/data-publishing-and-enterprise.htm">ArcGIS Portal ; Publication</a></strong></p>
+</details>
+<details class="example">
+<summary>Via l'API</summary>
+<p>Votre groupe de projet se verra attribuer un ID client lors de l'intégration, qui sera utilisé pour se connecter au portail ArcGIS Enterprise. Collez l'ID client entre les guillemets.</p>
+<h3 id="connexion">Connexion</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalyticsdev.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connecté avec succès en tant que : &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</code></pre></div>
+La sortie vous redirigera vers une page web où vous pourrez vous connecter au portail en utilisant l'option de connexion Azure de StatCan. Après une connexion réussie, vous recevrez un code pour vous connecter en utilisant SAML. Collez ce code dans la sortie.</p>
+<p><img alt="Approbation OAuth2" src="../imagesFR/OAuth2Key.png" /></p>
+<h3 id="chargement-de-contenu">Chargement de contenu</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="c1"># Définissez le chemin d&#39;accès au fichier que vous souhaitez charger</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/chemin/vers/votre/fichier&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="c1"># Chargez le fichier sur votre instance ArcGIS Enterprise</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">item_properties</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Mon fichier chargé&quot;</span><span class="p">,</span> <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;fichier, chargement&quot;</span><span class="p">}</span> <span class="c1"># remplacez par les propriétés d&#39;élément souhaitées</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">item_properties</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># Imprimez l&#39;URL de l&#39;élément chargé</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;URL de l&#39;élément chargé : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
+</code></pre></div>
+<p><a href="https://developers.arcgis.com/python/">En savoir plus sur l'API ; Documentation ESRI</a></p>
+</details>
+<hr />
+<h2 id="meilleures-pratiques">Meilleures pratiques</h2>
+<ul>
+<li>
+<p>Les éléments ne doivent être partagés qu'avec votre groupe. Ne les partagez pas au niveau de l'entreprise ou public.</p>
+</li>
+<li>
+<p>Utilisez de nombreux tags appropriés - c'est ainsi que la plupart des utilisateurs trouveront votre travail.</p>
+</li>
+<li>
+<p>Utilisez des tags communs pour les éléments qui sont liés.</p>
+</li>
+<li>
+<p>Organisez le contenu : Utilisez un système structuré et logique pour organiser le contenu dans le portail. Cela peut inclure la création de dossiers, de groupes et de catégories pour faciliter la recherche et l'accès au contenu par les utilisateurs.</p>
+</li>
+<li>
+<p>Utilisez des métadonnées : Incluez des métadonnées complètes pour tous les éléments du portail afin de faciliter la découverte, la compréhension et l'utilisation du contenu par les utilisateurs.</p>
+</li>
+<li>
+<p>Utilisez une convention de nommage</p>
+<ul>
+<li>Utilisez la <em>Version Sémantique</em><ul>
+<li>Un numéro de version à trois parties (Majeur.Mineur.Correction)</li>
+<li>Exemple : Ma carte v1.2.4, EV_Viewer_App DEV v0.0.2</li>
+<li>Ajoutez un attribut <em>Dernière mise à jour :</em> dans les détails de la page d'aperçu de l'élément</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

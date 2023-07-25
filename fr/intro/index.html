@@ -1,0 +1,1456 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../language/">
+      
+      
+        <link rel="next" href="../python/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Les bases de la théorie SIG - SAD; L’Environnement d'Analyse Géospatial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#une-breve-introduction-aux-sig" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-header__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAD; L’Environnement d'Analyse Géospatial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les bases de la théorie SIG
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Bienvenue
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link">
+        Pour commencer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Centre du savoir
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link">
+        Analyse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualisation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Stockage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-nav__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    SAD; L’Environnement d'Analyse Géospatial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Bienvenue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bienvenue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A propos de SAD-EAG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Démarrage rapide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Connexion au cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        Machine virtuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Langues Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Centre du savoir
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Centre du savoir
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les bases de la théorie SIG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les bases de la théorie SIG
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-lanalyse-geospatiale-est-elle-importante" class="md-nav__link">
+    Pourquoi l'analyse géospatiale est-elle importante ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donnees-spatiales" class="md-nav__link">
+    Données spatiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-geospatiale" class="md-nav__link">
+    Analyse géospatiale
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse géospatiale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methodes-courantes" class="md-nav__link">
+    Méthodes courantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projections-et-coordonnees" class="md-nav__link">
+    Projections et Coordonnées
+  </a>
+  
+    <nav class="md-nav" aria-label="Projections et Coordonnées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projections" class="md-nav__link">
+    Projections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemes-de-coordonnees" class="md-nav__link">
+    Systèmes de coordonnées
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gis-vocabulary" class="md-nav__link">
+    GIS Vocabulary
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Formation, tutoriels et liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Analyse-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        Multi-plateforme (ETAA/EAC)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Visualisation-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          ArcGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Cartes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Statique Cartes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Stockage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Stockage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisportal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-lanalyse-geospatiale-est-elle-importante" class="md-nav__link">
+    Pourquoi l'analyse géospatiale est-elle importante ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donnees-spatiales" class="md-nav__link">
+    Données spatiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-geospatiale" class="md-nav__link">
+    Analyse géospatiale
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse géospatiale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methodes-courantes" class="md-nav__link">
+    Méthodes courantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projections-et-coordonnees" class="md-nav__link">
+    Projections et Coordonnées
+  </a>
+  
+    <nav class="md-nav" aria-label="Projections et Coordonnées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projections" class="md-nav__link">
+    Projections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemes-de-coordonnees" class="md-nav__link">
+    Systèmes de coordonnées
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gis-vocabulary" class="md-nav__link">
+    GIS Vocabulary
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="une-breve-introduction-aux-sig">Une brève introduction aux SIG</h1>
+<p align='center'>
+<img src="https://i.ibb.co/TrGQv9f/intro.png" alt="image HTML">
+</p>
+
+<p><strong>L'analyse géospatiale concerne la localisation quantitative de caractéristiques importantes, appelées phénomènes.</strong></p>
+<p>Les données géospatiales sont des données sur des phénomènes qui ont une localisation sur la surface de la Terre. La localisation peut être statique (par exemple, l'emplacement d'une route, un événement catastrophe, des citoyens vivant dans la pauvreté) ou dynamique (par exemple, un véhicule ou un piéton en mouvement, la propagation de la COVID).</p>
+<p>Un SIG (Système d'Information Géospatial) nous aide à analyser les relations spatiales et les schémas entre ces phénomènes. Il est particulièrement utile pour visualiser les données spatiales et rapporter les résultats de l'analyse.</p>
+<p>Les SIG sont composés à la fois de composants matériels et logiciels. En raison des grands volumes de données spatiales et de la nécessité d'afficher les valeurs en temps réel, le matériel des SIG dispose souvent de grandes capacités de stockage, d'une grande vitesse de calcul et d'une mémoire puissante. <b>DAS-GAE a été conçu pour répondre aux besoins de ces utilisateurs.</b></p>
+<hr />
+<h2 id="pourquoi-lanalyse-geospatiale-est-elle-importante">Pourquoi l'analyse géospatiale est-elle importante ?</h2>
+<p>L'analyse géospatiale est réalisée pour :</p>
+<ul>
+<li>Identifier des schémas et des relations spatiales dans les données.</li>
+<li>Soutenir la prise de décision dans des domaines tels que l'urbanisme, la gestion des catastrophes et l'environnement.</li>
+<li>Optimiser l'allocation et la gestion des ressources.</li>
+<li>Évaluer et atténuer les risques liés aux catastrophes naturelles et aux urgences de santé publique.</li>
+<li>Surveiller et analyser les changements et les impacts environnementaux.</li>
+</ul>
+<hr />
+<h2 id="donnees-spatiales">Données spatiales</h2>
+<p>Les données spatiales font référence aux informations qui ont une composante de localisation ou géographique associée. Ce sont des <strong>données qui ont une référence spatiale, comme la latitude et la longitude ou une adresse</strong>, ce qui leur permet d'être affichées sur une carte et analysées à l'aide d'un logiciel de système d'information géographique (SIG). Les données spatiales peuvent être largement classées en deux types : les données vectorielles et les données raster.</p>
+<ol>
+<li><strong>Données vectorielles</strong> : Les données vectorielles représentent des caractéristiques géographiques à l'aide de points, de lignes et de polygones. Des exemples de données vectorielles incluent :</li>
+<li><strong>Points</strong> : adresses, villes, aéroports, hôpitaux et autres emplacements discrets.</li>
+<li><strong>Lignes</strong> : routes, rivières, chemins de fer et autres caractéristiques linéaires.</li>
+<li>
+<p><strong>Polygones</strong> : pays, états, comtés, parcs et autres zones avec des limites bien définies.</p>
+</li>
+<li>
+<p><strong>Données raster</strong> : Les données raster représentent des caractéristiques géographiques sous la forme d'une grille de cellules, où chaque cellule a une valeur qui représente un aspect de la caractéristique représentée. Des exemples de données raster incluent :</p>
+</li>
+<li>Données d'élévation : modèles numériques d'élévation (MNE) et modèles numériques de terrain (MNT).</li>
+<li>Imagerie satellite : photographies aériennes, imagerie multispectrale et imagerie thermique.</li>
+<li>Données climatiques : température, précipitations et autres données météorologiques.</li>
+</ol>
+<p>Les données vectorielles et raster peuvent être utilisées dans une large gamme d'applications SIG, telles que l'analyse spatiale, la cartographie et la modélisation environnementale.</p>
+<p>Une <strong>base de données spatiale</strong> - également appelée "géodatabase" - est conçue pour capturer et stocker les points, les lignes et les polygones.</p>
+<p>Une géodatabase est un type de base de données utilisé pour stocker et gérer des données géospatiales, y compris des entités, des attributs et des relations. Elle est conçue pour prendre en charge le stockage, la requête et la manipulation de données géographiques de manière à préserver les relations spatiales et temporelles entre les entités. Une géodatabase peut stocker différents types de données, notamment des points, des lignes, des polygones et des jeux de données raster, et peut être utilisée pour une large gamme d'applications, notamment l'analyse SIG, la production de cartes et la gestion des données. Les géodatabases sont généralement créées et gérées à l'aide de logiciels spécialisés, tels que ArcGIS d'Esri.</p>
+<h2 id="analyse-geospatiale">Analyse géospatiale</h2>
+<h3 id="methodes-courantes">Méthodes courantes</h3>
+<ul>
+<li>
+<p><strong>Interrogation spatiale</strong> : Recherche et récupération de données basées sur des critères spatiaux spécifiques ou des relations spatiales.</p>
+</li>
+<li>
+<p><strong>Statistiques spatiales</strong> : Analyse des schémas, des distributions et des relations au sein des données spatiales en utilisant des techniques statistiques.</p>
+</li>
+<li>
+<p><strong>Modélisation spatiale</strong> : Création de modèles mathématiques ou informatiques pour simuler et prédire des phénomènes ou des processus spatiaux.</p>
+</li>
+<li>
+<p><strong>Interpolation spatiale</strong> : Estimation des valeurs dans des emplacements non observés en se basant sur des valeurs connues des emplacements voisins.</p>
+</li>
+<li>
+<p><strong>Géocodage</strong> : Conversion d'adresses ou de noms de lieux en coordonnées géographiques (latitude et longitude).</p>
+</li>
+<li>
+<p><strong>Analyse de réseau</strong> : Examen de la connectivité, du flux et de l'accessibilité au sein d'un réseau, tel que les réseaux de transport ou les réseaux de services publics.</p>
+</li>
+<li>
+<p><strong>Télédétection</strong> : Analyse de données acquises à partir de satellites, d'aéronefs ou d'autres capteurs pour étudier et surveiller la surface de la Terre.</p>
+</li>
+<li>
+<p><strong>Géostatistique</strong> : Application de méthodes statistiques pour analyser et modéliser la variabilité spatiale et l'incertitude dans les données.</p>
+</li>
+<li>
+<p><strong>Visualisation spatiale</strong> : Représentation des données géospatiales à travers des cartes, des graphiques et d'autres formats visuels pour faciliter la compréhension et la communication.</p>
+</li>
+</ul>
+<p>Ces méthodes sont généralement utilisées en combinaison, en fonction des objectifs spécifiques de l'analyse et des caractéristiques des données étudiées.</p>
+<h3 id="projections-et-coordonnees">Projections et Coordonnées</h3>
+<p>Comprendre les projections et les systèmes de coordonnées est essentiel en SIG pour assurer une représentation et une analyse précises des données spatiales. En sélectionnant la bonne projection, en tenant compte de l'objectif de la carte et en gérant efficacement les distorsions, les utilisateurs de SIG peuvent travailler avec des données spatiales de manière précise et significative.</p>
+<h4 id="projections">Projections</h4>
+<p>Les projections cartographiques sont nécessaires car la surface courbe de la Terre ne peut pas être parfaitement représentée sur une carte plane. Cela introduit des distorsions de forme, de superficie, de distance et de direction. Aucune projection ne peut éliminer simultanément toutes les distorsions, il est donc nécessaire de choisir une projection appropriée en fonction de l'objectif de la carte et des propriétés à maintenir ou à minimiser.</p>
+<p>Il est essentiel de s'assurer que tous les ensembles de données et les couches sont dans la même projection pour une analyse géospatiale précise et significative, car cela permet un alignement correct, une cohérence de mesure et des relations spatiales valides entre différentes entités géographiques.</p>
+<p>Dans ArcGIS, vous pouvez modifier ou reprojeter des données en utilisant l'outil "Projet", qui vous permet de convertir des données d'un système de coordonnées à un autre.</p>
+<p>Dans QGIS, vous pouvez modifier ou reprojeter des données en utilisant l'outil "Reprojeter la couche", qui vous permet de transformer des données d'un système de coordonnées à un autre.</p>
+<p>En Python, vous pouvez effectuer la reprojection de données géospatiales en utilisant diverses bibliothèques telles que pyproj et gdal.</p>
+<p>Projections couramment utilisées :</p>
+<p><strong>Projection de Mercator</strong> : La projection de Mercator est largement utilisée pour les cartes du monde, les cartes de navigation et les applications de cartographie en ligne. ArcGIS/ESRI a adopté une version modifiée de la projection de Mercator appelée "Web Mercator Auxiliary Sphere" (WGS 1984 Web Mercator, ou Web Mercator abrégé) comme projection par défaut pour les services de cartographie Web au sein de leur écosystème logiciel.</p>
+<p><strong>Projection conique conforme de Lambert</strong> : La projection personnalisée utilisée par Statistique Canada est une variante de la projection conique conforme de Lambert. La projection de Lambert de Statistique Canada est spécifiquement basée sur la projection conique conforme de Lambert, qui est un type de projection conique connue pour préserver les angles et les formes locaux.</p>
+<h4 id="systemes-de-coordonnees">Systèmes de coordonnées</h4>
+<p>Les systèmes de coordonnées fournissent un cadre de référence pour définir des emplacements sur la surface de la Terre. Il existe deux principaux types : les systèmes de coordonnées géographiques (latitude et longitude) et les systèmes de coordonnées projetées (coordonnées X et Y sur une carte plane).
+Les systèmes de coordonnées géographiques sont sphériques et mesurent les positions en latitude et longitude.
+Les systèmes de coordonnées projetées utilisent des coordonnées cartésiennes et sont utilisés pour des mesures et des analyses précises.</p>
+<h2 id="gis-vocabulary">GIS Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Terme</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API</td>
+<td></td>
+<td>Interface de programmation d'application - une méthode permettant aux développeurs de logiciels de permettre la communication entre différentes applications ou systèmes.</td>
+</tr>
+<tr>
+<td>ArcGIS</td>
+<td></td>
+<td>Suite de logiciels de système d'information géographique (SIG) développée par ESRI.</td>
+</tr>
+<tr>
+<td>ArcGIS Pro</td>
+<td></td>
+<td>Une application SIG de bureau dans la suite ArcGIS pour une analyse géospatiale avancée, la gestion des données et la visualisation.</td>
+</tr>
+<tr>
+<td>Application (App)</td>
+<td></td>
+<td>Abréviation de "application", faisant référence à un logiciel conçu pour s'exécuter sur des PCs, smartphones, des tablettes ou d'autres appareils.</td>
+</tr>
+<tr>
+<td>Attribut (Attribute)</td>
+<td></td>
+<td>Informations non spatiales associées à des données géospatiales, stockées dans des tables attributaires.</td>
+</tr>
+<tr>
+<td>Carte de base (Basemap)</td>
+<td></td>
+<td>Données SIG et/ou imagerie qui constituent le contexte d'arrière-plan d'une carte.</td>
+</tr>
+<tr>
+<td>Tampon (Buffer)</td>
+<td></td>
+<td>Zone ou région créée autour d'une entité géographique, souvent utilisée pour des analyses de proximité.</td>
+</tr>
+<tr>
+<td>Cartographie (Cartography)</td>
+<td></td>
+<td>L'art et la science de créer des cartes, y compris la conception, la symbolisation et la production de cartes.</td>
+</tr>
+<tr>
+<td>Carte choroplèthe (Choropleth Map)</td>
+<td></td>
+<td>Une carte thématique qui utilise des teintes ou des motifs différents pour représenter des valeurs de données pour des zones géographiques spécifiques.</td>
+</tr>
+<tr>
+<td>Coordonnées (Coordinates)</td>
+<td></td>
+<td>Valeurs représentées par les lettres x, y, z [ou m (mesure)], qui définissent une position dans une référence spatiale.</td>
+</tr>
+<tr>
+<td>Système de Référence des Coordonnées (CRS)</td>
+<td></td>
+<td>Système de référence des coordonnées - un cadre utilisé pour définir et localiser des entités géographiques sur la surface de la Terre.</td>
+</tr>
+<tr>
+<td>DCAT, geoDCAT-ap</td>
+<td></td>
+<td>Norme de métadonnées permettant de rendre les ensembles de données spatiales, les séries de données et les services consultables dans les catalogues de données générales.</td>
+</tr>
+<tr>
+<td>Modèle Numérique d'Élévation (DEM)</td>
+<td></td>
+<td>Une représentation numérique du relief ou de la topographie d'une surface.</td>
+</tr>
+<tr>
+<td>Extraction, Transformation et Chargement (ETL)</td>
+<td></td>
+<td>Procédure de copie de données à partir de sources vers un système de destination qui représente les données différemment de la source ou dans un contexte différent de celui de la source.</td>
+</tr>
+<tr>
+<td>Généralisation (Generalization)</td>
+<td></td>
+<td>Méthode utilisée dans les SIG pour réduire les détails dans les données (pour des raisons de confidentialité et/ou de visualisation).</td>
+</tr>
+<tr>
+<td>Géocodage (Geocode)</td>
+<td></td>
+<td>Le processus d'identification d'une localisation par un ou plusieurs attributs, généralement une adresse ou une latitude/longitude, à partir d'une couche.</td>
+</tr>
+<tr>
+<td>Géodatabase (Geodatabase)</td>
+<td></td>
+<td>Un conteneur ou un format de fichier utilisé pour stocker, gérer et organiser des données géospatiales de manière structurée.</td>
+</tr>
+<tr>
+<td>Système d'Information Géographique (SIG)</td>
+<td></td>
+<td>Un système conçu pour capturer, stocker, analyser, gérer et présenter des données spatiales et attributaires.</td>
+</tr>
+<tr>
+<td>Géotraitement (Geoprocessing)</td>
+<td></td>
+<td>L'analyse et la manipulation de données géospatiales à l'aide d'outils et d'algorithmes SIG.</td>
+</tr>
+<tr>
+<td>Géospatial (Geospatial)</td>
+<td></td>
+<td>Relatif à des données associées à un emplacement spécifique sur la surface de la Terre.</td>
+</tr>
+<tr>
+<td>HNAP</td>
+<td></td>
+<td>HNAP-Canada est un profil du profil harmonisé nord-américain qui est lui-même un profil du standard ISO19139 (ISO 19115*).</td>
+</tr>
+<tr>
+<td>Environnement de Développement Intégré (IDE)</td>
+<td></td>
+<td>Une application logicielle fournissant des outils complets pour le développement de logiciels.</td>
+</tr>
+<tr>
+<td>Jupyter Notebook</td>
+<td></td>
+<td>Une application Web open source qui permet aux utilisateurs de créer et de partager des documents contenant du code en direct, des équations, des visualisations et du texte narratif.</td>
+</tr>
+<tr>
+<td>Couche (Layer)</td>
+<td></td>
+<td>Données thématiques décrites et stockées dans une bibliothèque de cartes. Les couches agissent comme des transparences qui peuvent être superposées les unes aux autres pour la visualisation ou l'analyse spatiale.</td>
+</tr>
+<tr>
+<td>Métadonnées (Metadata)</td>
+<td></td>
+<td>Informations décrivant les caractéristiques et les propriétés des données géospatiales, telles que leur source, leur qualité et leur contenu.</td>
+</tr>
+<tr>
+<td>OGC</td>
+<td></td>
+<td>Open Geospatial Consortium - champion des logiciels Open Source et des normes ouvertes.</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td></td>
+<td>Système de gestion de base de données objet-relationnel open source ; Azure Managed.</td>
+</tr>
+<tr>
+<td>Projection</td>
+<td></td>
+<td>Une transformation mathématique appliquée aux données spatiales pour les convertir de la surface courbe de la Terre à une surface plane, généralement une carte.</td>
+</tr>
+<tr>
+<td>Python</td>
+<td></td>
+<td>Un langage de programmation de haut niveau populaire largement utilisé dans l'analyse géospatiale et le scripting dans le domaine des SIG.</td>
+</tr>
+<tr>
+<td>R</td>
+<td></td>
+<td>Un langage de programmation et un environnement logiciel utilisés couramment dans l'analyse et la visualisation de données.</td>
+</tr>
+<tr>
+<td>Raster</td>
+<td></td>
+<td>Un format de données qui représente des informations géographiques sous forme de grille de cellules ou de pixels, couramment utilisé pour les images satellites et les données d'élévation.</td>
+</tr>
+<tr>
+<td>Shapefile</td>
+<td></td>
+<td>Format de stockage de données vectorielles permettant de stocker l'emplacement, la forme et les attributs. Il est stocké dans un ensemble de 4 fichiers connexes et contient une classe d'entités. <em>Les Shapefiles doivent être évités si possible</em>.</td>
+</tr>
+<tr>
+<td>Topologie (Topology)</td>
+<td></td>
+<td>Les relations spatiales et la connectivité entre les entités géométriques au sein d'un ensemble de données SIG.</td>
+</tr>
+<tr>
+<td>Vecteur (Vector)</td>
+<td></td>
+<td>Un format de données qui représente des entités géométriques telles que des points, des lignes ou des polygones dans un espace bidimensionnel ou tridimensionnel.</td>
+</tr>
+<tr>
+<td>Web Map</td>
+<td></td>
+<td>Une carte interactive accessible via Internet, souvent construite à l'aide de technologies web et de données géospatiales.</td>
+</tr>
+<tr>
+<td>WFS</td>
+<td></td>
+<td>Spécifications qui normalisent la manipulation de données et l'affichage de cartes sur Internet.</td>
+</tr>
+<tr>
+<td>WMS</td>
+<td></td>
+<td>Spécifications qui permettent un accès uniforme par les clients web à des cartes rendues par des serveurs de cartes sur Internet.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

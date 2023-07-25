@@ -1,0 +1,1302 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../login/">
+      
+      
+        <link rel="next" href="../language/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Machine virtuelle - SAD; L’Environnement d'Analyse Géospatial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-propos-des-machines-virtuelles-gea" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-header__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAD; L’Environnement d'Analyse Géospatial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Machine virtuelle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Bienvenue
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick/" class="md-tabs__link md-tabs__link--active">
+        Pour commencer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../intro/" class="md-tabs__link">
+        Centre du savoir
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../analysis_ov/" class="md-tabs__link">
+        Analyse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../vis_ov/" class="md-tabs__link">
+        Visualisation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../storage_ov/" class="md-tabs__link">
+        Stockage
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SAD; L’Environnement d&#39;Analyse Géospatial" class="md-nav__button md-logo" aria-label="SAD; L’Environnement d'Analyse Géospatial" data-md-component="logo">
+      
+  <img src="https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg" alt="logo">
+
+    </a>
+    SAD; L’Environnement d'Analyse Géospatial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Bienvenue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bienvenue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        A propos de SAD-EAG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick/" class="md-nav__link">
+        Démarrage rapide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Connexion au cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Machine virtuelle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Machine virtuelle
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisateurs-externes-non-statcan" class="md-nav__link">
+    Utilisateurs externes (non-StatCan) :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisateurs-internes-statcan" class="md-nav__link">
+    Utilisateurs internes (StatCan) :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-et-conseils" class="md-nav__link">
+    Erreurs et conseils
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/" class="md-nav__link">
+        Langues Controls
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Centre du savoir
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Centre du savoir
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Les bases de la théorie SIG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdmx/" class="md-nav__link">
+        SDMX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Formation, tutoriels et liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis_ov/" class="md-nav__link">
+        Analyse-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro/" class="md-nav__link">
+        ArcGIS Pro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        ArcGIS Insights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossplatform/" class="md-nav__link">
+        Multi-plateforme (ETAA/EAC)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vis_ov/" class="md-nav__link">
+        Visualisation-Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          ArcGIS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          ArcGIS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisMaps/" class="md-nav__link">
+        ArcGIS Cartes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisApps/" class="md-nav__link">
+        ArcGIS Apps and Sites
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        Notebooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis_maps/" class="md-nav__link">
+        QGIS Statique Cartes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Stockage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Stockage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_ov/" class="md-nav__link">
+        Vue d'ensemble
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgisportal/" class="md-nav__link">
+        ArcGIS Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        PostgreSQL + PostGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        Azure Blob (FDI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filers/" class="md-nav__link">
+        Field Filers (internal)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilisateurs-externes-non-statcan" class="md-nav__link">
+    Utilisateurs externes (non-StatCan) :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisateurs-internes-statcan" class="md-nav__link">
+    Utilisateurs internes (StatCan) :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-et-conseils" class="md-nav__link">
+    Erreurs et conseils
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="a-propos-des-machines-virtuelles-gea">À propos des machines virtuelles GEA</h1>
+<p><strong>Une machine virtuelle DAS-GEA peut être créée pour vous.</strong></p>
+<details class="info">
+<summary>Les machines virtuelles GEA standard comprennent les éléments suivants :</summary>
+<p>Hardware:</p>
+<ul>
+<li>4vcpus, 14GiB Memory (plus grandes spécifications disponibles)</li>
+<li>AMD Radeon Instinct MI25 GPU</li>
+<li>Managed storage</li>
+<li><a href="https://docs.microsoft.com/fr-ca/azure/virtual-machines/nvv4-series">en savoir plus - Microsoft</a></li>
+</ul>
+<p>Software:</p>
+<ul>
+<li>ArcGIS Pro <em>(licence personnelle requise)</em></li>
+<li>QGIS</li>
+<li>Conda (via miniforge)</li>
+<li>Python IDEs (pyCharm, VSCode, Jupyter)</li>
+<li>&amp; ressources identifiées lors de votre intégration au projet.</li>
+</ul>
+<details class="info">
+<summary>Machines virtuelles sur AAW et CAE</summary>
+<p>Selon votre projet, il est possible que vous ayez la possibilité de créer une machine virtuelle standard via le CAE ou de créer un espace de travail dans l'AAW.
+Ces machines virtuelles en libre-service <strong>ne sont PAS</strong> optimisées pour le rendu géospatial.</p>
+</details>
+</details>
+<h2 id="utilisateurs-externes-non-statcan">Utilisateurs externes (non-StatCan) :</h2>
+<details class="example">
+<summary>Connexion à votre VM</summary>
+<ol>
+<li>
+<p>Rendez-vous sur le lien suivant : <strong><a href="https://www.statcan.gc.ca/data-analytics-services/overview">Portail des services d'analyse de données</a></strong></p>
+</li>
+<li>
+<p>En haut à droite, sélectionnez <strong>Se connecter</strong></p>
+<blockquote>
+<p><img alt="external login" src="../imagesFR/login/ext-login.PNG" /></p>
+</blockquote>
+</li>
+<li>
+<p>Suivez les instructions de la fenêtre contextuelle pour vous connecter</p>
+</li>
+<li>
+<p>Faites défiler vers le bas, et votre machine virtuelle DAS sera répertoriée</p>
+</li>
+<li>
+<p>Utilisez l'interface pour démarrer, vous connecter, puis arrêter votre machine virtuelle</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Les machines virtuelles génèrent des coûts lorsqu'elles sont en cours d'exécution. <br> <br> Vous devriez arrêter votre machine virtuelle lorsque vous ne l'utilisez pas afin d'éviter des frais inutiles. <br> <br> Votre machine virtuelle est programmée pour s'éteindre automatiquement à 19 h, heure normale du Centre.</p>
+</div>
+</details>
+<details class="example">
+<summary>Demande de modifications à votre VM</summary>
+<p>Contactez : <strong>statcan.dassupport-soutiendelads.statcan@statcan.gc.ca</strong></p>
+<p>Informations à inclure :</p>
+<div class="highlight"><pre><span></span><code>- Votre nom de compte @ext.statcan.ca
+- Votre UCID (si connu)
+- Votre demande avec une brève explication
+</code></pre></div>
+<p>Demandes courantes :</p>
+<div class="highlight"><pre><span></span><code>- J&#39;ai besoin de réinitialiser mon mot de passe
+- Je souhaite augmenter/réduire la capacité de ma machine virtuelle
+- J&#39;ai besoin de logiciels supplémentaires/mis à jour
+- Je souhaite modifier la fonction de démarrage automatique et/ou d&#39;arrêt automatique
+- Je rencontre une erreur et j&#39;ai besoin d&#39;aide
+</code></pre></div>
+</details>
+<h2 id="utilisateurs-internes-statcan">Utilisateurs internes (StatCan) :</h2>
+<details class="info">
+<summary>AVD vs DAS VM</summary>
+<p>DAS a été soigneusement conçu pour permettre aux utilisateurs d'utiliser leurs AVD (Azure Virtual Desktops) pour accéder aux services DAS-GEA. Dans la majorité des cas, AVD répondra à vos besoins et fournira les fonctionnalités nécessaires pour vos besoins en analyse de données.</p>
+<p>Raisons de demander une machine virtuelle DAS :</p>
+<p>1- <strong>Puissance de calcul accrue</strong> : Les machines virtuelles DAS offrent un avantage lorsque les utilisateurs ont besoin de machines virtuelles à haute capacité dépassant ce que peut offrir AVD. Dans de tels cas, les utilisateurs peuvent également exercer un certain contrôle sur la mise à l'échelle en utilisant les options en libre-service.</p>
+<p>2- <strong>Tâches automatisées</strong> : Les machines virtuelles DAS peuvent être configurées pour un démarrage automatique, ce qui permet aux utilisateurs d'automatiser des tâches à l'aide du gestionnaire des tâches Microsoft. Cette fonctionnalité simplifie les processus répétitifs et améliore la productivité. <em>J'ai besoin que ce processus s'exécute tous les lundis à 6 heures du matin.</em></p>
+<p>3- <strong>Disponibilité des logiciels</strong> : Les machines virtuelles DAS peuvent offrir des logiciels qui ne sont pas disponibles sur AVD. Actuellement, nous proposons des versions plus récentes de logiciels tels que ArcPro, QGIS et pgAdmin, permettant aux utilisateurs de tirer parti des dernières fonctionnalités et améliorations.</p>
+<!-- OMITTED
+**Machines virtuelles partagées** (En cours d'examen) : Il est possible (avec une approbation de sécurité appropriée) que des projets partagent une machine virtuelle. Par exemple, un projet peut nécessiter une machine virtuelle partagée pour le traitement des observations terrestres, accessible par plusieurs personnes, favorisant ainsi la collaboration.
+-->
+</details>
+<details class="example">
+<summary>Trouver et réclamer une machine virtuelle</summary>
+<ol>
+<li>
+<p>Accédez à l'URL du portail Azure à partir d'OZ (NE PAS utiliser votre AVD à moins d'une raison spécifique !)
+    <strong>https://portal.azure.com/#home</strong></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Plus de services</strong>, et filtrez/recherchez <em>DevTest Labs</em>
+    <img alt="claim1" src="../imagesFR/VM/dtl1.PNG" />  </p>
+</li>
+<li>
+<p>Modifiez le filtre des abonnements en : <em>ALL</em> ou <em>DAaaS</em></p>
+<p>Sélectionnez <strong>geop-prod-intuser-dtl</strong></p>
+<p><img alt="claim2" src="../imagesFR/VM/dtl2.PNG" />  </p>
+</li>
+<li>
+<p>Dans le menu de gauche, sélectionnez : <em>Machines virtuelles réclamables</em></p>
+<p><img alt="claim3" src="../imagesFR/VM/dtl3.PNG" />  </p>
+</li>
+<li>
+<p>Localisez et sélectionnez votre machine virtuelle. Votre machine virtuelle sera nommée : <em>projectAccroymn-statcanID</em></p>
+<p><em>ex : gae-namenick</em></p>
+<p><img alt="claim4" src="../imagesFR/VM/dtl4.PNG" />  </p>
+</li>
+<li>
+<p>Sur la page d'aperçu de la machine virtuelle, sélectionnez <em>Réclamer la machine</em></p>
+<p><img alt="claim5" src="../imagesFR/VM/dtl5.PNG" />  </p>
+</li>
+<li>
+<p>La réclamation prendra quelques minutes. Attendez le message "Réclamation réussie" avant de continuer.
+    <img alt="claim6" src="../imagesFR/VM/dtl6.PNG" />  </p>
+</li>
+<li>
+<p>Sélectionnez <em>Connexion par navigateur</em>. Un nouveau panneau s'ouvrira à droite.</p>
+<p>Saisissez votre nom d'utilisateur : StatCanID <em>(ex : namenick)</em></p>
+<p>Saisissez le mot de passe temporaire : <em>(fourni via l'e-mail d'intégration)</em></p>
+<p>Sélectionnez <em>Connecter</em></p>
+<p><img alt="browserconnect" src="../imagesFR/VM/dtl7.PNG" />  </p>
+</li>
+</ol>
+<details class="tip">
+<summary>Désactiver les bloqueurs de fenêtres contextuelles</summary>
+<p>Après avoir tenté de vous connecter pour la première fois, une erreur peut apparaître indiquant qu'un bloqueur de fenêtres contextuelles empêche l'ouverture d'une nouvelle fenêtre. Pour le désactiver, une icône apparaîtra dans la barre de recherche du navigateur, sélectionnez le bouton et cliquez sur <strong>toujours autoriser</strong>.</p>
+</details>
+</details>
+<details class="example">
+<summary>Démarrage et connexion à votre machine virtuelle</summary>
+<ol>
+<li>
+<p>Accédez à l'URL du portail Azure à partir d'OZ (NE PAS utiliser votre AVD à moins d'une raison spécifique ! voir la section <em>Conseils</em> ci-dessous) :</p>
+<p><strong>https://portal.azure.com/#home</strong></p>
+<p>Sélectionnez <em>DevTest Labs</em> dans la section <em>"Mes ressources récentes"</em></p>
+<p>Sélectionnez votre machine virtuelle</p>
+<p>À partir de la page d'aperçu de la machine virtuelle, cliquez sur le bouton <em>Démarrer</em>.  </p>
+<p><img alt="Bouton de démarrage de la machine virtuelle" src="../imagesFR/VM/dtlstart.PNG" />  </p>
+<p>La machine virtuelle met quelques minutes à démarrer. Suivez sa progression de démarrage en sélectionnant l'icône de Notifications en haut à droite de la fenêtre.   </p>
+</li>
+</ol>
+<hr style="height:1px; background-color:green">
+<p><strong>Connexion à une machine virtuelle :</strong></p>
+<ol>
+<li>
+<p>Après le démarrage, attendez la notification de succès (cela peut prendre quelques minutes)</p>
+</li>
+<li>
+<ul>
+<li>À partir de la page <strong>Aperçu</strong> de votre machine virtuelle, cliquez sur le bouton <strong>Connexion par navigateur</strong> 
+       <img alt="Bouton Connexion par navigateur" src="../imagesFR/VM/dtl7.PNG" /></li>
+</ul>
+</li>
+<li>
+<p>Assurez-vous que la case à cocher <em>Ouvrir dans une nouvelle fenêtre</em> est sélectionnée, saisissez le nom d'utilisateur et le mot de passe, puis cliquez sur le bouton <em>Connecter</em>. Votre machine virtuelle s'ouvrira dans un nouvel onglet du navigateur.</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Les machines virtuelles entraînent des coûts lorsqu'elles sont en cours d'exécution. <br> <br> Vous devriez éteindre votre machine virtuelle lorsque vous ne l'utilisez pas pour éviter des frais inutiles. <br> <br> Votre machine virtuelle a une heure d'arrêt automatique à 19h CST.</p>
+</div>
+</details>
+<details class="example">
+<summary>Arrêter votre machine virtuelle</summary>
+<ol>
+<li>
+<p>À partir de la page <strong>Aperçu</strong> de votre machine virtuelle, cliquez sur le bouton <strong>Arrêter</strong>.  </p>
+<p><img alt="Bouton Arrêter la machine virtuelle" src="../imagesFR/VM/dtlstop.PNG" />  </p>
+</li>
+</ol>
+</details>
+<details class="example">
+<summary>Redimensionner votre machine virtuelle (autoservice)</summary>
+<p>Les utilisateurs ont la possibilité de redimensionner leurs machines virtuelles pour économiser des ressources (coûts) ou augmenter les performances.</p>
+<ol>
+<li>
+<p>À partir de la page d'aperçu des machines virtuelles, sélectionnez <strong>Taille</strong> dans la barre de menu de gauche
+<img alt="vmsize1" src="../imagesFR/VM/vmsize1.PNG" /></p>
+</li>
+<li>
+<p>Sélectionnez la taille souhaitée, puis cliquez sur <strong>Sélectionner</strong> en bas de la fenêtre
+<img alt="vmsize2" src="../imagesFR/VM/vmsize2.PNG" /></p>
+</li>
+</ol>
+<p>Si vous avez besoin de spécifications différentes de celles des machines virtuelles répertoriées, <a href="/contact/">envoyez un ticket de support technique à DAS-GAE</a></p>
+</details>
+<h2 id="erreurs-et-conseils">Erreurs et conseils</h2>
+<details class="tip">
+<summary>Erreurs courantes, correctifs et conseils</summary>
+<table>
+<thead>
+<tr>
+<th>Erreur</th>
+<th></th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="error1" src="../imagesFR/VM/error_bastion_falseStart.png" /></td>
+<td></td>
+<td>Votre machine virtuelle est encore en cours de démarrage ; attendez une minute et réessayez</td>
+</tr>
+<tr>
+<td><img alt="error2" src="../imagesFR/VM/error_loginFailed.png" /></td>
+<td></td>
+<td>Vous avez probablement saisi le nom d'utilisateur ou le mot de passe de la machine virtuelle de manière incorrecte, réessayez.</td>
+</tr>
+<tr>
+<td><img alt="error3" src="../imagesFR/VM/error_bastion.png" /></td>
+<td></td>
+<td>Vous rencontrez une latence réseau ; cela se résout généralement de lui-même. Sinon, essayez de redémarrer votre machine virtuelle</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="tip">
+<summary>Conseils</summary>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> N'utilisez <strong>PAS</strong> AVD pour vous connecter à une machine virtuelle. AVD est également une machine virtuelle Azure Cloud, vous augmentez donc seulement les coûts des ressources. Utilisez AVD uniquement si vous avez une raison spécifique.</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> Rendez-vous au <a href="/python">Centre de connaissances</a> pour obtenir de l'aide sur la configuration des bibliothèques et des packages Python.</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> L'utilisation de raccourcis clavier lors de la connexion à une machine virtuelle peut ne pas donner le même résultat attendu. Par exemple, <em>ctrl + z</em> fermera votre fenêtre principale du navigateur, pas la fenêtre du navigateur de la machine virtuelle.</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> Les machines virtuelles ont une heure d'arrêt automatique à 19h CST. (cela peut être ajusté sur demande : <a href="/contact">FAQ</a>)</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> <a href="https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302">Déplacer la barre des tâches</a> en haut ou sur le côté de la machine virtuelle peut aider à différencier votre espace de travail OZ-PC de celui de la machine virtuelle.</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> Plusieurs écrans ? Vous ne pouvez pas modifier les paramètres d'affichage des machines virtuelles, mais il existe un moyen d'utiliser <em>presque</em> plusieurs moniteurs. Utilisez le bouton <em>Restaurer</em> <img width=15px src="https://img.icons8.com/small/512/restore-down.png">  dans votre fenêtre du navigateur, puis faites glisser pour redimensionner la fenêtre sur plusieurs écrans pour obtenir un effet multi-écran. Vous devrez peut-être ajuster certaines configurations dans les paramètres d'affichage de votre ordinateur portable OZ.</p>
+<p><img alt="🚩" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6a9.svg" title=":triangular_flag_on_post:" /> Par défaut, la machine virtuelle <strong>Ubuntu</strong> s'ouvre en mode Terminal. Vous pouvez accéder à l'interface graphique de votre machine Ubuntu depuis une machine Windows en utilisant <a href="https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro#x2go">X2Go</a>.</p>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
