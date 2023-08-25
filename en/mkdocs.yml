@@ -1,0 +1,92 @@
+site_name: DAS; Geospatial Analytics Environment
+
+nav:
+- Welcome:
+    - About DAS GAE: index.md
+    - Contact: contact.md
+    
+- Getting Started:
+    - Quick Start: quick.md
+    - Cloud Sign In: login.md
+    - Virtual Machine: vm.md
+    - Language Controls: language.md
+    
+- Knowledge Centre:
+   ## - Overview: know_ov.md
+    - GIS Theory Basics: intro.md
+    - Python: python.md
+    - SDMX: sdmx.md
+    - Training, Tutorials, &, Links: resources.md
+    
+- Analysis:
+    - Overview: analysis_ov.md
+    #- GIS Analysis Basics: analysisBasics.md
+    - ArcGIS Pro: pro.md
+    - ArcGIS Insights: insights.md
+    - QGIS: qgis.md
+    - PostGIS: post.md
+    - DAS Cross-Platform: crossplatform.md
+
+- Visualization:
+    - Overview: vis_ov.md
+    - ArcGIS Maps: arcgisMaps.md
+    - ArcGIS Apps and Sites: arcgisApps.md 
+    - Notebooks: notebook.md
+    - QGIS Static Maps: qgis_maps.md
+    
+- Storage:
+    - Overview: storage_ov.md
+    - ArcGIS Portal: arcgisPortal.md
+    - PostgreSQL + PostGIS: postgresql.md
+    - Azure Blob (FDI): pipeline.md
+    - Field Filers (internal): filers.md
+
+#- Sandbox:
+   # - Overview:
+   # - Getting Started:
+   # - Guided Lesson:
+    
+
+#Inactive & Disabled pages:
+  #  -AAW: aaw.md
+  #  -CAE: cae.md
+  # - Data Storage: storage.md
+  # - GeoServer: GeoServer.md
+  # - Standards: hnap.md
+  # - GeoNetwork: geonetwork.md
+  # - Best Practices: bp.md
+  #-  Dev-Prod Space: devProd.md (Now within App page)
+
+theme:
+  name: material
+  language: en
+  features:
+    - tabs
+    - content.tabs.link
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+  palette:
+    primary: green
+    accent: red
+  show_sidebar: true
+  logo: https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+       emoji_index: !!python/name:materialx.emoji.twemoji
+       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - mdx_include
+   
+copyright: © 2023 Statistics Canada; DAS-GAE User Guide; V.2.0.0

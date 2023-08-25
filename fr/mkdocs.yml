@@ -1,0 +1,93 @@
+site_name: SAD; L’Environnement d'Analyse Géospatial
+
+nav:
+- Bienvenue:
+    - A propos de SAD-EAG: index.md
+    - Contact: contact.md
+    
+- Pour commencer:
+    - Démarrage rapide: quick.md
+    - Connexion au cloud: login.md
+    - Machine virtuelle: vm.md
+    - Langues Controls: language.md
+    
+- Centre du savoir:
+   ## - Overview: know_ov.md
+    - Les bases de la théorie SIG: intro.md
+    - Python: python.md
+    - SDMX: sdmx.md
+    - Formation, tutoriels et liens: resources.md
+    
+- Analyse:
+    - Analyse-Vue d'ensemble: analysis_ov.md
+    #- GIS Analysis Basics: analysisBasics.md
+    - ArcGIS Pro: pro.md
+    - ArcGIS Insights: insights.md
+    - QGIS: qgis.md
+    - PostGIS: post.md
+    - Multi-plateforme (ETAA/EAC): crossplatform.md
+
+- Visualisation:
+    - Visualisation-Vue d'ensemble: vis_ov.md
+    - ArcGIS:
+        - ArcGIS Cartes: arcgisMaps.md
+        - ArcGIS Apps and Sites: arcgisApps.md 
+    - Notebooks: notebook.md
+    - QGIS Statique Cartes: qgis_maps.md
+    
+- Stockage:
+    - Vue d'ensemble: storage_ov.md
+    - ArcGIS Portal: arcgisportal.md
+    - PostgreSQL + PostGIS: postgresql.md
+    - Azure Blob (FDI): pipeline.md
+    - Field Filers (internal): filers.md
+
+#- Sandbox:
+   # - Overview:
+   # - Getting Started:
+   # - Guided Lesson:
+    
+
+#Inactive & Disabled pages:
+  #  -AAW: aaw.md
+  #  -CAE: cae.md
+  # - Data Storage: storage.md
+  # - GeoServer: GeoServer.md
+  # - Standards: hnap.md
+  # - GeoNetwork: geonetwork.md
+  # - Best Practices: bp.md
+  #-  Dev-Prod Space: devProd.md (Now within App page)
+
+theme:
+  name: material
+  language: en
+  features:
+    - tabs
+    - content.tabs.link
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+  palette:
+    primary: green
+    accent: red
+  show_sidebar: true
+  logo: https://www.statcan.gc.ca/sites/all/themes/statcan_bootstrap/assets/sig-blk-en.svg
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+       emoji_index: !!python/name:materialx.emoji.twemoji
+       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+
+   
+copyright: © 2023 Statistics Canada; SAD-EAG Guide de l'utilisateur V.2.0
