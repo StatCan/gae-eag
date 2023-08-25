@@ -9,7 +9,7 @@ Pour les demandes commerciales et d'intégration, ou pour recevoir un support te
 	<b>Comment soumettre une demande technique ou signaler un problème </b>
 	Pour obtenir un support technique, veuillez soumettre un ticket via Jira :
 
-	1. Ouvrez le logiciel Jira de Statistique Canada : [Plateforme géospatiale DAS (DASGAE)](https://jirab.statcan.ca/projects/DASGEO/summary)
+	1. Ouvrez le logiciel Jira de Statistique Canada : [DAS Support (DASSR)](https://jirab.statcan.ca/projects/DASSR/summary)
 	2. Dans la barre de menu, sélectionnez le bouton **Créer** :
 		![jira_create](imagesFR/contact/jira1.png)
 	3. Dans la fenêtre de création de problème Jira, sélectionnez le type de problème = **Assistance client** :
@@ -17,8 +17,7 @@ Pour les demandes commerciales et d'intégration, ou pour recevoir un support te
 	4. Dans la fenêtre de création de problème Jira, saisissez les informations relatives à votre demande :
 		- **Résumé** (obligatoire) : Saisissez un court résumé de votre demande.
 		- **Assigné à** (obligatoire) : Sélectionnez "automatique".
-		- **Composant** (obligatoire) : Sélectionnez "Support client - Ressources d'aide aux utilisateurs de la plateforme géo" :
-			![jira_support](imagesFR/contact/jira3.png)
+		- **Composant** (obligatoire) : Sélectionnez "GAE".
 		- **Description** (obligatoire) : Saisissez une description détaillée de votre demande.
 		- **Pièce jointe** (facultatif) : Documentation supplémentaire concernant votre demande (captures d'écran des erreurs, par exemple).
 		

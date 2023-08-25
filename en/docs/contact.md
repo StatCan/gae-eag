@@ -9,7 +9,7 @@ For business and onboarding inquiries, or to receive technical support:
 	<b>How to submit a technical request or report a problem </b>
 	For technical support please submit a ticket via Jira:
 
-	1. Open Statistics Canada Jira software: [DAS Geospatial Platform (DASGAE)](https://jirab.statcan.ca/projects/DASGEO/summary)
+	1. Open Statistics Canada Jira software: [DAS Support (DASSR)](https://jirab.statcan.ca/projects/DASSR/summary)
 	2. From the Menu Bar, select the button **Create**:
 		![jira_create](images/contact/jira_create.png)
 	3. In the Jira Create Issue Window, Select the Issue Type = **Client Support**:
@@ -17,8 +17,7 @@ For business and onboarding inquiries, or to receive technical support:
 	4. In the Jira Create Issue window, enter the information related to your request:
 		- **Summary** (mandatory): Type a short summary definition of you request
 		- **Assignee** (mandatory): Select “automatic”
-		- **Component** (mandatory): Select “Customer Support – Geo Platform User Help Resources”:
-			![jira_support](images/contact/jira_support.png)
+		- **Component** (mandatory): Select “GAE”
 		- **Description** (mandatory): Type a detailed description of your request.
 		- **Attachment** (optional): Supporting documentation relating to your request (ex: screen caps of errors)
 		
