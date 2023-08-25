@@ -2,20 +2,11 @@
 
 ## Configuration initiale
 
-??? success "Connectez votre licence ArcPro - Utilisateurs externes (@ext.statcan.ca)"
-    Pour les utilisateurs externes, DAS est un service de type *Apportez votre propre licence*.
+??? success "Connectez votre licence ArcPro"
+    
+    ArcGIS Pro devrait déjà être connecté à notre serveur de licences. Les instructions suivantes sont fournies en cas de problème.
 
-    1. Dans l'application ArcGIS Pro, allez à l'onglet "Projet" dans le ruban.
-    2. Cliquez sur "Licence" dans l'onglet "Projet".
-    3. Dans le volet Licence, sélectionnez l'option "ArcGIS Online".
-    4. Cliquez sur le bouton "Se connecter" et saisissez vos informations d'identification ArcGIS Online (nom d'utilisateur et mot de passe) pour vous connecter à votre compte ArcGIS Online.
-    5. Une fois connecté, ArcGIS Pro vérifiera vos droits de licence et activera le logiciel en utilisant votre licence ArcGIS Online.
-
-??? success "Connectez votre licence ArcPro - Employés de StatCan - Utilisateurs internes"
-    ??? success "À propos de votre licence ArcGIS Pro"
-		Les licences ArcGIS Pro sont gérées par l'équipe **StatCan GeoHelp**.
-		Il s'agit de la même licence que celle utilisée pour accéder à ArcGIS Pro sur NetA-B/AVD.
-
+    Les licences ArcGIS Pro sont gérées par l'équipe **StatCan GeoHelp**.
     **Veuillez contacter GeoHelp pour obtenir de l'aide : geohelp@statcan.gc.ca**
 
     1. Dans le menu Paramètres, sélectionnez "Licence" dans la liste à gauche. Il est normal que le gestionnaire de licences mette plusieurs minutes à s'initialiser.

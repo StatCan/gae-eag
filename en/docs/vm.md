@@ -1,7 +1,7 @@
-#About GEA Virtual Machines
-**A DAS-GEA Virtual Machine can be created for you.** 
+#About GAE Virtual Machines
+**A DAS-GAE Virtual Machine can be created for you.** 
 	
-???info "The standard GEA VMs include the following:"
+???info "The standard GAE VMs include the following:"
 	Hardware:
 
 	- 4vcpus, 14GiB Memory (larger specs available)
