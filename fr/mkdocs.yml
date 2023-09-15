@@ -40,7 +40,7 @@ nav:
     - Azure Blob (FDI): pipeline.md
     - Field Filers (internal): filers.md
 
-- English: 'https://statcan.gc.ca/en/languageswitch'
+- English: 'https://statcan.gc.ca/fr/languageswitch'
 
 not_in_nav: |
   conda.md
