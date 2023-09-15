@@ -16,7 +16,7 @@ This page provides short, summarized help for common FAQs. Each help block links
 		You have already claimed your VM 
 		
 	**Full Help:
-	[Link to VM Help Page](/vm/#start-your-virtual-machine)**
+	[Link to VM Help Page](vm.md#start-your-virtual-machine)**
 
 	**Quick Help:**
 	
@@ -31,7 +31,7 @@ This page provides short, summarized help for common FAQs. Each help block links
 
 ??? info "Acccess ArcGIS Enterprise Portal Interface"
 	**Full Help:
-	[Link to Help ArcGIS Enterprise Portal Page](/arcgisPortal/)**
+	[Link to Help ArcGIS Enterprise Portal Page](arcgisPortal.md)**
 
 	**Quick Help:**
 
@@ -52,7 +52,7 @@ This page provides short, summarized help for common FAQs. Each help block links
 
 ??? example "How to access your Database"
 	**Full Help:
-	[Link to PostgreSQL+PostGIS Help Page](/postgresql/)**
+	[Link to PostgreSQL+PostGIS Help Page](postgresql.md)**
 	
 
 	**In ArcPro** 
@@ -101,7 +101,7 @@ I have no clue why, but for the next block 'field filers'; in order to have two 
 
 ??? example "How to access your Field Filer (Internal users)"
 	**Full Help:
-	[Link to Full Help page](/filers/)**
+	[Link to Full Help page](filers.md)**
 	
 	1. Open Windows File Explorer
 
@@ -116,7 +116,7 @@ I have no clue why, but for the next block 'field filers'; in order to have two 
 		
 ??? question "How to contact DAS GAE"
 	**Full Help:
-	[Link to Contact Help Page](/contact)**
+	[Link to Contact Help Page](contact.md)**
 
 	**Quick Help:**
 	

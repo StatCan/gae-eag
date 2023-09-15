@@ -16,7 +16,7 @@
 
 
 	5. For security reasons, your default role will be *Viewer Only*. Contact the DAaaS Geo Team to have your permissions adjusted.
-	See the **[Contact](/faq/)** section for help on how to contact DAS-GAE
+	See the **[Contact](contact.md)** section for help on how to contact DAS-GAE
  
 
 ??? info "About User Roles"
@@ -44,7 +44,7 @@
 ## Uploading/Publishing Content
 
 ??? example "Uploading from ArcGIS Pro"
-	Please refer to this section:[ArcGIS Pro- Sharing Results](/pro/#sharing-results)
+	Please refer to this section:[ArcGIS Pro- Sharing Results](pro.md#sharing-results)
 
 ??? example "Uploading Content using Portal Interface"
 	Shapefiles and File Geodatabases are the most common files that will be uploaded to the Portal. However a full list of supported items can be found by clicking the question mark as seen in the figure below.<br/>

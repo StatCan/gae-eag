@@ -8,6 +8,6 @@ PyCharm is an integrated development environment (IDE) specifically designed for
 Visual Studio Code, often referred to as VSCode, is a lightweight and versatile code editor that supports various programming languages, including Python. VSCode also offers a flexible and customizable user interface, allowing analysts to arrange their workspace according to their preferences. Its integrated terminal and debugging capabilities make it convenient for executing and troubleshooting geospatial analysis scripts.
 
 
-{! C:\Users\culkeri\Documents\guidebook\en\docs\python.md !}
-{! C:\Users\culkeri\Documents\guidebook\en\docs\crossplatform.md [ln:16-260] !}
-{! C:\Users\culkeri\Documents\guidebook\en\docs\notebook.md !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\python.md !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\crossplatform.md [ln:16-260] !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\notebook.md !}

@@ -57,7 +57,7 @@ Features include customizable symbology, layer visibility control, configurable 
 
 ??? success "Before you begin: ArcGIS Portal Intro"
 	To create a web map in Portal, start by self-registering for an Enterprise account and then publishing data into the Portal. 
-	For detailed instructions, refer to this page which provides a complete step-by-step guide: [GAE Storage- ArcGIS Portal](/portal)
+	For detailed instructions, refer to this page which provides a complete step-by-step guide: [GAE Storage- ArcGIS Portal](portal.md)
 
 ??? example "Creating Web Maps"
 

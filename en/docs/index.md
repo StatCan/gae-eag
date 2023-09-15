@@ -1,12 +1,17 @@
-#<center> Welcome to the DAS-GAE Guide </center>
+#<center> Welcome to the DAS-GAE Guide  </center>
+<!--<small><a id="vf">(version française...)</a></small>
+<script>
+  let frenchUrl = window.location.href.replace('/en/','/fr/')
+  document.getElementById("vf").setAttribute("href",frenchUrl);
+</script>-->
+
 
 <center>**The DAS Geospatial Analytics Environment (DAS-GAE) offers a collaborative cross-workspace environment that provides data analysts and scientists with access to trusted spatial data, tools, and services for geospatial processing, analysis, and visualization.**
 <br>
 <img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-pro/arcgis-pro-2020-update/assets/arcgis-pro-overview-fss-how-it-works-v3.gif" alt="gif" width="400"/><p style="font-size:8px; margin-top:-70px"> credit: ESRI inc.</p>
 </center>
 
-<center>**With DAS-GAE, you have the power to perform analytics through geomatics and location-based tools, all within a secure, cloud-based environment. Here's what you can do:
-** </center>
+<center>**With DAS-GAE, you have the power to perform analytics through geomatics and location-based tools, all within a secure, cloud-based environment. Here's what you can do:** </center>
 <br>
 
 <p style='text-align: justify;'>
@@ -31,3 +36,4 @@
 ---
 
 **Learn More: [Data Analytics Services; Powered by Statistics Canada](https://www.statcan.gc.ca/data-analytics-services/overview)**
+

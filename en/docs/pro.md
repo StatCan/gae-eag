@@ -47,7 +47,7 @@
 
 		<br>
 
-		Learn more about [Self-Registering in the Portal](/arcgisPortal/)
+		Learn more about [Self-Registering in the Portal](arcgisPortal.md)
 		
 		Learn more: [Manage portal connections from ArcGIS Pro](https://pro.arcgis.com/en/pro-app/latest/help/projects/manage-portal-connections-from-arcgis-pro.htm)
 	

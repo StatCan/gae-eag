@@ -2,7 +2,7 @@
 
 ??? success "Before you begin: ArcGIS Portal Intro"
 	To create a web map in Portal, start by self-registering for an Enterprise account and then publishing data into the Portal. 
-	For detailed instructions, refer to this page which provides a complete step-by-step guide: [GAE Storage- ArcGIS Portal](/portal)	
+	For detailed instructions, refer to this page which provides a complete step-by-step guide: [GAE Storage- ArcGIS Portal](portal.md)	
 
 ArcGIS Enterprise offers a range of no-code apps that allow users to create and share interactive geospatial applications without coding skills. 
 
@@ -56,7 +56,7 @@ These **Apps** enhance data visualization, and support data-driven decision-maki
 
 	**To Begin:**
 	
-	To request (initialize) a Site, contact the DAS-GAE team via the Jira Board.  [How to submit a technical request or report a problem](/english/faq/). 
+	To request (initialize) a Site, contact the DAS-GAE team via the Jira Board.  [How to submit a technical request or report a problem](contact.md). 
 
 	Please include what you would prefer the URL to be.  The URL will be formatted as:
 		```https://geoanalytics.cloud.statcan.ca/portal/apps/sites/#/{YOUR_CHOSEN_URL}```

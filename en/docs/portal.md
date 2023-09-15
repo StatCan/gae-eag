@@ -19,10 +19,10 @@ Here are some common tasks and activities that users can perform in ArcGIS Enter
 - **Visualization and Reporting**: Users can create visually appealing maps, dashboards, and reports to effectively communicate their spatial analysis findings.
 
 
-{! C:\Users\culkeri\Documents\guidebook\en\docs\arcgisPortal.md !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\arcgisPortal.md !}
 
-{! C:\Users\culkeri\Documents\guidebook\en\docs\crossplatform.md [ln:16-55] !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\crossplatform.md [ln:16-55] !}
 
-{! C:\Users\culkeri\Documents\guidebook\en\docs\arcgisMaps.md [ln:47-75] !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\arcgisMaps.md [ln:47-75] !}
 ## ArcGIS WebApps
-{! C:\Users\culkeri\Documents\guidebook\en\docs\arcgisApps.md !}
+{! C:\Users\john.dorion\code\gae-eag\en\docs\arcgisApps.md !}

@@ -167,7 +167,7 @@
 	2. Select the desired size, then click **Select** at the bottom of the window
 	![vmsize2](images/vm/vmsize2.PNG)
 
-	If you require different specs from the VMs listed, [submit a technical support ticket to DAS-GAE](/contact/)
+	If you require different specs from the VMs listed, [submit a technical support ticket to DAS-GAE](contact.md)
 
 ##Errors and Tips
 
@@ -183,11 +183,11 @@
 
 	:triangular_flag_on_post: Do **NOT** use AVD to connect to a VM. AVD is also a Azure Cloud VM so you are only increasing resource costs, only use AVD if you have a specific reason.
 
-	:triangular_flag_on_post: Visit the [Knowledge Centre](/python) for help on configuring Python libraries and packages
+	:triangular_flag_on_post: Visit the [Knowledge Centre](python.md) for help on configuring Python libraries and packages
 
 	:triangular_flag_on_post: Using keyboard shortcuts while connected to a VM may not result in the same action as expected. (i.e. *ctrl + z* will close your main browser window, not the VM browser window)
 
-	:triangular_flag_on_post: VMs have an auto-shutdown time of 7pm cst. (this can be adjusted upon request: [FAQ](/contact)
+	:triangular_flag_on_post: VMs have an auto-shutdown time of 7pm cst. (this can be adjusted upon request: [FAQ](contact.md)
 
 	:triangular_flag_on_post: [Moving the taskbar](https://support.microsoft.com/hr-hr/topic/how-to-move-the-windows-taskbar-from-its-default-position-or-reset-it-to-its-default-position-71e48b52-9373-191a-d3e8-78fe78419302) to the top or side of the VM might help differentiate between your OZ-PC and VM workspace.
 
