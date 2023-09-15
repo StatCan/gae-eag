@@ -57,7 +57,7 @@ Les fonctionnalités comprennent la symbologie personnalisable, le contrôle de 
 
 ??? success "Avant de commencer : Introduction à ArcGIS Portal"
     Pour créer une carte web dans Portal, commencez par vous inscrire vous-même pour un compte Enterprise, puis publiez des données dans le Portail.
-    Pour des instructions détaillées, consultez cette page qui fournit un guide complet étape par étape : [GAE Storage- ArcGIS Portal](/portal)
+    Pour des instructions détaillées, consultez cette page qui fournit un guide complet étape par étape : [GAE Storage- ArcGIS Portal](portal.md)
 
 ??? example "Création de cartes web"
 

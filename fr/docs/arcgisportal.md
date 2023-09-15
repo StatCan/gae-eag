@@ -15,7 +15,7 @@
 		![self_reg_success.png](imagesFR/portal/self_reg_success.png)
 
 	5. Pour des raisons de sécurité, votre rôle par défaut sera *Viewer Only* (consultation seulement). Contactez l'équipe DAaaS Geo pour ajuster vos autorisations.
-	Consultez la section **[Contact](/contact/)** pour obtenir de l'aide sur la façon de contacter DAS-GAE.
+	Consultez la section **[Contact](contact.md)** pour obtenir de l'aide sur la façon de contacter DAS-GAE.
 
  
 

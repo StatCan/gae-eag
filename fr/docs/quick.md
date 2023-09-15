@@ -16,7 +16,7 @@ Cette page fournit une aide courte et résumée pour les questions fréquemment 
         Vous avez déjà réclamé votre machine virtuelle
 
     **Aide complète :
-    [Lien vers la page d'aide sur les machines virtuelles](/vm/#start-your-virtual-machine)**
+    [Lien vers la page d'aide sur les machines virtuelles](vm.md#start-your-virtual-machine)**
 
     **Aide rapide :**
     
@@ -30,7 +30,7 @@ Cette page fournit une aide courte et résumée pour les questions fréquemment 
 
 ??? info "Accéder à l'interface du portail ArcGIS Enterprise"
     **Aide complète :
-    [Lien vers la page d'aide du portail ArcGIS Enterprise](/arcgisportal/)**
+    [Lien vers la page d'aide du portail ArcGIS Enterprise](arcgisportal.md)**
 
     **Aide rapide :**
 
@@ -51,7 +51,7 @@ Cette page fournit une aide courte et résumée pour les questions fréquemment 
 
 ??? example "Comment accéder à votre base de données"
     **Aide complète :
-    [Lien vers la page d'aide PostgreSQL+PostGIS](/postgresql/)**
+    [Lien vers la page d'aide PostgreSQL+PostGIS](postgresql.md)**
 
     **Dans ArcPro**
 
@@ -95,7 +95,7 @@ Cette page fournit une aide courte et résumée pour les questions fréquemment 
 
 ??? example "Comment accéder à votre Field Filer (utilisateurs internes)"
     **Aide complète :
-    [Lien vers la page d'aide complète](/filers/)**
+    [Lien vers la page d'aide complète](filers.md)**
 
     1. Ouvrez l'explorateur de fichiers Windows
 
@@ -109,7 +109,7 @@ Cette page fournit une aide courte et résumée pour les questions fréquemment 
         
 ??? question "Comment contacter le DAS GAE"
     **Aide complète :
-    [Lien vers la page de contact](/contact)**
+    [Lien vers la page de contact](contact.md)**
 
     **Aide rapide :**
     

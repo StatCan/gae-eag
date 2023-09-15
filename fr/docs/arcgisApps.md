@@ -2,7 +2,7 @@
 
 ??? success "Avant de commencer: Introduction à ArcGIS Portal"
 	Pour créer une carte web dans Portal, commencez par vous inscrire pour un compte Enterprise, puis publiez les données dans Portal. 
-	Pour des instructions détaillées, consultez cette page qui fournit un guide complet étape par étape: [GAE Storage - ArcGIS Portal](/portal)	
+	Pour des instructions détaillées, consultez cette page qui fournit un guide complet étape par étape: [GAE Storage - ArcGIS Portal](portal.md)	
 
 ArcGIS Enterprise propose une gamme d'applications sans code qui permettent aux utilisateurs de créer et de partager des applications géospatiales interactives sans compétences en programmation.
 
@@ -58,7 +58,7 @@ Ces **applications** améliorent la visualisation des données et favorisent la 
 
 	**Pour commencer :**
 	
-	Pour demander (initialiser) un site, contactez l'équipe DAS-GAE via le tableau Jira. [Comment soumettre une demande technique ou signaler un problème](/francais/faq/).
+	Pour demander (initialiser) un site, contactez l'équipe DAS-GAE via le tableau Jira. [Comment soumettre une demande technique ou signaler un problème](contact.md).
 
 	Veuillez indiquer la préférence de l'URL. L'URL sera formatée comme suit :
 		```https://geoanalytics.cloud.statcan.ca/portal/apps/sites/#/{VOTRE_URL_CHOISIE}```

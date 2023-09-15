@@ -12,7 +12,6 @@ nav:
     - Langues Controls: language.md
     
 - Centre du savoir:
-   ## - Overview: know_ov.md
     - Les bases de la théorie SIG: intro.md
     - Python: python.md
     - SDMX: sdmx.md
@@ -20,7 +19,6 @@ nav:
     
 - Analyse:
     - Analyse-Vue d'ensemble: analysis_ov.md
-    #- GIS Analysis Basics: analysisBasics.md
     - ArcGIS Pro: pro.md
     - ArcGIS Insights: insights.md
     - QGIS: qgis.md
@@ -42,21 +40,11 @@ nav:
     - Azure Blob (FDI): pipeline.md
     - Field Filers (internal): filers.md
 
-#- Sandbox:
-   # - Overview:
-   # - Getting Started:
-   # - Guided Lesson:
-    
+- English: 'https://statcan.gc.ca/en/languageswitch'
 
-#Inactive & Disabled pages:
-  #  -AAW: aaw.md
-  #  -CAE: cae.md
-  # - Data Storage: storage.md
-  # - GeoServer: GeoServer.md
-  # - Standards: hnap.md
-  # - GeoNetwork: geonetwork.md
-  # - Best Practices: bp.md
-  #-  Dev-Prod Space: devProd.md (Now within App page)
+not_in_nav: |
+  conda.md
+  portal.md
 
 theme:
   name: material
